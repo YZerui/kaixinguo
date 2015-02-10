@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/page_theme_color"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_right_img_src="@drawable/friend_to_contacts_note"
+        custom:topbar_left_img_src="@drawable/icon_white_search"
+        custom:topbar_title="联系人" >
+    </com.customview.view.CustomTopbarView>
+
+    
+    <com.customview.view.CustomPageView
+        android:id="@+id/pageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        custom:page_error_img="@drawable/default_friend_null_page"
+        ></com.customview.view.CustomPageView>
+
+    <com.xlistview.XListView
+        android:id="@+id/xListView"
+        style="@style/friend_list_style"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.xlistview.XListView>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/friend_page_layout.xml -->

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pageBgColor"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="5dip"
+        android:textColor="@color/app_theme_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/contactIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/contacts_none_localcontacts_icon" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/list_crop_cricle" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:background="@drawable/contacts_item_bg"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/contactName"
+                    style="@style/msg_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="1dp"
+                    android:text="小瑞瑞" />
+            </RelativeLayout>
+			<Button
+			    android:id="@+id/contactAddBtn"
+			    android:layout_width="50dp"
+			    android:layout_height="30dp"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginRight="30dp" 
+			    android:textSize="16dp"
+			    android:background="@drawable/green_btn_bg"
+			    android:text="添加"
+			    android:visibility="invisible"
+			    android:textColor="#fff"
+			    />
+			<TextView
+			    android:id="@+id/contactFollowText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginRight="30dp" 
+			    android:text="已关注"
+			    android:textStyle="bold"
+			    android:textSize="16dp"
+			    android:visibility="invisible"
+			    android:textColor="@color/app_theme_color"
+			    />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:background="#4000" />
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/friend_contact_item_layout.xml -->

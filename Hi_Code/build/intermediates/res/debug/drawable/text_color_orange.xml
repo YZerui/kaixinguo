@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" android:color="#fa723a"/>
+    <item android:state_focused="true" android:color="#fa723a"/>
+    <item android:color="#f99166"/> 
+
+</selector><!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/res/drawable/text_color_orange.xml --><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/drawable/text_color_orange.xml -->

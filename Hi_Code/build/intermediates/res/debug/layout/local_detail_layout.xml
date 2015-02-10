@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBgColor" >
+
+    <!-- 现场用户的详情页 -->
+
+    <com.hi.view.StretchScrollView
+        android:id="@+id/local_user_detail_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:headerHeight="300dp"
+        app:headerVisibleHeight="100dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/scroll_view_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+
+                <!-- 头像设定 -->
+
+                <RelativeLayout
+                    android:id="@+id/local_user_detail_icon_layout"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" >
+
+                    <com.hi.view.RoundedImageView
+                        android:id="@+id/local_user_detail_selIcon"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true" />
+
+                    <CheckBox
+                        android:id="@+id/local_user_detail_like"
+                        style="@style/CheckBoxStyle_Default"
+                        android:layout_width="@dimen/icon_default_size"
+                        android:layout_height="@dimen/icon_default_size"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:visibility="gone"
+                        android:background="@drawable/checkbox_like_btn" />
+                </RelativeLayout>
+                <!-- 名字设定 -->
+
+                <RelativeLayout
+                    android:id="@+id/local_detail_selName_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/local_user_detail_icon_layout"
+                    android:layout_marginTop="@dimen/unit_margin_level_one"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/local_user_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="姓名"
+                        android:textColor="@color/text_color_level_one"
+                        android:textSize="@dimen/text_page_level_two"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/local_user_detail_genderIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/unit_margin_level_three"
+                        android:layout_toRightOf="@id/local_user_detail_name" >
+                    </ImageView>
+                </RelativeLayout>
+
+                <!-- 年龄星座 -->
+
+                <LinearLayout
+                    android:id="@+id/selAgeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/local_detail_selName_layout"
+                    android:layout_marginTop="@dimen/unit_margin_level_three"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/local_detail_selfAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/unit_margin_level_one"
+                            android:text="age"
+                            android:textColor="@color/text_color_level_three"
+                            android:textSize="@dimen/text_page_level_two"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/local_detail_xingZuo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/unit_margin_level_one"
+                            android:text="星座"
+                            android:textSize="@dimen/text_page_level_two" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/local_user_detail_selWorks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/selAgeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/unit_margin_level_three"
+                    android:text="职业"
+                    android:textSize="@dimen/text_page_level_two" />
+
+                <LinearLayout
+                    android:id="@+id/local_detail_itemsLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/local_user_detail_selWorks"
+                    android:layout_marginTop="@dimen/unit_margin_level_one"
+                    android:orientation="vertical" >
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/state_item"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_margin_level_one"
+                        app:item_imgNote="@drawable/self_state_note"
+                        app:item_splitPartBottomShow="SHOW"
+                        app:item_splitTopShow="SHOW"
+                        app:item_textContent="怎样的心情呢?" >
+                    </com.customview.view.CustomItemView>
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/label_item"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        app:item_imgNote="@drawable/self_label_note"
+                        app:item_splitBottomShow="SHOW"
+                        app:item_textContent="他(她)的标签是神马?" >
+                    </com.customview.view.CustomItemView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.hi.view.StretchScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/local_user_detail_flyMsg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/local_user_detail_msg_send" />
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/local_detail_layout.xml -->

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_page_bg"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/login_meimei_icon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/login_meimei_icon" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/login_meimei_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/login_word_note" />
+
+        <TextView
+            android:id="@+id/teamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="" />
+
+      	<ImageView
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="250dp"
+      	    android:layout_centerHorizontal="true"
+
+      	    android:layout_alignParentBottom="true"
+      	    android:src="@drawable/heads_icon_2"
+      	    />
+    </RelativeLayout>
+
+</LinearLayout>

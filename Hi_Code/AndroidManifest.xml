@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.ruifeng.hi"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="11" />
+
+    <application
+        tools:replace="android:theme"
+
+        android:name="com.hi.module.base.application.AppContextApplication"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.NoTitleBar" >
+
+        <!-- ******************************测试******************************* -->
+
+
+        <!-- ******************************启动页******************************* -->
+        <!-- excludeFromRecents 关键属性 ：FirstActivity所在的Task不会被显示出来 -->
+        <!-- taskAffinity 关键属性 ：让FirstActivity存于单独的Task里 -->
+        <!-- theme 指向自定义Style，Style设置WindowIsTranslucent = true，即让系统等FirstActivity页面加载完成之后再进行显示 -->
+        <activity
+            android:name="com.hi.module.base.application.FirstActivity"
+            android:configChanges="keyboardHidden|orientation|fontScale"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.android.ruifeng.hi.first"
+            android:theme="@style/WindowIsTranslucent"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hi.module.register_login.ui.AppStartActivity"
+            android:excludeFromRecents="true" >
+        </activity>
+        <!-- ******************************控制页******************************* -->
+        <activity
+            android:name="com.hi.module.base.application.TabBarActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- ******************************登录&注册页******************************* -->
+        <activity android:name="com.hi.module.register_login.ui.SSOLoginActivity" >
+        </activity>
+        <activity
+            android:name="com.hi.module.register_login.ui.RegiPhoneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.hi.module.register_login.ui.SubmitAuthActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.hi.module.register_login.ui.PasswordSetActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.hi.module.register_login.ui.PhoneLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+        <!-- ******************************全局页面****************************** -->
+        <activity android:name="com.hi.module.global.AboutUsPage" >
+        </activity>
+        <activity android:name="com.hi.module.global.AppNotePage" >
+        </activity>
+        <activity android:name="com.hi.module.global.ProtocolPage" >
+        </activity>
+        <!-- ******************************现场页面(local)*************************** -->
+        <activity
+            android:name="com.hi.module.locale.ui.local.LocalSettingActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.hi.module.locale.ui.LocalFragmentActivity" >
+        </activity>
+        <activity android:name="com.hi.module.locale.ui.UserDetailFragmentActivity" >
+        </activity>
+        <activity
+            android:name="com.hi.module.locale.ui.leavenote.ImgSelectDialog"
+            android:theme="@style/Theme_dialog" >
+        </activity>
+        <activity android:name="com.hi.module.base.img.ImageAlbumList" >
+        </activity>
+        <activity android:name="com.hi.module.base.img.ImageCollectionPage" >
+        </activity>
+        <activity android:name="com.hi.module.base.img.ImageTotalPage" >
+        </activity>
+        <activity android:name="com.hi.module.base.img.ImageSelectPage" >
+        </activity>
+        <activity android:name="com.hi.module.base.img.ImageViewPage" >
+        </activity>
+        <activity
+            android:name="com.hi.module.locale.ui.leavenote.LeaveNoteEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.hi.view.scaleImg.DragImgShowActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity android:name="com.hi.module.locale.ui.leavenote.LeaveNotePraisePage" >
+        </activity>
+        <!-- ******************************消息页面(msg)****************** -->
+        <activity android:name="com.hi.module.msg.ui.MsgActivity" >
+        </activity>
+        <activity
+            android:name="com.hi.module.msg.ui.MsgDetailActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- ******************************Receiver****************** -->
+        <receiver android:name="com.hi.receiver.AvosPushReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="MeiMei" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.hi.receiver.IMessageReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.avoscloud.session.action" />
+            </intent-filter>
+        </receiver>
+        <!-- ******************************朋友页面************************ -->
+        <activity android:name="com.hi.module.friend.ui.LocalFriendsActivity" >
+        </activity>
+        <activity android:name="com.hi.module.friend.ui.ContactsPage" >
+        </activity>
+        <activity
+            android:name="com.hi.module.friend.ui.SearchPage_Friends"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+
+        <!-- ****************************分享页面************************ -->
+        <activity android:name="com.hi.module.base.application.ShareUnitDialog" >
+        </activity>
+        <!-- ****************************个人页面**************** -->
+        <activity android:name="com.hi.module.self.ui.MyselfActivity" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.SetGenderDialog"
+            android:theme="@style/Theme_dialog" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.IfoEditPage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.ImgSetDialog"
+            android:theme="@style/Theme_dialog" >
+        </activity>
+        <activity android:name="com.hi.module.self.ui.ImgWallSettingActivity" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.SelfBirthdayDialog"
+            android:theme="@style/Theme_dialog" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.IfoSetListPage"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.ImgClipPage" 
+            ></activity>
+        <!-- ************************商家页面************************ -->
+        <activity android:name="com.hi.module.store.ui.ShopActivity" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.ShopDetailActivity" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.StorePrivilegePage" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.MyPrivilegeDetailPage" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.MyStorePrivilegePage" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.StoreIntroducePage" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.MyPrivilegeActivity" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.StorePrivilegeDetailPage" >
+        </activity>
+        <activity android:name="com.hi.module.store.ui.LeaveNotePage" >
+        </activity>
+        <!-- *******************************服务类********************** -->
+        <service android:name="com.hi.service.ContactsUploadService" >
+        </service>
+        <service android:name="com.hi.service.sync.SyncMsgService" >
+        </service>
+        <service android:name="com.hi.service.LocalWifiSignService" >
+        </service>
+        <service android:name="com.hi.service.LocalWifiCheckService" >
+        </service>
+        <service android:name="com.hi.service.sync.SyncInfoService" >
+        </service>
+        <service android:name="com.hi.service.sync.SyncMyfreinds" >
+        </service>
+        <service android:name="com.hi.service.db.DBSync_Msg" >
+        </service>
+        <service android:name="com.hi.service.sync.SyncConpousService" >
+        </service>
+
+        <!-- QQ登录的配置 -->
+        <!--<activity-->
+            <!--android:name="com.tencent.connect.common.AssistActivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--<activity android:name="com.android.share.ShareMainActivity" >-->
+        <!--</activity>-->
+        <!--<activity android:name="com.meimei.a.locale.ui.LocalSettingActivity" >-->
+        <!--</activity>-->
+
+        <!-- ShareSDK 分享页面 -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 推送的相关配置 -->
+        <service android:name="com.avos.avoscloud.PushService" />
+
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.avos.avoscloud.AVDefaultNotificationReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.avos.UPDATE_STATUS" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 开机的广播 -->
+        <receiver android:name="com.hi.receiver.ActionStartReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.android.ruifeng.hi.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 震动标识 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- 关于获取当前运行任务的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+
+</manifest>

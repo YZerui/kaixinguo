@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient 
+        android:startColor="#FFFF"
+        android:centerColor="#FFFF"
+        android:endColor="#FFFF"
+        />
+    
+</shape><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/drawable/contacts_item_normal.xml -->

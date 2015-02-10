@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/shopIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp" />
+                <!-- image corner -->
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/clip_rect_bg" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/list_item_bg" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:paddingLeft="5dp" >
+
+                <!-- 店名 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/shopItemName"
+                        style="@style/shop_item_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="必胜客" />
+
+                    <CheckBox
+                        android:id="@+id/shopComment"
+                        style="@style/StoreLikeCheckboxTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+                </RelativeLayout>
+                <!-- 信息 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.2" >
+
+                    <TextView
+                        android:id="@+id/shopItemMsg"
+                        style="@style/shop_item_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:text="5个关注" />
+                </RelativeLayout>
+                <!-- 地点 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/siteIcon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/business_location_icon" />
+
+                    <TextView
+                        android:id="@+id/shop_item_address"
+                        style="@style/shop_item_site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/siteIcon"
+                        android:maxEms="8"
+                        android:singleLine="true"
+                        android:text="南山区南头" />
+
+                    <TextView
+                        android:id="@+id/shop_item_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:visibility="invisible"
+                        android:text="2.5km" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/list_sqlit_line_style"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_functions"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_coating"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:visibility="gone" />
+
+</FrameLayout>

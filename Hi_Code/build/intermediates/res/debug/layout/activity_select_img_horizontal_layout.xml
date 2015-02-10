@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBgColor"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.hi.view.RoundedImageView
+        android:id="@+id/selectRoundImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="3dp" />
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/activity_select_img_horizontal_layout.xml -->

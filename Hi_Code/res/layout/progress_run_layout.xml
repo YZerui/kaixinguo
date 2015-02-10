@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:background="#0000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#0000" >
+
+        <com.hi.view.customWidget.ProgressWheel
+            android:id="@+id/progressBar"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            ProgressWheel:barColor="#fff"
+            ProgressWheel:barLength="20dp"
+            ProgressWheel:barWidth="8dp"
+            ProgressWheel:rimColor="#fa723a"
+            ProgressWheel:rimWidth="10dp"
+            ProgressWheel:spinSpeed="5dp"
+            ProgressWheel:textColor="#fff"
+            ProgressWheel:textSize="14sp"
+            android:background="#0fff" />
+    </RelativeLayout>
+
+</LinearLayout>

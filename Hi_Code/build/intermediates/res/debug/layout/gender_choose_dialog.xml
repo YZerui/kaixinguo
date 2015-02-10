@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#0fff"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <LinearLayout
+        android:id="@+id/overallLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+   
+    <Button
+        android:id="@+id/manSelectBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_level_third"
+        android:background="@drawable/photo_gallery_selector"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="男"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#DAD9DB" />
+
+    <Button
+        android:id="@+id/womanSelectBtn"
+        android:layout_width="match_parent"
+         android:layout_height="@dimen/item_height_level_third"
+        android:background="@drawable/photo_camera_selector"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="女"
+        android:textSize="16sp" />
+ </LinearLayout>
+    
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/gender_choose_dialog.xml -->

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用主题颜色 -->
+    <color name="theme_color">#fa723a</color>
+    <color name="theme_color_light">#aafa723a</color>
+
+    <!-- ***********************************全局属性*********************************** -->
+    <!-- bar控件触发颜色 -->
+    <color name="item_color_deep">#ebebeb</color>
+    <!-- bar内部文字颜色 -->
+    <color name="bar_text_color">#5c5c5c</color>
+    <!-- tapBar颜色 -->
+    <color name="tapbar_bg_color">#f2f2f2</color>
+    <!-- 页面底层颜色 -->
+    <color name="page_theme_color">#fff</color>
+
+    <!-- 页面一级文字颜色 -->
+    <color name="text_first_level_color">#5c5c5c</color>
+    <!-- 页面二级文字颜色 -->
+    <color name="text_second_level_color">#a7a7a7</color>
+
+    <!-- 列表的缓存颜色 -->
+    <color name="list_cache_color">#0000</color>
+    <color name="topbar_title_color">#fff</color>
+    <!-- 返回键中的标识文字颜色 -->
+    <color name="topbar_left_back_text_color">#fff</color>
+    <color name="topbar_right_text_btn_color">#fff</color>
+    <!-- 列表中小红点文字的颜色 -->
+    <color name="list_item_head_noteText_color">#fff</color>
+
+    <!-- 列表中一级标题文字颜色 -->
+    <color name="list_item_firstlevel_content_color">#323232</color>
+    <!-- 列表中二级标题文字颜色 -->
+    <color name="list_item_secondlevel_content_color">#c2c2c2</color>
+    <!-- 列表中右边标识文字颜色 -->
+    <color name="list_item_topright_content_color">#c2c2c2</color>
+
+    <!-- 列表中各个项分割线颜色 -->
+    <color name="list_split_line_color">#ebebeb</color>
+	
+	
+    <!-- ********************************自定义对话框********************************** -->
+    <!-- 自定义对话框背景 -->
+    <color name="custom_dialog_bg_color">#aafa723a</color>
+    <!-- 自定义对话框文字标题颜色 -->
+    <color name="custom_dialog_title_text_color">#fff</color>
+    <!-- 自定义对话框文字内容颜色 -->
+    <color name="custom_dialog_content_text_color">#fff</color>
+    <color name="custom_dialog_btn_text_color">#fff</color>
+
+    <!-- *********************************消息板块（msg）属性*************************** -->
+    <!-- 消息列表项的分割线颜色属性 -->
+    <color name="msg_list_divie_line_color">#fff</color>
+
+    <!-- *********************************朋友板块（friend）属性*************************** -->
+    <!-- 朋友列表项的分割线颜色属性 -->
+    <color name="friend_list_divie_line_color">#fff</color>
+
+    <!-- *********************************现场板块（local）属性*************************** -->
+    <!-- 现场列表项的分割线颜色属性 -->
+    <color name="localuser_list_divie_line_color">#fff</color>
+    <!-- *********************************店家板块（store）属性*************************** -->
+    <!-- 店家列表项的分割线颜色属性 -->
+    <color name="store_list_divie_line_color">#fff</color>
+    <!-- ***********************************自定义视图属性(custom)************************* -->
+    <color name="custom_progress_text_color">#cacaca</color>
+    
+	<color name="custom_toast_bg_color">#bb434242</color>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="pageBgColor">#f4f4f4</color>
+    <color name="pageListBgColor">#fff</color>
+    <color name="split_line_bg">#dedede</color>
+    <color name="item_text_color_light">#a7a7a7</color>
+    <color name="item_text_color_deep">#5f5f5f</color>
+    <color name="bottom_bar_bg_color">#88f2f2f2</color>
+    <color name="bottom_bar_bg_color_light">#44f2f2f2</color>
+    <color name="item_line_color">#dfdfdf</color>
+    <color name="text_color_gray">#666666</color>
+
+    <!-- 小红点背景颜色 -->
+    <color name="badge_bg_color">#f15e73</color>
+
+    <!-- list 下来标识文字颜色 -->
+    <color name="list_load_text_color">#ffb500</color>
+    <color name="devide_line">#CBCED2</color>
+    <color name="blue">#499BF7</color>
+    <color name="whites">#ffffff</color>
+    <color name="grays">#818181</color>
+    <color name="gray_font">#818181</color>
+    <color name="common_title">#F9F9F9</color>
+    <color name="black">#000000</color>
+    <color name="pull_refresh_textview">#000000</color>
+    <color name="gold">#000000</color>
+    <color name="refresh_head_bg">#2B2B2B</color>
+    <color name="red">#FF0000</color>
+    <color name="backColor">#2000</color>
+    <color name="detail_bgColor">#f5f5f5</color>
+    <color name="defaultTextColor">#666</color>
+    <color name="viewfinder_frame">#2477ab</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="gray">#AFAFAF</color>
+    <color name="yellow">#F99503</color>
+    <color name="orange">#ff9900</color>
+    <color name="deepcolor">#faaa5f</color>
+    <color name="shadowcolor">#333333</color>
+    <color name="naming">#ABABAB</color>
+    <color name="background">#272727</color>
+    <color name="orange_yellow">#9b9ba0</color>
+
+    <drawable name="semi_black">#80000000</drawable>
+
+    <color name="remote_connect_text">#FFe78018</color>
+    <color name="remote_disconnect_text">#FF901821</color>
+
+</resources>

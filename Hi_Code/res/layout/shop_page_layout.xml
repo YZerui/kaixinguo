@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/pageListBgColor"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/topbar_bg_style" >
+
+        <RelativeLayout
+            android:id="@+id/store_seq_list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bar_btn_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <TextView
+                android:id="@+id/store_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="场所"
+                android:textColor="@color/topbar_title_color"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/store_bar_title"
+                android:src="@drawable/abc_ic_go_search_api_holo_light" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/storePrivilegeBtn"
+            style="@style/topbar_right_text_style"
+            android:text="我的优惠" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/leave_item_more" 
+        layout="@layout/include_shop_leave_item" />
+
+    <View
+        style="@style/split_line_view"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <com.customview.view.CustomPageView
+        android:id="@+id/pageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        custom:page_error_img="@drawable/default_store_null_page" >
+    </com.customview.view.CustomPageView>
+
+    <com.xlistview.XListView
+        android:id="@+id/xListView"
+        style="@style/store_list_style"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.xlistview.XListView>
+
+</LinearLayout>

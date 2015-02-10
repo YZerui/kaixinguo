@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:background="#b000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#0000" >
+
+        <com.hi.view.customWidget.ProgressWheel
+            android:id="@+id/progressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            ProgressWheel:barColor="#fa723a"
+            ProgressWheel:barLength="60dp"
+            ProgressWheel:barWidth="25dp"
+            ProgressWheel:rimColor="#44000000"
+            ProgressWheel:rimWidth="25dp"
+            ProgressWheel:spinSpeed="3dp"
+            ProgressWheel:textColor="#fff"
+            ProgressWheel:textSize="14sp"
+            android:background="#0000" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="正在上传..."
+            android:textColor="#fff"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/img_upload_layout.xml -->

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="注册"
+        custom:topbar_title="填写验证码" >
+    </com.customview.view.CustomTopbarView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="已发送验证码到该手机" />
+
+    <TextView
+        android:id="@+id/regiPhoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
+        android:text="(+86)***********" />
+
+    <EditText
+        android:id="@+id/phone_author_code"
+        style="@style/bar_margin_left_right"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_bg"
+        android:ellipsize="end"
+        android:hint="请输入验证码"
+        android:numeric="integer" />
+
+    <com.customview.view.CustomBtnView
+        android:id="@+id/submitPhoneBtn"
+        style="@style/bar_margin_left_right"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/unit_margin_level_one"
+        custom:btn_color_style="BG_GREEN"
+        custom:btn_text="提交" >
+    </com.customview.view.CustomBtnView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" >
+
+        <com.hi.view.customWidget.CustomDigitalClock
+            android:id="@+id/phoneTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#3000"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+</LinearLayout>

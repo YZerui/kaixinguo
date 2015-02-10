@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="登录"
+        custom:topbar_title="注册加入"
+         >
+    </com.customview.view.CustomTopbarView>
+
+    <RelativeLayout
+        style="@style/bar_margin_left_right"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/phonePreText"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="+86"
+            android:textSize="20dp" />
+
+        <com.hi.view.customWidget.ClearEditText
+            android:id="@+id/submitPhoneText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/phonePreText"
+            android:background="#fff"
+            android:drawableLeft="@drawable/split_line_vertical"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:hint="输入手机号码"
+            android:numeric="integer"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <View
+        style="@style/split_line_view"
+        android:layout_marginLeft="@dimen/unit_margin_level_one"
+        android:layout_marginRight="@dimen/unit_margin_level_one" />
+
+    <com.customview.view.CustomBtnView
+         android:id="@+id/phoneRegiBtn"
+        style="@style/bar_margin_left_right"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/unit_margin_level_one" 
+        custom:btn_text="注册"
+        custom:btn_color_style="BG_GREEN">
+    </com.customview.view.CustomBtnView>
+
+
+    <TextView
+        style="@style/bar_margin_left_right"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/phone_regi_hint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="" />
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/regi_phone_layout.xml -->

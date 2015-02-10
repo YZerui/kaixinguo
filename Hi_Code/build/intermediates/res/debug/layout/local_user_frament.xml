@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_theme_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/global_text_note_bar" />
+
+    <!-- 本地用户列表的页面 -->
+    <!-- 现场用户列表 -->
+
+    <LinearLayout
+        android:id="@+id/localListLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.customview.view.CustomPageView
+            android:id="@+id/pageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="gone" >
+        </com.customview.view.CustomPageView>
+
+        <com.xlistview.XListView
+            android:id="@+id/xListView"
+            style="@style/localUser_list_style"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.xlistview.XListView>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/local_user_frament.xml -->

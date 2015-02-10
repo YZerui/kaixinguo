@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    
+    <!-- ***********************全局UI样式************************** -->
+    <style name="ChatPageTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <!-- TopBar底层布局样式 -->
+    <style name="topbar_bg_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/topbar_height</item>
+        <item name="android:background">@color/theme_color</item>
+    </style>
+
+    <!-- TopBar标题样式 -->
+    <style name="topbar_title_style">
+        <item name="android:textSize">@dimen/topbar_title_size</item>
+        <item name="android:textColor">@color/topbar_title_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:maxEms">6</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- TopBar右边控件样式 -->
+    <style name="topbar_right_widget_style">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/topbar_LR_icon_margin</item>
+        <item name="android:layout_width">@dimen/topbar_right_widget_width</item>
+        <item name="android:layout_height">@dimen/topbar_right_widget_height</item>
+    </style>
+    <!-- TopBar左边控件样式 -->
+    <style name="topbar_left_widget_style">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/topbar_LR_icon_margin</item>
+        <item name="android:layout_width">@dimen/topbar_right_widget_width</item>
+        <item name="android:layout_height">@dimen/topbar_right_widget_height</item>
+    </style>
+    <!-- TopBar左边返回控件的背景样式 -->
+    <style name="topbar_left_back_bg_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/bar_btn_bg</item>
+        <item name="android:paddingRight">@dimen/topbar_left_back_bg_rightpadding</item>
+    </style>
+
+    <!-- TopBar返回控件图标的样式 -->
+    <style name="topbar_left_back_icon_style">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">@dimen/topbar_left_back_icon_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@drawable/topbar_white_back_icon</item>
+    </style>
+
+    <!-- TopBar返回控件文字的样式 -->
+    <style name="topbar_left_back_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">@dimen/topbar_left_back_text_marginleft</item>
+        <item name="android:paddingRight">@dimen/topbar_left_back_text_marginleft</item>
+        <item name="android:textColor">@color/topbar_left_back_text_color</item>
+        <item name="android:textSize">@dimen/topbar_left_back_text_size</item>
+    </style>
+
+    <style name="topbar_left_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/topbar_left_back_text_marginleft</item>
+        <item name="android:paddingRight">@dimen/topbar_left_back_text_marginleft</item>
+        <item name="android:textColor">@color/topbar_left_back_text_color</item>
+        <item name="android:textSize">@dimen/topbar_left_back_text_size</item>
+    </style>
+
+    <!-- topBar中右边文字控件的样式 -->
+    <style name="topbar_right_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/topbar_LR_icon_margin</item>
+        <item name="android:paddingRight">@dimen/topbar_LR_icon_margin</item>
+        <item name="android:textColor">@color/topbar_right_text_btn_color</item>
+        <item name="android:textSize">@dimen/topbar_right_text_btn_size</item>
+    </style>
+
+    <!-- 列表消息提示图标的外布局样式 -->
+    <style name="list_item_head_note_layout">
+        <item name="android:layout_width">@dimen/list_item_head_note_icon_length</item>
+        <item name="android:layout_height">@dimen/list_item_head_note_icon_length</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginRight">@dimen/list_item_head_note_icon_marginEdge</item>
+        <item name="android:layout_marginTop">@dimen/list_item_head_note_icon_marginEdge</item>
+        <item name="android:padding">@dimen/list_item_head_note_icon_padding</item>
+    </style>
+
+    <!-- 列表消息提示图标中小红点的样式 -->
+    <style name="list_item_head_redNote_style">
+        <item name="android:layout_width">@dimen/list_item_head_note_redIcon_length</item>
+        <item name="android:layout_height">@dimen/list_item_head_note_redIcon_length</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:src">@drawable/list_item_head_rednote</item>
+    </style>
+
+    <!-- 列表消息提示图标中数字红点的样式 -->
+    <style name="list_item_head_numNote_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/list_item_head_numnote</item>
+    </style>
+
+    <!-- 列表消息提示图标中数字文本的样式 -->
+    <style name="list_item_head_numText_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/list_item_head_noteText_color</item>
+        <item name="android:textSize">@dimen/list_item_head_note_text_size</item>
+    </style>
+
+    <!-- 列表内容中一级标题样式 -->
+    <style name="list_item_content_firstlevel_style">
+        <item name="android:textColor">@color/list_item_firstlevel_content_color</item>
+        <item name="android:textSize">@dimen/list_item_firstlevel_content_size</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">12</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- 列表内容中二级标题样式 -->
+    <style name="list_item_content_secondlevel_style">
+        <item name="android:textColor">@color/list_item_secondlevel_content_color</item>
+        <item name="android:textSize">@dimen/list_item_secondlevel_content_size</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">12</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- 列表中内容右上角标识文字样式 -->
+    <style name="list_item_content_righttop_style">
+        <item name="android:textSize">@dimen/list_item_righttop_content_size</item>
+        <item name="android:textColor">@color/list_item_topright_content_color</item>
+    </style>
+
+    <!-- 列表分割线样式 -->
+    <style name="list_sqlit_line_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/list_item_splitline_height</item>
+        <item name="android:background">@color/list_split_line_color</item>
+    </style>
+
+    <style name="page_load_img_progressbar">
+        <item name="android:layout_width">@dimen/little_progress_bar_dimen</item>
+        <item name="android:layout_height">@dimen/little_progress_bar_dimen</item>
+        <item name="android:indeterminateDrawable">@anim/progress_img_loading2</item>
+    </style>
+
+    <!-- 文本最大允许显示字体数限制 -->
+    <style name="text_max_num_firstlevel">
+        <item name="android:maxEms">7</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="text_max_num_secondlevel">
+        <item name="android:maxEms">12</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="text_max_num_thirdlevel">
+        <item name="android:maxEms">15</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="list_style">
+        <item name="android:cacheColorHint">@color/list_cache_color</item>
+    </style>
+     <!-- 横线进度条样式 -->
+    <style name="SmoothProgressBar" parent="android:Widget.Holo.ProgressBar.Horizontal">
+        <item name="spb_color">@color/spb_default_color</item>
+        <item name="spb_sections_count">@integer/spb_default_sections_count</item>
+        <item name="spb_speed">@string/spb_default_speed</item>
+        <item name="spb_stroke_width">@dimen/spb_default_stroke_width</item>
+        <item name="spb_stroke_separator_length">@dimen/spb_default_stroke_separator_length</item>
+        <item name="spb_reversed">@bool/spb_default_reversed</item>
+        <item name="spb_progressiveStart_speed">2</item>
+        <item name="spb_progressiveStop_speed">3.4</item>
+        <item name="spb_mirror_mode">@bool/spb_default_mirror_mode</item>
+    </style>
+
+    <style name="GNowProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">8dp</item>
+        <item name="spb_sections_count">2</item>
+        <item name="spb_speed">1.7</item>
+        <item name="spb_progressiveStart_speed">2</item>
+        <item name="spb_progressiveStop_speed">3.4</item>
+        <item name="spb_interpolator">spb_interpolator_acceleratedecelerate</item>
+        <item name="spb_mirror_mode">true</item>
+        <item name="spb_reversed">true</item>
+        <item name="spb_progressiveStart_activated">true</item>
+        <item name="spb_generate_background_with_colors">false</item>
+    </style>
+    <!-- *********************消息模块UI样式******************** -->
+    <!-- 消息模块一级列表样式 -->
+    <style name="msg_list_style">
+        <item name="android:layout_margin">@dimen/msg_list_margin</item>
+        <item name="android:cacheColorHint">@color/list_cache_color</item>
+        <item name="android:divider">@color/msg_list_divie_line_color</item>
+        <item name="android:dividerHeight">@dimen/msg_list_divide_height</item>
+    </style>
+
+    <!-- 消息列表头像外部件参数 -->
+    <style name="msg_list_item_head_layout">
+        <item name="android:layout_height">@dimen/msg_list_item_head_layout_length</item>
+        <item name="android:layout_width">@dimen/msg_list_item_head_layout_length</item>
+    </style>
+
+    <!-- 消息列表项内容外布局样式 -->
+    <style name="msg_list_item_content_layout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/msg_list_item_head_layout_length</item>
+        <item name="android:background">@drawable/list_item_bg</item>
+    </style>
+    <!-- 消息模块二级列表样式 -->
+    <style name="msg_detail_list_style">
+        <item name="android:layout_margin">@dimen/msg_list_margin</item>
+        <item name="android:cacheColorHint">@color/list_cache_color</item>
+        <item name="android:divider">@color/msg_list_divie_line_color</item>
+        <item name="android:dividerHeight">@dimen/msg_detail_list_divide_height</item>
+    </style>
+    <style name="leave_note_list_style">
+        <item name="android:cacheColorHint">@color/list_cache_color</item>
+        <item name="android:divider">@color/page_bg_level_three</item>
+        <item name="android:dividerHeight">8dp</item>
+    </style>
+
+    <!-- ************************朋友模块UI样式************************ -->
+    <!-- 朋友模块一级列表样式 -->
+    <style name="friend_list_style">
+        <item name="android:layout_margin">@dimen/friend_list_margin</item>
+        <item name="android:cacheColorHint">@color/list_cache_color</item>
+        <item name="android:divider">@color/friend_list_divie_line_color</item>
+        <item name="android:dividerHeight">@dimen/friend_list_divide_height</item>
+    </style>
+
+    <!-- 朋友列表头像外部件参数 -->
+    <style name="friend_list_item_head_layout">
+        <item name="android:layout_height">@dimen/friend_list_item_head_layout_length</item>
+        <item name="android:layout_width">@dimen/friend_list_item_head_layout_length</item>
+    </style>
+    <!-- 朋友列表项内容外布局样式 -->
+    <style name="friend_list_item_content_layout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/friend_list_item_head_layout_length</item>
+        <item name="android:background">@drawable/list_item_bg</item>
+    </style>
+
+    <!-- ************************现场用户模块UI样式************************ -->
+    <!-- 朋友模块一级列表样式 -->
+    <style name="localUser_list_style">
+        <item name="android:layout_margin">@dimen/localuser_list_margin</item>
+        <item name="android:cacheColorHint">@color/list_cache_color</item>
+        <item name="android:divider">@color/localuser_list_divie_line_color</item>
+        <item name="android:dividerHeight">@dimen/localuser_list_divide_height</item>
+    </style>
+
+    <!-- 朋友列表头像外部件参数 -->
+    <style name="localUser_list_item_head_layout">
+        <item name="android:layout_height">@dimen/localuser_list_item_head_layout_length</item>
+        <item name="android:layout_width">@dimen/localuser_list_item_head_layout_length</item>
+    </style>
+    <!-- 朋友列表项内容外布局样式 -->
+    <style name="localUser_list_item_content_layout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/localuser_list_item_head_layout_length</item>
+        <item name="android:background">@drawable/list_item_bg</item>
+    </style>
+
+    <!-- **********************************店家模块样式************************************** -->
+    <style name="store_list_style">
+        <item name="android:layout_margin">@dimen/store_list_margin</item>
+        <item name="android:cacheColorHint">@color/list_cache_color</item>
+        <item name="android:divider">@color/store_list_divie_line_color</item>
+        <item name="android:dividerHeight">@dimen/store_list_divide_height</item>
+    </style>
+
+    <!-- 店家喜欢按钮样式 -->
+    <style name="StoreLikeCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/store_like_checkbox_style</item>
+    </style>
+
+    <!-- 店家详情页喜欢按钮样式 -->
+    <style name="StoreDetailLikeCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/store_detail_like_checkbox_style</item>
+    </style>
+    <!-- 店家详情页鄙视按钮样式 -->
+    <style name="StoreDetailDisLikeCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/store_detail_dislike_checkbox_style</item>
+    </style>
+
+    <!-- 动画对话框样式 -->
+    <style name="dialog_untran" parent="dialog_tran">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialog_tran" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#a000</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/selector_radio_common</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="main_tab_custom_bottom">
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/selector_radio_common</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="Theme_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowAnimationStyle">@anim/dialog_exit</item>
+    </style>
+
+    <style name="bar_margin_left_right">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+    <style name="btn_text_style">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="msg_item_title">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="msg_item_content">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#6000</item>
+    </style>
+
+    <style name="shop_item_title">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="shop_item_msg">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/item_text_color_light</item>
+    </style>
+
+    <style name="shop_item_site">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/item_text_color_light</item>
+    </style>
+
+    <color name="app_theme_color">#fa723a</color>
+
+    <dimen name="list_item_height">55dp</dimen>
+    <dimen name="list_item_normal_height">45dp</dimen>
+    <dimen name="item_height">40dp</dimen>
+    <dimen name="list_item_text_size">16dp</dimen>
+    <dimen name="detail_content_title_size">18dp</dimen>
+    <dimen name="detail_content_content_size">15dp</dimen>
+
+    <style name="top_bar_back_text">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="top_bar_back_icon">
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="detail_content_title">
+        <item name="android:textColor">@color/item_text_color_deep</item>
+        <item name="android:textSize">@dimen/detail_content_title_size</item>
+    </style>
+
+    <style name="detail_content_ifo">
+        <item name="android:textColor">@color/item_text_color_light</item>
+        <item name="android:textSize">@dimen/detail_content_content_size</item>
+    </style>
+
+    <style name="share_text_style">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#a000</item>
+    </style>
+    <!--&lt;!&ndash; 顶栏右部图标的属性 &ndash;&gt;-->
+    <!--<style name="bar_right_icon_style"></style>-->
+    <!--&lt;!&ndash; 顶栏左部图标的属性 &ndash;&gt;-->
+    <!--<style name="bar_right_icon_style">-->
+        <!--<item name="android:layout_width">30dp</item>-->
+        <!--<item name="android:layout_height">30dp</item>-->
+        <!--<item name="android:layout_centerVertical">true</item>-->
+        <!--<item name="android:layout_alignParentLeft">true</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+    <!--</style>-->
+
+    <style name="radioButton">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <dimen name="title_bar_height">45dp</dimen>
+    <dimen name="icon_normal_size">25dp</dimen>
+    <dimen name="icon_img_wall_size">70dp</dimen>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="login_btn_word_style">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <dimen name="login_btn_margin_left_right">30dp</dimen>
+
+    <!-- 默认进度圈 -->
+    <style name="customProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/custom_loading</item>
+    </style>
+
+    <style name="customListProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/custom_list_loading</item>
+    </style>
+    <!-- 对话框弹进弹出动画 -->
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+    <!-- CheckBox自定义样式 -->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+</resources>

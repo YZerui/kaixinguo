@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="WindowIsTranslucent">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.NoTitleBar" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--
+             Note that we use the base animation style here (that is no
+             animations) because we really have no idea how this kind of
+             activity will be used.
+        -->
+
+    </style>
+
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- <item name="actionSheetStyle">@style/ActionSheetStyleIOS6</item> -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

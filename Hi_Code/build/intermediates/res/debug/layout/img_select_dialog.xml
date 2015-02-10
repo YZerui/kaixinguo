@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<com.customview.view.CustomSectorView 
+	    android:id="@+id/sector"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        custom:sector_bottom_visible="SHOW"
+        custom:sector_bottom_text="取消"
+        custom:sector_first_text="拍照"
+        custom:sector_second_text="从相册选取"
+        custom:sector_unit_num="TWO" 
+	    ></com.customview.view.CustomSectorView>
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/img_select_dialog.xml -->

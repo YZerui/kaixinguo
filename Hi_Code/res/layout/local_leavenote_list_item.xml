@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingRight="20dp" >
+
+    <RelativeLayout
+        android:id="@+id/msg_detail_icon_layout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/head_demo"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/list_crop_cricle" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/leftPartLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relative"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/msg_detail_icon_layout" >
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#A6A6A6" />
+
+        <FrameLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/msg_detail_note_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/leavenote_msg_icon" />
+
+            <ProgressBar
+                android:id="@+id/customProgress"
+                style="@style/customProgressBar"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/leftPartLayout"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/page_bg_level_two"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:text="小欣欣"
+                android:textColor="@color/list_item_firstlevel_content_color"
+                android:textSize="@dimen/list_item_firstlevel_content_size" />
+
+            <ImageView
+                android:id="@+id/genderIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/name"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@id/genderIcon"
+                android:text="22"
+                android:textColor="@color/text_color_level_two"
+                android:textSize="@dimen/text_btn_level_fifth" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topLayout" >
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingLeft="5dp"
+                android:text="今天去了 一家幼儿园当老师，感觉萌萌哒"
+                android:textColor="@color/text_color_level_two"
+                android:textSize="@dimen/text_btn_level_four" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="100dp"
+                android:maxWidth="80dp"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contentLayout"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="18:60"
+                android:textColor="@color/text_color_level_three"
+                android:textSize="@dimen/text_btn_level_fifth" />
+
+            <CheckBox
+                android:id="@+id/favour_checkbox"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/checkbox_favour_style"
+                android:button="@drawable/btn_null"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/favour_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="3dp"
+                android:text="11"
+                android:textColor="@color/text_color_level_three"
+                android:textSize="@dimen/text_btn_level_four" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/list_sqlit_line_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp" />
+
+</RelativeLayout>

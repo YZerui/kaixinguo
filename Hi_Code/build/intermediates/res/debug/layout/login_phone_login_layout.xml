@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="注册"
+        custom:topbar_title="登录" >
+    </com.customview.view.CustomTopbarView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#fff" >
+
+        <ImageView
+            android:id="@+id/phone_login_edit_icon"
+            android:layout_width="25dp"
+            android:layout_height="@dimen/icon_normal_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/phone_login_btn_icon" />
+
+        <com.hi.view.customWidget.ClearEditText
+            android:id="@+id/phone_login_number_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/phone_login_edit_icon"
+            android:background="#fff"
+            android:drawableLeft="#fff"
+            android:hint="账号或手机号"
+            android:numeric="integer"
+            android:paddingLeft="5dp"
+            android:singleLine="true" />
+
+        <View
+            style="@style/split_line_view"
+            android:layout_alignParentBottom="true"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#fff" >
+
+        <ImageView
+            android:id="@+id/phone_login_password_edit_icon"
+            android:layout_width="25dp"
+            android:layout_height="@dimen/icon_normal_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/phone_login_password_icon" />
+
+        <com.hi.view.customWidget.ClearEditText
+            android:id="@+id/phone_login_password_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/phone_login_password_edit_icon"
+            android:background="#fff"
+            android:drawableLeft="#fff"
+            android:hint="密码"
+            android:paddingLeft="5dp"
+            android:password="true"
+            android:singleLine="true" />
+
+       <View
+            style="@style/split_line_view"
+            android:layout_alignParentBottom="true"
+             />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="忘记密码？" />
+
+  
+    <com.customview.view.CustomBtnView
+        android:id="@+id/phoneLoginBtn" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/unit_margin_level_one"
+        style="@style/bar_margin_left_right"
+        custom:btn_bg="@drawable/orange_send_btn_bg"
+        custom:btn_text="登录"
+        />
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/login_phone_login_layout.xml -->

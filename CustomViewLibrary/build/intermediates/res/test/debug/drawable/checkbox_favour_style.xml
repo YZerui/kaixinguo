@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">  
+  
+    <item android:drawable="@drawable/favour_on_icon" android:state_checked="true"/>  
+    <item android:drawable="@drawable/favour_off_icon" android:state_checked="false"/>  
+    <item android:drawable="@drawable/favour_off_icon"/>  
+  
+</selector>  
+<!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/res/drawable/checkbox_favour_style.xml --><!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/build/intermediates/bundles/debug/res/drawable/checkbox_favour_style.xml -->

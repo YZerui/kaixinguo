@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.meimei.a.a.super_class.ShopDetailActivity$PlaceholderFragment" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="所有店铺"
+        custom:topbar_right_text="留言墙"
+        custom:topbar_title="店铺详情" >
+    </com.customview.view.CustomTopbarView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="160dp" >
+
+        <com.hi.view.MyGallery
+            android:id="@+id/gy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="0dp"
+            android:fadingEdge="none"
+            android:padding="0dp"
+            android:spacing="1dp"
+            android:unselectedAlpha="1" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.hi.view.StretchScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 店铺名 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/shop_name"
+                        style="@style/detail_content_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:text="未知姓名" />
+                </RelativeLayout>
+                <!-- 店铺信息 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/item_height" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/app_theme_color" />
+
+                        <ImageView
+                            android:id="@+id/phone_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/phone_note" />
+
+                        <TextView
+                            android:id="@+id/shop_phone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/phone_icon"
+                            android:text="未知联系方式" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@id/shop_phone"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/pageBgColor" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/item_height" >
+
+                        <ImageView
+                            android:id="@+id/address_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/locate_note" />
+
+                        <TextView
+                            android:id="@+id/shop_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/address_icon"
+                            android:text="未知位置" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@id/shop_address"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/pageBgColor" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/store_detail_introduce_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:background="@drawable/list_item_bg" >
+
+                        <ImageView
+                            android:id="@+id/store_detail_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:src="@drawable/detail_note" />
+
+                        <TextView
+                            android:id="@+id/store_detail_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/store_detail_icon"
+                            android:text="店家详情介绍" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@id/store_detail_text"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/pageBgColor" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/more_note" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/item_height" >
+
+                        <TextView
+                            style="@style/detail_content_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="10dp"
+                            android:text="在线用户" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/app_theme_color" >
+                        </View>
+                    </RelativeLayout>
+
+                    <com.xlistview.XListView          
+                        android:id="@+id/store_local_user_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@color/pageBgColor"
+                        android:dividerHeight="5dp" >
+                    </com.xlistview.XListView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.hi.view.StretchScrollView>
+        <!-- 底部按钮 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bottom_bar_bg_color"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/store_privilege_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/store_detail_page_bottom_bar_height"
+                android:layout_weight="1"
+                android:background="@drawable/store_bottom_bar_bg"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/item_line_color" />
+
+                <ImageView
+                    android:id="@+id/store_privilege_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/store_privilege" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/store_share_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/store_detail_page_bottom_bar_height"
+                android:layout_weight="1"
+                android:background="@drawable/store_bottom_bar_bg" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/item_line_color" />
+
+                <ImageView
+                    android:id="@+id/store_share_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/store_share" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/like_cancel_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/store_detail_page_bottom_bar_height"
+                android:layout_weight="1"
+                android:background="@drawable/store_bottom_bar_bg" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/item_line_color" />
+
+                <CheckBox
+                    android:id="@+id/store_detail_like_checkbox"
+                    style="@style/StoreDetailLikeCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="3dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dislike_cancel_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/store_detail_page_bottom_bar_height"
+                android:layout_weight="1"
+                android:background="@drawable/store_bottom_bar_bg" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/item_line_color" />
+
+                <CheckBox
+                    android:id="@+id/store_detail_dislike_checkbox"
+                    style="@style/StoreDetailDisLikeCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="3dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

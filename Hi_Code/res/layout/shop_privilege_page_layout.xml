@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/split_line_bg"
+    android:orientation="vertical" >
+	<com.customview.view.CustomTopbarView
+	    android:id="@+id/topBar"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    custom:topbar_back_text="店家"
+        custom:topbar_title="本店优惠劵" 
+	    ></com.customview.view.CustomTopbarView>
+	  <com.customview.view.CustomPageView
+        android:id="@+id/pageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" 
+        ></com.customview.view.CustomPageView>
+    <com.xlistview.XListView
+        android:id="@+id/xListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/split_line_bg"
+        android:dividerHeight="@dimen/store_privilege_item_divide_length" >
+    </com.xlistview.XListView>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_level_one"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        
+        app:topbar_title="相册列表"
+        app:topbar_left_text="取消">
+    </com.customview.view.CustomTopbarView>
+
+    <ListView
+        android:id="@+id/listView"
+        style="@style/localUser_list_style"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+       
+        android:padding="5dp" >
+    </ListView>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/img_album_list_layout.xml -->

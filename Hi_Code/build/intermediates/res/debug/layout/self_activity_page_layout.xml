@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dadada"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/topbar_bg_style" >
+
+        <RelativeLayout
+            android:id="@+id/backLayout"
+            style="@style/topbar_left_back_bg_style" >
+
+            <ImageView
+                android:id="@+id/backIcon"
+                style="@style/topbar_left_back_icon_style" />
+
+            <TextView
+                android:id="@+id/backText"
+                style="@style/topbar_left_back_text_style"
+                android:layout_toRightOf="@id/backIcon"
+                android:text="我的主页" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/topbar_title_style"
+            android:text="活动" />
+
+        <ImageView
+            android:id="@+id/activity_add_btn"
+            style="@style/topbar_right_widget_style"
+            android:background="@drawable/activity_add_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/localListLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.hi.view.customListView.XListView
+            android:id="@+id/activityListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#dadada"
+            android:dividerHeight="8dp" >
+        </com.hi.view.customListView.XListView>
+
+        <RelativeLayout
+            android:id="@+id/defaultLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/defalutErrorPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:id="@+id/defaultRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/widget_icon_refresh" />
+
+                <ProgressBar
+                    android:id="@+id/defaultProgressBar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@anim/progress_img_loading2"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/self_activity_page_layout.xml -->

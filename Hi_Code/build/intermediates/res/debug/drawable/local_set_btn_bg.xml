@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/local_setting_note" android:state_pressed="false"></item>
+    <item android:drawable="@drawable/local_setting_note_dark" android:state_pressed="true"></item>
+
+</selector>
+<!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/drawable/local_set_btn_bg.xml -->

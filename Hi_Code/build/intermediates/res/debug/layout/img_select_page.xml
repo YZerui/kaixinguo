@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_height_level_second"
+        android:layout_alignParentBottom="true"
+        android:background="#5fff" 
+        >
+        <ImageView
+            android:id="@+id/back"
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bottom_bar_back_icon"
+            android:layout_alignParentLeft="true" 
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            />
+        <TextView
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_btn_level_three"
+            android:text="选择"
+            android:gravity="center" 
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:background="#000"
+         android:scaleType="fitCenter"
+        android:layout_above="@id/bottomBar"
+        />
+	
+</RelativeLayout>
+<!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/img_select_page.xml -->

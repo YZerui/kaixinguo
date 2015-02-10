@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_level_three"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/showImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.customview.view.CustomPageView
+            android:id="@+id/pageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="invisible" >
+        </com.customview.view.CustomPageView>
+
+        <com.xlistview.XListView
+            android:id="@+id/xListView"
+            style="@style/leave_note_list_style"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.xlistview.XListView>
+
+        <ImageView
+            android:id="@+id/sendBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_send_btn_bg"
+             />
+    </RelativeLayout>
+
+</LinearLayout>

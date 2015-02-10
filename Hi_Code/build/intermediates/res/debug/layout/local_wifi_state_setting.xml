@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <!-- 进入现场的设置页面 -->
+
+    <LinearLayout
+        android:id="@+id/localSetLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.customview.view.CustomTopbarView
+            android:id="@+id/topBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:topbar_back_text="wifi现场"
+            app:topbar_title="设定现场状态" >
+        </com.customview.view.CustomTopbarView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/pageBgColor" >
+
+            <com.hi.view.StretchScrollView
+                android:id="@+id/selfSetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:headerHeight="300dp"
+                app:headerVisibleHeight="100dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/scroll_view_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/transparent"
+                        android:orientation="vertical" >
+
+                        <!-- 头像设定 -->
+
+                        <com.hi.view.RoundedImageView
+                            android:id="@+id/local_set_icon"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/app_icon" />
+                        <!-- 名字设定 -->
+
+                        <RelativeLayout
+                            android:id="@+id/selNameLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/local_set_icon"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/nickNameSet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="MeiMei"
+                                android:textColor="#5c5c5c"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/selfGenderIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/nickNameSet"
+                                android:background="@drawable/userinfo_icon_female" >
+                            </ImageView>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/itemsLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/selNameLayout"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical" >
+
+                       
+                            <!-- 状态 -->
+
+                            <com.customview.view.CustomItemView
+                                android:id="@+id/switchLocalState"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                app:item_imgNote="@drawable/personal_achievement_mark"
+                                app:item_splitBottomShow="SHOW"
+                                app:item_splitTopShow="SHOW"
+                                android:layout_marginTop="@dimen/unit_margin_level_one"
+                                app:item_textContent="点击更改你现场的状态哦" >
+                            </com.customview.view.CustomItemView>
+
+                            <com.customview.view.CustomItemView
+                                android:id="@+id/ifSiteDisplay"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/unit_margin_level_one"
+                                app:item_line_mode="允许显示我的位置"
+                                app:item_slipButtonShow="SHOW"
+                                app:item_splitBottomShow="SHOW"
+                                app:item_splitTopShow="SHOW" >
+                            </com.customview.view.CustomItemView>
+
+                            <com.customview.view.CustomItemView
+                                android:id="@+id/ifTalkAble"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/unit_margin_level_one"
+                                app:item_line_mode="允许向我发送消息"
+                                app:item_slipButtonShow="SHOW"
+                                app:item_splitBottomShow="SHOW"
+                                app:item_splitTopShow="SHOW" >
+                            </com.customview.view.CustomItemView>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.hi.view.StretchScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/toLocalBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/to_local_btn_bg" />
+
+</RelativeLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/local_wifi_state_setting.xml -->

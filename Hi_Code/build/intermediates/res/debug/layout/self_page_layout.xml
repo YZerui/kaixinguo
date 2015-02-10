@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_theme_color"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:topbar_right_text="个人设置"
+        app:topbar_title="我" >
+    </com.customview.view.CustomTopbarView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/background_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="-100dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY" />
+
+        <com.hi.view.PullScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:headerHeight="300dp"
+            app:headerVisibleHeight="100dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/scroll_view_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/transparent"
+                    android:orientation="vertical" >
+
+                    <!-- 头像设定 -->
+
+                    <RelativeLayout
+                        android:id="@+id/self_icon_layout"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp" >
+
+                        <com.hi.view.RoundedImageView
+                            android:id="@+id/self_Icon"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/default_img_head" />
+
+                        <ImageView
+                            android:id="@+id/action_to_img_set"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/self_img_set_btn_bg"
+                            android:padding="5dp"
+                            android:src="@drawable/self_note_camera_icon_while" />
+                    </RelativeLayout>
+                    <!-- 名字设定 -->
+
+                    <RelativeLayout
+                        android:id="@+id/selfNameLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/self_icon_layout"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/self_Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Hi"
+                            android:textColor="@color/text_color_level_one"
+                            android:textSize="@dimen/text_page_level_two"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/selfGenderIcon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/self_Name" >
+                        </ImageView>
+                    </RelativeLayout>
+
+                    <!-- 年龄星座 -->
+
+                    <LinearLayout
+                        android:id="@+id/selAgeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/selfNameLayout"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/selfAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="15dp"
+                                android:text="age"
+                                android:textColor="@color/text_color_level_three"
+                                android:textSize="@dimen/text_page_level_three" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/xingZuo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="天秤座"
+                                android:textColor="@color/text_color_level_three"
+                                android:textSize="@dimen/text_page_level_three" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/self_Work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/selAgeLayout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="设计师"
+                        android:textColor="@color/text_color_level_three"
+                        android:textSize="@dimen/text_page_level_three" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/itemsLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical" >
+
+                    <!-- 标签 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/labelItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        app:item_imgNote="@drawable/self_label_note"
+                        app:item_splitPartBottomShow="SHOW"
+                        app:item_splitTopShow="SHOW"
+                        app:item_textContent="我的标签" >
+                    </com.customview.view.CustomItemView>
+                    <!-- 状态 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/stateItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        app:item_imgNote="@drawable/self_state_note"
+                        app:item_splitPartBottomShow="SHOW"
+                        app:item_textContent="我的状态" >
+                    </com.customview.view.CustomItemView>
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/activityItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        app:item_imgNote="@drawable/self_activity_note"
+                        app:item_splitBottomShow="SHOW"
+                        app:item_textContent="我的活动" >
+                    </com.customview.view.CustomItemView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.hi.view.PullScrollView>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/self_page_layout.xml -->

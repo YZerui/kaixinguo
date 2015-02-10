@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<color xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/btn_state_normal_color" >
+
+</color><!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/res/drawable/btn_selector_bg_normal.xml --><!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/build/intermediates/bundles/debug/res/drawable/btn_selector_bg_normal.xml -->

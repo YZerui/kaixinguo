@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="fill_parent"
+    android:background="@color/page_bg_level_one"
+    android:layout_height="fill_parent" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="个人设置"
+        custom:topbar_title="设置头像" >
+    </com.customview.view.CustomTopbarView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <com.hi.view.RoundedImageView
+                android:id="@+id/self_img_set_btn"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/self_head_set_note_bg" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <com.hi.view.RectImageView
+                    android:id="@+id/self_img_wall_set_1"
+                    android:layout_width="@dimen/icon_img_wall_size"
+                    android:layout_height="@dimen/icon_img_wall_size"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/self_img_wall_bg" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/split_line_vertical" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <com.hi.view.RectImageView
+                    android:id="@+id/self_img_wall_set_2"
+                    android:layout_width="@dimen/icon_img_wall_size"
+                    android:layout_height="@dimen/icon_img_wall_size"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/self_img_wall_bg" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/split_line_vertical" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <com.hi.view.RectImageView
+                    android:id="@+id/self_img_wall_set_3"
+                    android:layout_width="@dimen/icon_img_wall_size"
+                    android:layout_height="@dimen/icon_img_wall_size"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/self_img_wall_bg" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="可上传多张图片,点击可编辑"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/self_photo_setting_page.xml -->

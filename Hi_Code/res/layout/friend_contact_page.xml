@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="联系人"
+        custom:topbar_title="通信录" >
+    </com.customview.view.CustomTopbarView>
+
+    <com.customview.view.CustomPageView
+        android:id="@+id/pageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+    </com.customview.view.CustomPageView>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.xlistview.XListView
+            android:id="@+id/xListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:cacheColorHint="#00000000"
+            android:divider="#fff"
+            android:dividerHeight="1dp" >
+        </com.xlistview.XListView>
+
+        <TextView
+            android:id="@+id/pingYinDialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/number_base"
+            android:gravity="center"
+            android:textColor="@color/app_theme_color"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.hi.com.hi.view.customWidget.SideBar      
+             android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center"
+            android:layout_margin="5dp" />
+    </FrameLayout>
+
+</LinearLayout>

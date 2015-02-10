@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="我的主页"
+        custom:topbar_title="个人设置" >
+    </com.customview.view.CustomTopbarView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.customview.view.CustomItemView
+            android:id="@+id/quitItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            custom:item_splitBottomShow="SHOW"
+            custom:item_splitTopShow="SHOW"
+            custom:item_text_mode="退出登录" >
+        </com.customview.view.CustomItemView>
+
+        <com.hi.view.StretchScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/quitItem" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- 头像设定 -->
+
+                    <RelativeLayout
+                        android:id="@+id/img_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/list_item_bg" >
+
+                        <TextView
+                            android:id="@+id/img_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="头像"
+                            android:textColor="@color/item_text_color_light"
+                            android:textSize="@dimen/list_item_text_size" />
+
+                        <ImageView
+                            android:id="@+id/img_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/g_more_icon" />
+
+                        <com.hi.view.RoundedImageView
+                            android:id="@+id/selfSetImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/img_icon" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@id/img_note"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/split_line_bg" />
+                    </RelativeLayout>
+                    <!-- 昵称设定 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/nickNameItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        custom:item_rightNoteShow="SHOW"
+                        custom:item_splitPartBottomShow="SHOW"
+                        custom:item_textContent="编辑你的昵称"
+                        custom:item_textNote="昵称" >
+                    </com.customview.view.CustomItemView>
+
+                    <!-- 性别设定 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/genderItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        custom:item_rightNoteShow="SHOW"
+                        custom:item_splitPartBottomShow="SHOW"
+                        custom:item_textContent="编辑你的性别"
+                        custom:item_textNote="性别" >
+                    </com.customview.view.CustomItemView>
+
+                    <!-- 生日设定 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/birthdayItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        custom:item_rightNoteShow="SHOW"
+                        custom:item_splitPartBottomShow="SHOW"
+                        custom:item_textContent="输入你的生日"
+                        custom:item_textNote="生日" >
+                    </com.customview.view.CustomItemView>
+
+                    <!-- 状态设定 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/stateItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        custom:item_rightNoteShow="SHOW"
+                        custom:item_splitPartBottomShow="SHOW"
+                        custom:item_textContent="编辑你的状态"
+                        custom:item_textNote="状态" >
+                    </com.customview.view.CustomItemView>
+
+                    <!-- 职业设定 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/occupationItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        custom:item_rightNoteShow="SHOW"
+                        custom:item_splitPartBottomShow="SHOW"
+                        custom:item_textContent="编辑你的职业"
+                        custom:item_textNote="职业" >
+                    </com.customview.view.CustomItemView>
+
+                    <!-- 标签设定 -->
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/labelItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        custom:item_rightNoteShow="SHOW"
+                        custom:item_splitBottomShow="SHOW"
+                        custom:item_textContent="添加你的个人标签"
+                        custom:item_textNote="标签" >
+                    </com.customview.view.CustomItemView>
+
+                    <com.customview.view.CustomItemView
+                        android:id="@+id/moreItem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        custom:item_splitBottomShow="SHOW"
+                        custom:item_splitTopShow="SHOW"
+                        custom:item_rightNoteShow="SHOW"
+                        custom:item_line_mode="关于应用"
+                        
+                     >
+                    </com.customview.view.CustomItemView>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.hi.view.StretchScrollView>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/self_ifo_set_layout.xml -->

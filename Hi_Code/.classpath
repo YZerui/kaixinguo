@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="lib" path="libs/fastjson.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/httpmime-4.2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/mta-sdk-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/json-lib-2.4-jdk15.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jackson-all-1.7.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/libammsdk.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/android-viewbadger.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/com.haarman.listviewanimations-2.6.0.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="src" path="/UtilsLibrary"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

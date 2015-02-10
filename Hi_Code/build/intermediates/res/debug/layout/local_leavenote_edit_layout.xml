@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="留言墙"
+        custom:topbar_right_text="发送"
+        custom:topbar_title="传递你的足迹" >
+    </com.customview.view.CustomTopbarView>
+    <!-- 小纸条编辑页面! -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <EditText
+            android:id="@+id/fly_msg_content"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dip"
+            android:background="#00000000"
+            android:gravity="top"
+            android:hint="在这里留下你的足迹吧~"
+            android:lines="6"
+            android:maxLength="140"
+            android:padding="8dip"
+            android:textColor="#000000"
+            android:textSize="16dp" >
+
+            <requestFocus />
+        </EditText>
+
+        <View
+            style="@style/split_line_view"
+            android:layout_below="@id/fly_msg_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:id="@+id/imgSelect"
+            android:layout_width="@dimen/icon_img_wall_size"
+            android:layout_height="@dimen/icon_img_wall_size"
+            android:layout_below="@id/fly_msg_content"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/self_img_wall_bg" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@color/page_bg_level_three"
+            android:gravity="right"
+            android:padding="8dip" >
+
+            <TextView
+                android:id="@+id/fly_msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#80333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="/140"
+                android:textColor="#80333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/local_leavenote_edit_layout.xml -->

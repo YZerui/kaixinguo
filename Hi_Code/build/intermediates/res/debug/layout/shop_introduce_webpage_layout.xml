@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+	<com.customview.view.CustomTopbarView
+	    android:id="@+id/topBar"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    custom:topbar_back_text="店家详情"
+        custom:topbar_title="店家介绍"  
+	    ></com.customview.view.CustomTopbarView>
+    <WebView
+        android:id="@+id/store_introduce_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/shop_introduce_webpage_layout.xml -->

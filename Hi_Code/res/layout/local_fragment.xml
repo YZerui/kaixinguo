@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/topbar_bg_style" >
+
+        <TextView
+            android:id="@+id/local_wifi_set_btn"
+            style="@style/topbar_left_text_style"
+            android:text="现场设置"
+            android:background="@drawable/btn_selector_bg" />
+        <TextView
+            android:id="@+id/local_note_input_btn"
+            style="@style/topbar_left_text_style"
+            android:text="留言"
+            android:background="@drawable/btn_selector_bg"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/local_note_share_btn"
+            style="@style/topbar_right_text_style"
+            android:background="@drawable/btn_selector_bg"
+            android:layout_alignParentRight="true"
+            android:text="分享"
+            android:visibility="invisible" />
+
+        <RadioGroup
+            android:id="@+id/local_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/local_user_radio"
+                style="@style/radioButton"
+                android:background="@drawable/title_bar_radio_left"
+                android:text="现场" />
+
+            <RadioButton
+                android:id="@+id/local_note_radio"
+                style="@style/radioButton"
+                android:background="@drawable/title_bar_radio_right"
+                android:text="留言墙" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/local_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

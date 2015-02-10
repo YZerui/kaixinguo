@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/app_theme_color" >
+
+        <RelativeLayout style="@style/topbar_bg_style" >
+
+            <RelativeLayout
+                android:id="@+id/backLayout"
+                style="@style/topbar_left_back_bg_style" >
+
+                <ImageView
+                    android:id="@+id/backIcon"
+                    style="@style/topbar_left_back_icon_style" />
+
+                <TextView
+                    android:id="@+id/backText"
+                    style="@style/topbar_left_back_text_style"
+                    android:layout_toRightOf="@id/backIcon"
+                    android:text="活动列表" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/topbar_title_style"
+                android:text="发活动" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/fly_msg_send"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bar_btn_bg"
+            android:src="@drawable/activity_lunch_btn" />
+    </RelativeLayout>
+    <!-- 小纸条编辑页面! -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <EditText
+            android:id="@+id/fly_msg_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dip"
+            android:background="#00000000"
+            android:gravity="top"
+            android:hint="发起你的活动呼叫小伙伴吧~"
+            android:maxLength="140"
+            android:padding="8dip"
+            android:textColor="#000000"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/green_btn_bg"
+            android:text="邀请你的好友一起玩"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/self_activity_lunch_page.xml -->

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_level_three"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="设置"
+        custom:topbar_right_text="保存"
+        custom:topbar_title="编辑" >
+    </com.customview.view.CustomTopbarView>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/unit_margin_level_one" >
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_item_normal_height"
+            android:background="#fff"
+            android:focusable="true"
+            android:paddingLeft="@dimen/unit_margin_level_three" />
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/self_ifo_item_set_layout.xml -->

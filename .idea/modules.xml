@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CustomViewLibrary/CustomViewLibrary.iml" filepath="$PROJECT_DIR$/CustomViewLibrary/CustomViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExpandListLibrary/ExpandListLibrary.iml" filepath="$PROJECT_DIR$/ExpandListLibrary/ExpandListLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hi_Code/Hi_Code.iml" filepath="$PROJECT_DIR$/Hi_Code/Hi_Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SMSSDK/SMSSDK.iml" filepath="$PROJECT_DIR$/SMSSDK/SMSSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" filepath="$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kaixinguo.iml" filepath="$PROJECT_DIR$/kaixinguo.iml" />
+    </modules>
+  </component>
+</project>
+

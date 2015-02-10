@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+   <item android:state_selected="true" android:drawable="@drawable/color_transparent" /> 
+</selector>
+<!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/res/drawable/list_null_selector.xml --><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/drawable/list_null_selector.xml -->

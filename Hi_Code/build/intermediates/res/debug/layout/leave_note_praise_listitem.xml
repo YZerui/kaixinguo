@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    android:orientation="vertical" >
+
+    <com.customview.view.ImageView_Rounded
+        android:id="@+id/ItemImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true" >
+    </com.customview.view.ImageView_Rounded>
+
+    <TextView
+        android:id="@+id/ItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ItemImage"
+        android:textSize="@dimen/text_btn_level_four"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/unit_margin_level_three"
+        android:maxEms="5"
+        android:textColor="@color/text_color_level_two"
+        android:singleLine="true"
+         >
+    </TextView>
+
+</RelativeLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/leave_note_praise_listitem.xml -->

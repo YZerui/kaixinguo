@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">  
+  
+    <item android:drawable="@drawable/friend_checkbox_select" android:state_checked="true"/>  
+    <item android:drawable="@drawable/friend_checkbox_unselect" android:state_checked="false"/>  
+    <item android:drawable="@drawable/friend_checkbox_unselect"/>  
+  
+</selector>  
+<!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/drawable/checkbox_style.xml -->

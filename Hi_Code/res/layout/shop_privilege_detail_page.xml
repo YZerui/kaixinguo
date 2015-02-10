@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_back_text="优惠列表"
+        custom:topbar_title="优惠详情" >
+    </com.customview.view.CustomTopbarView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/obtLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true" >
+
+            <com.hi.view.customWidget.CustomDigitalClock
+                android:id="@+id/timerBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_green_style"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="点击获取 - 开始计时"
+                android:textColor="@color/page_bg_level_one"
+                android:textSize="@dimen/text_btn_level_three" >
+            </com.hi.view.customWidget.CustomDigitalClock>
+            <com.customview.view.CustomBtnView
+                android:id="@+id/noteBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true" 
+                custom:btn_color_style="BG_GREEN"
+                ></com.customview.view.CustomBtnView>
+        </RelativeLayout>
+
+        <com.hi.view.StretchScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/obtLayout" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.customview.view.ImageView_Rounded
+                        android:id="@+id/image"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/scrollview_header" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/image"
+                        android:text="优惠劵名"
+                        android:textColor="@color/text_color_level_one"
+                        android:textSize="@dimen/text_btn_level_two" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/split_line_view"
+                    android:layout_margin="10dp" />
+
+                <com.customview.view.CustomItemView
+                    android:id="@+id/item_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    custom:item_imgNote="@drawable/phone_note"
+                    custom:item_textContent="联系方式" >
+                </com.customview.view.CustomItemView>
+
+                <com.customview.view.CustomItemView
+                    android:id="@+id/item_locate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    custom:item_imgNote="@drawable/locate_note"
+                    custom:item_textContent="地点" >
+                </com.customview.view.CustomItemView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/item_height_level_third"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="优惠详情"
+                    android:textColor="@color/text_color_level_one"
+                    android:textSize="@dimen/text_btn_level_four" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/app_theme_color" />
+
+                <TextView
+                    android:id="@+id/privilegeDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="优惠详情信息"
+                    android:textColor="@color/text_color_level_two"
+                    android:textSize="@dimen/text_btn_level_fifth" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/item_height_level_third"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="优惠须知"
+                    android:textColor="@color/text_color_level_one"
+                    android:textSize="@dimen/text_btn_level_four" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/app_theme_color" />
+
+                <TextView
+                    android:id="@+id/privilegeNote"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="优惠须知详情"
+                    android:textColor="@color/text_color_level_two"
+                    android:textSize="@dimen/text_btn_level_fifth" />
+            </LinearLayout>
+        </com.hi.view.StretchScrollView>
+    </RelativeLayout>
+
+</LinearLayout>
