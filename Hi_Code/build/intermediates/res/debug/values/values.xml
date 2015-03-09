@@ -285,7 +285,17 @@
     <color name="badge_bg_color">#f15e73</color>
     <color name="bar_text_color">#5c5c5c</color>
     <color name="black">#000000</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="black_50_alpha">#88000000</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="blue">#499BF7</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="border_gray">#ffcccccc</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="bottom_bar_bg_color">#88f2f2f2</color>
     <color name="bottom_bar_bg_color_light">#44f2f2f2</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
@@ -312,15 +322,47 @@
     <color name="color_btn_green_deep">#2a994f</color>
     <color name="color_btn_red">#e94b4b</color>
     <color name="color_btn_red_deep">#c03d3d</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="color_cihei">#ff333333</color>
+    <color name="color_hei">#ff000000</color>
+    <color name="color_hei_8">#00000000</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
+    <eat-comment/>
     <color name="color_note">#fa723a</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="color_shenhui">#ff999999</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
+    <eat-comment/>
     <color name="color_theme">#fa723a</color>
     <color name="color_theme_light">#aafa723a</color>
     <color name="color_topbar">#fff</color>
     <color name="color_topbar_note_bg">#e000</color>
     <color name="color_topbar_note_text">#fff</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="color_zhonghui">#ff798089</color>
+    <color name="comment_bg">#fff8fbf8</color>
+    <color name="comment_hint">#ff979aa0</color>
+    <color name="comment_replay_bg">#ffedeeee</color>
+    <color name="comment_title">#ff3f454d</color>
+    <color name="comment_toolbar_hint">#ffced5db</color>
+    <color name="common_bg">#fff4f4f4</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
     <eat-comment/>
     <color name="common_title">#F9F9F9</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="community_auth_bg">#fff8f8f8</color>
+    <color name="community_bg">#ffe4e8eb</color>
+    <color name="community_blue_bg">#ff009fd3</color>
+    <color name="community_blue_text">#ff50cffa</color>
+    <color name="community_detail_user_info_bg">#ff373737</color>
+    <color name="community_show_times_bg">#ffeff3f4</color>
+    <color name="content">#ff444444</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="custom_dialog_bg_color">#aafa723a</color>
     <color name="custom_dialog_btn_text_color">#fff</color>
     <color name="custom_dialog_content_text_color">#fff</color>
@@ -332,9 +374,20 @@
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
     <eat-comment/>
     <color name="custom_toast_bg_color">#bb434242</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="dark">#e0000000</color>
+    <color name="dark_white">#ffd0d0d0</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="deepcolor">#faaa5f</color>
     <color name="defaultTextColor">#666</color>
     <color name="detail_bgColor">#f5f5f5</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="details_panel_separator">#ffbebebe</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="devide_line">#CBCED2</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
@@ -342,19 +395,41 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="divider_light">#ffd1d3d3</color>
+    <color name="empty_txt_color">#ffa5acb2</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
     <eat-comment/>
     <color name="friend_list_divie_line_color">#fff</color>
     <color name="gold">#000000</color>
     <color name="gray">#AFAFAF</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="gray_3">#ff333333</color>
+    <color name="gray_4">#ff444444</color>
+    <color name="gray_b4">#ffb4b4b4</color>
+    <color name="gray_bg">#ffefefef</color>
+    <color name="gray_dark">#ffd6d6d6</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="gray_font">#818181</color>
     <color name="grays">#818181</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="green">#ff009900</color>
+    <color name="guide_page_1_bg">#ff2ec49b</color>
+    <color name="guide_page_2_bg">#ff3fb8d6</color>
+    <color name="guide_page_3_bg">#fffd7570</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="image_border">#ffd4d4d4</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
     <eat-comment/>
     <color name="item_color_deep">#ebebeb</color>
@@ -371,6 +446,9 @@
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
     <eat-comment/>
     <color name="list_divide_line_color">#fff</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="list_divider">#ffd0d0d0</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
     <eat-comment/>
     <color name="list_item_firstlevel_content_color">#323232</color>
@@ -385,6 +463,9 @@
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
     <eat-comment/>
     <color name="localuser_list_divie_line_color">#fff</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="main_blue_light">#ff33b5e5</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -440,6 +521,11 @@
     <eat-comment/>
     <color name="ripple_material_dark">#40ffffff</color>
     <color name="ripple_material_light">#40000000</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="same_app_item_bg">#ffe9ebea</color>
+    <color name="search_hint">#ffb1b6c0</color>
+    <color name="search_item_pressed">#ffe0e3e8</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
     <eat-comment/>
     <color name="search_page_default_bg">#5000</color>
@@ -450,6 +536,10 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="setting_more">#ff878b90</color>
+    <color name="setting_title">#ff333333</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
     <eat-comment/>
     <color name="shadowcolor">#333333</color>
@@ -494,13 +584,39 @@
     <color name="text_second_level_color">#a7a7a7</color>
     <color name="theme_color">#fa723a</color>
     <color name="theme_color_light">#aafa723a</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="time_created">#ffa1a1a1</color>
+    <color name="title">#ff333333</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="topbar_left_back_text_color">#fff</color>
     <color name="topbar_right_text_btn_color">#fff</color>
     <color name="topbar_title_color">#fff</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="topic_bg">#ff009fd3</color>
+    <color name="translucent">#e0000000</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="transparent">#00000000</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="umeng_fb_color_btn_normal">#ff333333</color>
+    <color name="umeng_fb_color_btn_pressed">#ff1495f7</color>
+    <color name="up_times_bg_gray">#ffc3cdce</color>
+    <color name="up_times_bg_red">#ffef805d</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="viewfinder_frame">#2477ab</color>
     <color name="viewfinder_mask">#60000000</color>
     <color name="white">#ffffff</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="white_60_alpha">#99ffffff</color>
+    <color name="white_80_alpha">#bbffffff</color>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/color.xml -->
+    <eat-comment/>
     <color name="whites">#ffffff</color>
     <color name="yellow">#F99503</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
@@ -509,6 +625,7 @@
     <declare-styleable name="ActionMenuView"/>
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/><attr format="reference" name="closeItemLayout"/></declare-styleable>
     <declare-styleable name="ActivityChooserView"><attr format="string" name="initialActivityCount"/><attr format="reference" name="expandActivityOverflowButtonDrawable"/></declare-styleable>
+    <declare-styleable name="CircleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable>
     <declare-styleable name="CompatTextView"><attr format="reference|boolean" name="textAllCaps"/></declare-styleable>
     <declare-styleable name="CustomBarView"><attr name="bar_mode"><enum name="Horizontal" value="0"/><enum name="Vetical" value="1"/></attr><attr name="bar_unit_num"><enum name="ONE" value="1"/><enum name="TWO" value="2"/><enum name="THREE" value="3"/><enum name="FOUR" value="4"/><enum name="FIVE" value="5"/></attr><attr name="bar_split_view_visible"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr name="bar_t_split_view_visible"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr name="bar_b_split_view_visible"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr format="integer" name="bar_unit_one_img"/><attr format="integer" name="bar_unit_two_img"/><attr format="integer" name="bar_unit_three_img"/><attr format="integer" name="bar_unit_four_img"/><attr format="integer" name="bar_unit_five_img"/><attr format="string" name="bar_unit_one_text"/><attr format="string" name="bar_unit_two_text"/><attr format="string" name="bar_unit_three_text"/><attr format="string" name="bar_unit_four_text"/><attr format="string" name="bar_unit_five_text"/><attr format="integer" name="bar_unit_one_bg"/><attr format="integer" name="bar_unit_two_bg"/><attr format="integer" name="bar_unit_three_bg"/><attr format="integer" name="bar_unit_four_bg"/><attr format="integer" name="bar_unit_five_bg"/><attr format="color" name="bar_text_color"/><attr format="dimension" name="bar_h_item_heigth"/><attr format="dimension" name="bar_v_item_heigth"/><attr format="dimension" name="bar_img_size"/></declare-styleable>
     <declare-styleable name="CustomBtnView"><attr name="btn_color_style"><enum name="BG_GREEN" value="0"/><enum name="BG_GRAY" value="1"/><enum name="BG_RED" value="2"/><enum name="BG_OUTLINE" value="3"/><enum name="BG_NULL" value="4"/></attr><attr format="color" name="btn_text_color"/><attr format="string" name="btn_text"/><attr format="integer" name="btn_img"/><attr format="integer" name="btn_bg"/><attr name="btn_bottom_splitline_visible"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr name="btn_top_splitline_visible"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr format="dimension" name="btn_text_size"/><attr format="dimension" name="btn_img_size"/></declare-styleable>
@@ -519,6 +636,8 @@
     <declare-styleable name="CustomTextView"><attr name="text_progress_mode"><enum name="PRO_LEFT" value="0"/><enum name="PRO_RIGHT" value="1"/><enum name="PRO_NULL" value="2"/></attr><attr format="string" name="text_content"/></declare-styleable>
     <declare-styleable name="CustomTopBarView"><attr format="string" name="topbar_title"/><attr format="dimension" name="topbar_height"/><attr format="color" name="topbar_bg_color"/><attr name="topbar_back_visibility"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr format="string" name="topbar_back_text"/><attr format="integer" name="topbar_right_img_src"/><attr format="integer" name="topbar_left_img_src"/><attr name="topbar_progress_visibility"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr name="topbar_right_btn_visibility"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr name="topbar_left_btn_visibility"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr name="topbar_left_text_btn_visibility"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr name="topbar_right_text_btn_visibility"><enum name="SHOW" value="1"/><enum name="HIDE" value="0"/></attr><attr format="string" name="topbar_right_text"/><attr format="string" name="topbar_left_text"/><attr format="color" name="topbar_title_color"/><attr format="color" name="topbar_text_color"/><attr format="integer" name="topbar_right_second_btn"/><attr format="integer" name="topbar_right_second_btn_text"/><attr format="string" name="topbar_right_second_text_btn"/><attr format="string" name="topbar_right_second_text_btn_text"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="topBottomBarArrowSize"/><attr format="dimension" name="middleBarArrowSize"/><attr format="dimension" name="barSize"/><attr format="dimension" name="thickness"/></declare-styleable>
+    <declare-styleable name="FlowLayout"><attr format="dimension" name="horizontalSpacing"/><attr format="dimension" name="verticalSpacing"/><attr format="enum" name="orientation"><enum name="horizontal" value="0"/><enum name="vertical" value="1"/></attr><attr format="boolean" name="debugDraw"/></declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams"><attr format="boolean" name="layout_newLine"/><attr format="dimension" name="layout_horizontalSpacing"/><attr format="dimension" name="layout_verticalSpacing"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
@@ -603,6 +722,12 @@
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/dimen.xml -->
     <eat-comment/>
     <dimen name="chatBottomMoreHeight">150dp</dimen>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="common_margin">12.0dip</dimen>
+    <dimen name="common_margin_10">10.0dip</dimen>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/dimen.xml -->
+    <eat-comment/>
     <dimen name="custom_progress_bar_length">65dp</dimen>
     <dimen name="custom_progress_layout_length">70dp</dimen>
     <dimen name="custom_progress_text_size">16dp</dimen>
@@ -722,6 +847,13 @@
     <dimen name="store_privilege_item_divide_length">8dp</dimen>
     <dimen name="store_privilege_item_height">70dp</dimen>
     <dimen name="store_privilege_item_title_textsize">18dp</dimen>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="tag_corner_radius">5.0dip</dimen>
+    <dimen name="tag_horizontal_spacing">4.0dip</dimen>
+    <dimen name="tag_vertical_spacing">3.0dip</dimen>
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/dimen.xml -->
+    <eat-comment/>
     <dimen name="tapbar_height">50dip</dimen>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
     <eat-comment/>
@@ -843,6 +975,7 @@
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/strings.xml -->
     <eat-comment/>
     <string name="hello">Hello World, main!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/ssdk_strings.xml -->
     <eat-comment/>
@@ -868,6 +1001,7 @@
     <string name="mingdao_share_content">网页分享</string>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/strings.xml -->
     <eat-comment/>
+    <string name="module_self_page_title">我</string>
     <string name="more">更多</string>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/oks_strings.xml -->
     <eat-comment/>
@@ -1001,6 +1135,8 @@
     <string name="tencentweibo">腾讯微博</string>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_sefl_setting">SeflSetting</string>
+    <string name="title_activity_self_module">SelfModuleActivity</string>
     <string name="title_activity_test">TestActivity</string>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/ssdk_strings.xml -->
     <eat-comment/>

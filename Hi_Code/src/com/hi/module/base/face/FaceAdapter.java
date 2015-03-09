@@ -15,12 +15,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 /**
- * 
+ *
  ******************************************
- * @author å»–ä¹ƒæ³¢
- * @æ–‡ä»¶åç§°	:  FaceAdapter.java
- * @åˆ›å»ºæ—¶é—´	: 2013-1-27 ä¸‹åˆ02:34:01
- * @æ–‡ä»¶æè¿°	: è¡¨æƒ…å¡«å……å™¨
+ * @author ÁÎÄË²¨
+ * @ÎÄ¼şÃû³Æ	:  FaceAdapter.java
+ * @´´½¨Ê±¼ä	: 2013-1-27 ÏÂÎç02:34:01
+ * @ÎÄ¼şÃèÊö	: ±íÇéÌî³äÆ÷
  ******************************************
  */
 public class FaceAdapter extends BaseAdapter {
@@ -37,7 +37,7 @@ public class FaceAdapter extends BaseAdapter {
         this.size=list.size();
     }
     public void setCallBack(callBack call){
-    	this.call=call;
+        this.call=call;
     }
     @Override
     public int getCount() {
@@ -88,10 +88,10 @@ public class FaceAdapter extends BaseAdapter {
         return convertView;
     }
     class ViewHolder {
-    	
+
         public ImageView iv_face;
     }
     public static abstract class callBack{
-    	public abstract void del();
+        public abstract void del();
     }
 }

@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hi.module.self.ui.selfmodule.SelfModuleActivity">
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:topbar_title="@string/module_self_page_title"
+        app:topbar_right_text="个人设置">
+    </com.customview.view.CustomTopbarView>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp">
+
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/color_theme"
+            android:gravity="center"
+            android:text="搭讪" />
+        <View
+            android:layout_width="0.2dp"
+            android:layout_height="fill_parent"
+            android:background="@color/text_color_level_three">
+
+        </View>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/color_theme"
+            android:gravity="center"
+            android:text="分享" />
+    </LinearLayout>
+    <View
+        style="@style/split_line_view"
+        >
+
+    </View>
+</LinearLayout>
+<!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/activity_self_module.xml -->

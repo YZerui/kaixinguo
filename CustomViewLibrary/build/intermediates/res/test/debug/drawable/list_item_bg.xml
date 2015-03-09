@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/btn_bg_theme_check" android:state_pressed="true"></item>
+	<item android:drawable="@drawable/btn_bg_theme_normal" android:state_pressed="false"></item>
+</selector>
+<!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/res/drawable/list_item_bg.xml --><!-- From: file:/D:/Code/git/firm/kaixinguo/CustomViewLibrary/build/intermediates/bundles/debug/res/drawable/list_item_bg.xml -->

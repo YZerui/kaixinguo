@@ -2,8 +2,10 @@ D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\classes\debug
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-2.3.12-efc99ba0cf7cf9e6b0e232d52f24065b83079de9.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Moments-2.3.12-3bd4c983f859208e80a8b3c4e2fabe9860c112cd.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Favorite-2.3.12-07acd49f45de8272e83d3a9505709c2bd29becea.jar
+D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\classes-494479850c2c9d736359c3daa7ea290307c24d89.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\android-viewbadger-e373a558cfe54eca38e1a4a8cf75d59059c19a64.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\classes-30e88b7ae64d63a36429bccda2d52a552ad97bd5.jar
+D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\classes-5ba1e5c04facffbf91f414b04c73336d84dc8f31.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\stickylistheaders_lib-443e1d3c1f6c093778e95011538a3abef053f090.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\avossearch-v2.6.9.1-0d69d3a716c0f27221c574b3c9f863a228f5d5ef.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\ShareSDK-SinaWeibo-2.3.12-96de686b6fa3428f0b324305d4910844af0a83c6.jar
@@ -34,5 +36,5 @@ D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\fastjson-
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\xUtils-2.6.10-4e998e3bbf3a9e561392c18a60669c6c3cbeab02.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\avoscloud-v2.6.9.1-f059783830a6f3ae254cd06681fd0590012dc395.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\classes-3489265b6d3b331ca8673458a76298c38eae8700.jar
-D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\android-support-v4-c346333d29d70d59b6fcc3d76caf5cb8703e9bd0.jar
+D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\android-support-v4-5592a9eb05b08f8b8a13024db18e92fb03e51414.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\jackson-all-1.7.6-6aee775d2b961dc10a773f88e2e5c115a758b59f.jar

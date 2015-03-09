@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\CodeWorkSpace\AndroidStudio\kaixinguo\UtilsLibrary\assets"/></dataSet><dataSet config="debug"><source path="D:\CodeWorkSpace\AndroidStudio\kaixinguo\UtilsLibrary\build-types\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\Code\git\firm\kaixinguo\UtilsLibrary\assets"/></dataSet><dataSet config="debug"><source path="D:\Code\git\firm\kaixinguo\UtilsLibrary\build-types\debug\assets"/></dataSet></merger>

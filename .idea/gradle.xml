@@ -12,7 +12,9 @@
             <option value="$PROJECT_DIR$/ExpandListLibrary" />
             <option value="$PROJECT_DIR$/Hi_Code" />
             <option value="$PROJECT_DIR$/SMSSDK" />
+            <option value="$PROJECT_DIR$/TagView" />
             <option value="$PROJECT_DIR$/UtilsLibrary" />
+            <option value="$PROJECT_DIR$/circleimageview" />
           </set>
         </option>
       </GradleProjectSettings>

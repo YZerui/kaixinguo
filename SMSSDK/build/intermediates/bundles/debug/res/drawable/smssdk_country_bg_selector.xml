@@ -4,4 +4,4 @@
   <!-- 默认时的背景图片-->    
   <item android:drawable="@color/smssdk_white" /> 
 </selector>
-<!-- From: file:/D:/CodeWorkSpace/AndroidStudio/kaixinguo/SMSSDK/res/drawable/smssdk_country_bg_selector.xml -->
+<!-- From: file:/D:/Code/git/firm/kaixinguo/SMSSDK/res/drawable/smssdk_country_bg_selector.xml -->

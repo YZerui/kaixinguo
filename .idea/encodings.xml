@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/Hi_Code/res/drawable-mdpi/charm_note_icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Hi_Code/src/com/hi/module/base/face/FaceAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/TagView" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/TagView/src/com/niceapp/lib/tagview/widget/FlowLayout.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/circleimageview" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
 </project>
 

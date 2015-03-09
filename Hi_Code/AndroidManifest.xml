@@ -3,17 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.android.ruifeng.hi"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="11" />
 
-    <application
-        tools:replace="android:theme"
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 震动标识 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <!-- 关于获取当前运行任务的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+
+    <application
         android:name="com.hi.module.base.application.AppContextApplication"
         android:icon="@drawable/app_icon"
         android:label="@string/app_name"
-        android:theme="@style/Theme.NoTitleBar" >
+        android:theme="@style/Theme.NoTitleBar"
+        tools:replace="android:theme" >
 
         <!-- ******************************测试******************************* -->
 
@@ -175,9 +192,7 @@
             android:name="com.hi.module.self.ui.IfoSetListPage"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-        <activity
-            android:name="com.hi.module.self.ui.ImgClipPage" 
-            ></activity>
+        <activity android:name="com.hi.module.self.ui.ImgClipPage" />
         <!-- ************************商家页面************************ -->
         <activity android:name="com.hi.module.store.ui.ShopActivity" >
         </activity>
@@ -216,14 +231,15 @@
         </service>
 
         <!-- QQ登录的配置 -->
-        <!--<activity-->
-            <!--android:name="com.tencent.connect.common.AssistActivity"-->
-            <!--android:screenOrientation="portrait"-->
-            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
-        <!--<activity android:name="com.android.share.ShareMainActivity" >-->
-        <!--</activity>-->
-        <!--<activity android:name="com.meimei.a.locale.ui.LocalSettingActivity" >-->
-        <!--</activity>-->
+        <!-- <activity -->
+        <!-- android:name="com.tencent.connect.common.AssistActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+        <!-- <activity android:name="com.android.share.ShareMainActivity" > -->
+        <!-- </activity> -->
+        <!-- <activity android:name="com.meimei.a.locale.ui.LocalSettingActivity" > -->
+        <!-- </activity> -->
+
 
         <!-- ShareSDK 分享页面 -->
         <activity
@@ -260,27 +276,17 @@
         </receiver>
 
         <activity
-            android:name="com.android.ruifeng.hi.TestActivity"
+            android:name=".TestActivity"
             android:label="@string/title_activity_test" >
         </activity>
+        <activity
+            android:name="com.hi.module.self.ui.selfmodule.SelfModuleActivity"
+            android:label="@string/title_activity_self_module" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.selfSetting.SeflSetting"
+            android:label="@string/title_activity_sefl_setting" >
+        </activity>
     </application>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <!-- 震动标识 -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-
-    <!-- 关于获取当前运行任务的权限 -->
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
 
 </manifest>

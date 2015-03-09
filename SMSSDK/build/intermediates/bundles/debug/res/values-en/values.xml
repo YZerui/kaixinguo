@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/CodeWorkSpace/AndroidStudio/kaixinguo/SMSSDK/res/values-en/smssdk_arrays.xml -->
+    <!-- From: file:/D:/Code/git/firm/kaixinguo/SMSSDK/res/values-en/smssdk_arrays.xml -->
     <eat-comment/>
     <string-array name="smssdk_country_group_a">
 		<item>Afghanistan,93,44</item>

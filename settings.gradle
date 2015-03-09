@@ -1,1 +1,1 @@
-include ':UtilsLibrary', ':CustomViewLibrary', ':ExpandListLibrary', ':SMSSDK', ':Hi_Code'
+include ':UtilsLibrary', ':CustomViewLibrary', ':ExpandListLibrary', ':SMSSDK', ':Hi_Code', ':circleimageview', ':TagView'

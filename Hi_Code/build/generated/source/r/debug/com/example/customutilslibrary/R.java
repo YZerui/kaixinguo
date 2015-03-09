@@ -8,8 +8,8 @@ package com.example.customutilslibrary;
 
 public final class R {
 	public static final class color {
-		public static final int btn_state_normal_color = 0x7f080019;
-		public static final int btn_state_select_color = 0x7f08001a;
+		public static final int btn_state_normal_color = 0x7f08001b;
+		public static final int btn_state_select_color = 0x7f08001c;
 	}
 	public static final class dimen {
 		public static final int activity_horizontal_margin = 0x7f090025;
@@ -19,22 +19,22 @@ public final class R {
 		public static final int btn_selector_bg = 0x7f02005e;
 		public static final int btn_selector_bg_normal = 0x7f02005f;
 		public static final int btn_selector_bg_press = 0x7f020060;
-		public static final int default_load_img = 0x7f0200cc;
-		public static final int ic_launcher = 0x7f020119;
+		public static final int default_load_img = 0x7f0200cd;
+		public static final int ic_launcher = 0x7f02011b;
 	}
 	public static final class id {
-		public static final int action_settings = 0x7f0a0279;
-		public static final int count = 0x7f0a0173;
-		public static final int cover = 0x7f0a0171;
-		public static final int imageViewNoti = 0x7f0a01d1;
-		public static final int info_layout = 0x7f0a0172;
-		public static final int textViewNoti = 0x7f0a01d2;
-		public static final int title = 0x7f0a004a;
+		public static final int action_settings = 0x7f0a0282;
+		public static final int count = 0x7f0a017c;
+		public static final int cover = 0x7f0a017a;
+		public static final int imageViewNoti = 0x7f0a01d8;
+		public static final int info_layout = 0x7f0a017b;
+		public static final int textViewNoti = 0x7f0a01d9;
+		public static final int title = 0x7f0a004c;
 	}
 	public static final class layout {
 		public static final int activity_main = 0x7f030019;
-		public static final int item_bucket_list = 0x7f03004c;
-		public static final int notification_bar = 0x7f030065;
+		public static final int item_bucket_list = 0x7f030050;
+		public static final int notification_bar = 0x7f030069;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0e0000;
@@ -42,7 +42,7 @@ public final class R {
 	public static final class string {
 		public static final int action_settings = 0x7f0c0010;
 		public static final int app_name = 0x7f0c0011;
-		public static final int hello_world = 0x7f0c001e;
+		public static final int hello_world = 0x7f0c001f;
 	}
 	public static final class style {
 		public static final int AppBaseTheme = 0x7f0d0000;

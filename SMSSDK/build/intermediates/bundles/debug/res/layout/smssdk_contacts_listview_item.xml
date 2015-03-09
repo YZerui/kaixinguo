@@ -43,4 +43,4 @@
         android:textSize="14sp"
         android:textColor="#797979"
         android:background="@drawable/smssdk_corners_bg"/>
-</RelativeLayout><!-- From: file:/D:/CodeWorkSpace/AndroidStudio/kaixinguo/SMSSDK/res/layout/smssdk_contacts_listview_item.xml -->
+</RelativeLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/SMSSDK/res/layout/smssdk_contacts_listview_item.xml -->

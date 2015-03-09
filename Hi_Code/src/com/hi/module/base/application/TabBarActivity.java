@@ -30,6 +30,7 @@ import com.hi.module.register_login.ui.RegiPhoneActivity;
 import com.hi.module.register_login.ui.SSOLoginActivity;
 import com.hi.module.register_login.ui.SubmitAuthActivity;
 import com.hi.module.self.ui.MyselfActivity;
+import com.hi.module.self.ui.selfmodule.SelfModuleActivity;
 import com.hi.module.store.ui.ShopActivity;
 import com.hi.service.LocalWifiCheckService;
 import com.hi.service.LocalWifiSignService;
@@ -201,7 +202,7 @@ public class TabBarActivity extends TabActivity {
 				R.drawable.tab_5_highlight);
 		TabSpec tabSpec5 = tabHost.newTabSpec("tab5");
 		tabSpec5.setIndicator(tabView5);
-		Intent intent5 = new Intent(this, MyselfActivity.class);
+		Intent intent5 = new Intent(this, SelfModuleActivity.class);
 		tabSpec5.setContent(intent5);
 
 		tabHost.addTab(tabSpec1);

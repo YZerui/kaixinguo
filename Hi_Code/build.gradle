@@ -10,6 +10,8 @@ dependencies {
     compile project(':CustomViewLibrary')
     compile project(':SMSSDK')
     compile project(':ExpandListLibrary')
+    compile project(':circleimageview')
+    compile project(':TagView')
 //    compile files('libs/android-support-v4.jar')
 }
 configurations {

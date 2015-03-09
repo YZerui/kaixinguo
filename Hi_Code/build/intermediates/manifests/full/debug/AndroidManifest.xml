@@ -280,6 +280,14 @@
             android:name="com.android.ruifeng.hi.TestActivity"
             android:label="@string/title_activity_test" >
         </activity>
+        <activity
+            android:name="com.hi.module.self.ui.selfmodule.SelfModuleActivity"
+            android:label="@string/title_activity_self_module" >
+        </activity>
+        <activity
+            android:name="com.hi.module.self.ui.selfSetting.SeflSetting"
+            android:label="@string/title_activity_sefl_setting" >
+        </activity>
     </application>
 
 </manifest>

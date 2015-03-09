@@ -6,7 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/ExpandListLibrary/ExpandListLibrary.iml" filepath="$PROJECT_DIR$/ExpandListLibrary/ExpandListLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hi_Code/Hi_Code.iml" filepath="$PROJECT_DIR$/Hi_Code/Hi_Code.iml" />
       <module fileurl="file://$PROJECT_DIR$/SMSSDK/SMSSDK.iml" filepath="$PROJECT_DIR$/SMSSDK/SMSSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TagView/TagView.iml" filepath="$PROJECT_DIR$/TagView/TagView.iml" />
       <module fileurl="file://$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" filepath="$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circleimageview/circleimageview.iml" filepath="$PROJECT_DIR$/circleimageview/circleimageview.iml" />
       <module fileurl="file://$PROJECT_DIR$/kaixinguo.iml" filepath="$PROJECT_DIR$/kaixinguo.iml" />
     </modules>
   </component>

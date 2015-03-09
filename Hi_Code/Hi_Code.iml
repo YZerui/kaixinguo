@@ -78,9 +78,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="android-support-v4" level="project" />
-    <orderEntry type="library" exported="" name="avossearch-v2.6.9.1" level="project" />
     <orderEntry type="library" exported="" name="junit4.4" level="project" />
+    <orderEntry type="library" exported="" name="avossearch-v2.6.9.1" level="project" />
     <orderEntry type="library" exported="" name="com.haarman.listviewanimations-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Wechat-Moments-2.3.12" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-QQ-2.3.12" level="project" />
@@ -90,8 +89,8 @@
     <orderEntry type="library" exported="" name="mta-sdk-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="avospush-v2.6.9.1" level="project" />
     <orderEntry type="library" exported="" name="jackson-all-1.7.6" level="project" />
-    <orderEntry type="library" exported="" name="ShareSDK-Wechat-Favorite-2.3.12" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-QZone-2.3.12" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Wechat-Favorite-2.3.12" level="project" />
     <orderEntry type="library" exported="" name="avosstatistics-v2.6.9.1" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Core-2.3.12" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.2" level="project" />
@@ -108,6 +107,8 @@
     <orderEntry type="library" exported="" name="qiniu-android-sdk-7.0.0" level="project" />
     <orderEntry type="library" exported="" name="httpmime-4.2.4" level="project" />
     <orderEntry type="module" module-name="SMSSDK" exported="" />
+    <orderEntry type="module" module-name="circleimageview" exported="" />
+    <orderEntry type="module" module-name="TagView" exported="" />
     <orderEntry type="module" module-name="CustomViewLibrary" exported="" />
     <orderEntry type="module" module-name="ExpandListLibrary" exported="" />
     <orderEntry type="module" module-name="UtilsLibrary" exported="" />

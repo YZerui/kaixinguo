@@ -19,5 +19,9 @@
     <string name="title_activity_test">TestActivity</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_self_module">SelfModuleActivity</string>
+    <string name="module_self_page_title">我</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_sefl_setting">SeflSetting</string>
 
 </resources>

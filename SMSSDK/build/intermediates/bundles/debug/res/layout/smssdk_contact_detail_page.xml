@@ -82,4 +82,4 @@
     	android:textSize="16sp"
     	android:textColor="#ffffff"
 	    android:background="@drawable/smssdk_btn_enable"/>
-</LinearLayout><!-- From: file:/D:/CodeWorkSpace/AndroidStudio/kaixinguo/SMSSDK/res/layout/smssdk_contact_detail_page.xml -->
+</LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/SMSSDK/res/layout/smssdk_contact_detail_page.xml -->
