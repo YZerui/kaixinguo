@@ -1,54 +1,28 @@
 package com.hi.module.self.ui;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Gravity;
-import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.view.animation.AnticipateOvershootInterpolator;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.ruifeng.hi.R;
 import com.customview.callBack.topBarCallBack;
 import com.customview.view.CustomTopbarView;
 import com.exception.utils.P;
-import com.hi.common.API;
-import com.hi.common.EXCEPTION_CODE;
-import com.hi.common.PARAMS;
 import com.hi.common.db.E_DB_SelfIfo;
 import com.hi.common.http.E_Http_InfoType;
-import com.hi.dao.supImpl.Dao_Params;
 import com.hi.dao.supImpl.Dao_SelfIfo;
 import com.hi.http.base.Call_httpData;
 import com.hi.http.member.model.Req_UpdateIfo;
 import com.hi.http.member.req.Http_UpdateIfo;
-import com.hi.module.base.application.ThreadPool;
-import com.hi.module.base.callBack.httpResultCallBack;
 import com.hi.module.base.superClass.RequestActivity;
-import com.hi.module.self.model.ReqAlterIfoBean;
-import com.hi.service.HttpResultService;
 import com.hi.utils.AnimationUtil;
-import com.hi.utils.DBUtils;
 import com.hi.utils.DeviceUtils;
 import com.hi.utils.FormatUtils;
-import com.hi.utils.HttpUtils;
-import com.hi.utils.ViewHandleUtils;
 import com.hi.view.customWidget.StrericWheelAdapter;
 import com.hi.view.customWidget.WheelView;
 import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.exception.HttpException;
-import com.lidroid.xutils.http.ResponseInfo;
-import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
 public class SelfBirthdayDialog extends RequestActivity {

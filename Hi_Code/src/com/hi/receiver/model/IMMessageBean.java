@@ -8,7 +8,11 @@ import org.json.JSONObject;
 import com.avos.avoscloud.AVMessage;
 import com.exception.utils.P;
 import com.format.utils.Md5Util;
+import com.hi.common.http.E_Http_SendState;
+import com.hi.dao.model.T_IMsg;
 import com.hi.dao.supImpl.Dao_SelfIfo;
+import com.hi.module.msg.service.ChatUtils;
+import com.hi.utils.DeviceUtils;
 import com.hi.utils.ParseJson;
 
 /**
@@ -98,7 +102,36 @@ public class IMMessageBean {
 		// private long m_timestamp;
 		private int m_type;
 		private int m_formate;
+        private AVMessage internalMessage;
+        public AVMessage getInternalMessage() {
+            return internalMessage;
+        }
 
+        public void setInternalMessage(AVMessage internalMessage) {
+            this.internalMessage = internalMessage;
+        }
+        public T_IMsg toT_IMsg(int identity, int msgType, int imageUrlMode) {
+            T_IMsg msgBean = new T_IMsg();
+            msgBean.setObjectId(getObjectId());
+            msgBean.setHead(getU_head());
+            msgBean.setIdentity(identity);// 身份为对方
+            msgBean.setMid(Dao_SelfIfo.getInstance().getMid());
+            msgBean.setMsg(getM_content());
+            msgBean.setMsgFormat(getM_formate());
+            msgBean.setMsgType(msgType);
+            msgBean.setTime(getTimestamp());
+            msgBean.setName(getU_name());
+            msgBean.setUid(getU_sendID());
+            msgBean.setImageUrlMode(imageUrlMode);
+            msgBean.setWifiMac(DeviceUtils.getWifiMac());
+            msgBean.setConvid(ChatUtils.convid(msgBean.getMid(), msgBean.getUid()));
+            //对接收到的消息在本地设定发送状态为 “到达”
+            msgBean.setSendState(E_Http_SendState.DELIVERED.value());
+            return msgBean;
+        }
+        public long getTimestamp() {
+            return internalMessage.getTimestamp();
+        }
 		public String getU_animID() {
 			return u_animID;
 		}
@@ -267,6 +300,7 @@ public class IMMessageBean {
 			jsonObject.put("objectId", msgBean.getObjectId());
 			jsonObject.put("m_type",msgBean.getM_type());
 			jsonObject.put("m_formate", msgBean.getM_formate());
+            jsonObject.put("u_sendID",Dao_SelfIfo.getInstance().getMid());
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;

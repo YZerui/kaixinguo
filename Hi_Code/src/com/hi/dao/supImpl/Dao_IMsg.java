@@ -1,10 +1,12 @@
 package com.hi.dao.supImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.exception.utils.P;
 import com.format.utils.DataValidate;
 import com.hi.common.db.E_DB_IMsg;
+import com.hi.common.db.E_DB_ImgUrlMode;
 import com.hi.common.db.E_DB_Msg;
 import com.hi.common.http.E_Http_SendState;
 import com.hi.common.param.Enum_ListLimit;
@@ -67,6 +69,32 @@ public class Dao_IMsg extends SuperDaoImpl {
 		}
 	}
 
+    /**
+     * 更新某条信息的发送状态
+     * @param objectId
+     * @param sendState
+     */
+    public static void updateMsgState(String objectId,E_Http_SendState sendState){
+        T_IMsg iMsg=new T_IMsg();
+        iMsg.setSendState(sendState.value());
+        try {
+            db.update(iMsg,WhereBuilder.b(E_DB_IMsg.objectId.name(),"=",objectId),E_DB_IMsg.sendState.name());
+        } catch (DbException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void updateImageMode(String objectId,String imgUrl,E_DB_ImgUrlMode urlMode){
+        T_IMsg iMsg=new T_IMsg();
+        iMsg.setImageUrlMode(urlMode.value());
+        iMsg.setMsg(imgUrl);
+        try {
+            db.update(iMsg,WhereBuilder.b(E_DB_IMsg.objectId.name(),"=",objectId),
+                    E_DB_IMsg.msg.name(),E_DB_IMsg.ImageUrlMode.name());
+        } catch (DbException e) {
+            e.printStackTrace();
+        }
+    }
 	/**
 	 * 删除和某用户间的所有记录
 	 * 
@@ -112,6 +140,7 @@ public class Dao_IMsg extends SuperDaoImpl {
 	 */
 	public static synchronized void addMessage(T_IMsg iMsg, boolean unRead,
 			boolean isRefresh) {
+        P.v("addMessage...");
 		try {
 			if (checkExist(iMsg.getObjectId())) {
 				return;
@@ -181,12 +210,33 @@ public class Dao_IMsg extends SuperDaoImpl {
 		}
 		return null;
 	}
+	/**
+	 * 获取和某用户间的对话
+	 *
+	 * @return
+	 */
+	public static List<T_IMsg> getMessage2(String convid, int msgSize) {
+		// TODO Auto-generated method stub
+		try {
+			int length = Enum_ListLimit.MSG_LIST.value();
+			List<T_IMsg> msgList = db.findAll(Selector
+					.from(T_IMsg.class)
+					.where(E_DB_IMsg.convid.name(), "=", convid)
+					.and(E_DB_IMsg.sendState.name(), "<>",
+                            E_Http_SendState.HIDE.value())
+					.orderBy(E_DB_IMsg.time.name(),true).limit(msgSize))
+					;
+			return msgList;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return new ArrayList<T_IMsg>();
+	}
 
 	/**
 	 * 获取和某用户间最新的N条对话
 	 * 
 	 * @param uid
-	 * @param index
 	 * @return
 	 */
 	public static List<T_IMsg> getMessageNum(String uid, int num) {
@@ -209,7 +259,6 @@ public class Dao_IMsg extends SuperDaoImpl {
 	 * 获取和某用户间最新的对话
 	 * 
 	 * @param uid
-	 * @param index
 	 * @return
 	 */
 	public static T_IMsg getNewestMessage(String uid) {

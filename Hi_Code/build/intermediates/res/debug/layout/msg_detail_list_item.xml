@@ -31,52 +31,14 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/leftPartLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/relative"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/msg_detail_icon_layout" >
-
-        <View
-            android:id="@+id/view_2"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:background="#A6A6A6" />
-
-        <FrameLayout
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:background="#fff" >
-
-            <ImageView
-                android:id="@+id/msg_detail_note_icon"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-            />
-
-            <ProgressBar
-                android:id="@+id/customProgress"
-                style="@style/customProgressBar"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:visibility="invisible" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
         android:id="@+id/relative"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:minHeight="80dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/leftPartLayout"
-        android:paddingBottom="10dp"
+        android:layout_marginLeft="95dp"
         android:background="@drawable/btn_selector_bg"
+        android:paddingBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp" >
 
@@ -89,8 +51,8 @@
             android:paddingLeft="5dp"
             android:singleLine="true"
             android:text="活动预告"
-            android:textColor="@color/list_item_firstlevel_content_color"
-            android:textSize="@dimen/list_item_firstlevel_content_size" />
+            android:textColor="#5000"
+            android:textSize="12dp" />
 
         <RelativeLayout
             android:id="@+id/msg_detail_layout"
@@ -133,6 +95,48 @@
             android:text="18:60"
             android:textColor="@color/list_item_topright_content_color"
             android:textSize="@dimen/list_item_righttop_content_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/leftPartLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/relative"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/msg_detail_icon_layout" >
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="0.3dp"
+            android:layout_height="fill_parent"
+            android:minHeight="1200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+          android:background="#5000"
+            />
+
+        <FrameLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/msg_detail_note_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                />
+
+            <ProgressBar
+                android:id="@+id/customProgress"
+                style="@style/customProgressBar"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="invisible" />
+        </FrameLayout>
     </RelativeLayout>
 
     <View

@@ -8,6 +8,7 @@ package com.hi.common.db;
 public enum E_DB_IMsg {
 	mid,
 	uid,
+    convid,
 	head,
 	name,
 	msg,
@@ -17,5 +18,6 @@ public enum E_DB_IMsg {
 	msgFormat,
 	wifiMac,
 	objectId,
+    ImageUrlMode,
 	sendState;
 }

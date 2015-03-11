@@ -1,13 +1,5 @@
 package com.hi.module.locale.ui.local;
 
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.json.JSONObject;
-
-import cn.sharesdk.framework.network.c;
-
 import com.android.ruifeng.hi.R;
 import com.customview.callBack.topBarCallBack;
 import com.customview.view.CustomItemView;
@@ -27,7 +19,7 @@ import com.hi.utils.AnimationUtil;
 import com.hi.utils.DBUtils;
 import com.hi.utils.DeviceUtils;
 import com.hi.utils.FormatUtils;
-import com.hi.utils.HttpUtils;
+import com.hi.utils.network.HttpUtils;
 import com.hi.view.RoundedImageView;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;

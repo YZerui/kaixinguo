@@ -4,44 +4,23 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import com.android.ruifeng.hi.R;
 import com.format.utils.DataValidate;
 import com.hi.adapter.MyFragmentAdapter;
-import com.hi.common.API;
-import com.hi.common.EXCEPTION_CODE;
 import com.hi.dao.supImpl.Dao_SelfIfo;
 import com.hi.http.base.Call_httpData;
 import com.hi.http.member.model.Recv_UserIfo;
 import com.hi.http.member.model.Req_UserIfo;
 import com.hi.http.member.req.Http_GetUserIfo;
-import com.hi.module.base.application.ShareUnitDialog;
-import com.hi.module.base.application.ThreadPool;
-import com.hi.module.base.superClass.RequestFragment;
-import com.hi.module.locale.model.RecvPhotoUrlBean;
-import com.hi.module.locale.model.RecvUserIfoBean;
-import com.hi.module.locale.model.ReqUserIfoBean;
 import com.hi.module.locale.ui.leavenote.LeaveNoteEditActivity;
 import com.hi.module.locale.ui.leavenote.LeaveNoteFragment;
 import com.hi.module.locale.ui.local.LocalSettingActivity;
 import com.hi.module.locale.ui.local.UserDetailFragment;
 import com.hi.module.locale.ui.local.UserImgFragment;
-import com.hi.module.msg.ui.MsgDetailActivity;
-import com.hi.module.self.model.RecvImgUrlBean;
 import com.hi.utils.AnimationUtil;
-import com.hi.utils.DBUtils;
-import com.hi.utils.HttpUtils;
-import com.hi.utils.ParseJson;
-import com.hi.utils.ScreenShot;
-import com.hi.view.RoundedImageView;
-import com.thread.RunnableService;
-import com.thread.callBack.runCallBack;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -49,12 +28,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
-import android.widget.RadioGroup.OnCheckedChangeListener;
-import android.widget.Toast;
 
 /**
  * 控制用户详情页面的类
