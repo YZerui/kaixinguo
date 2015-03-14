@@ -16,6 +16,7 @@ import com.customview.view.CustomTopbarView;
 import com.hi.module.base.img.adapter.ImageGridAdapter;
 import com.hi.module.base.superClass.SuperActivity;
 import com.hi.utils.AnimationUtil;
+import com.hi.utils.network.NetAsyncTask;
 import com.imagefetch.model.ImageItem;
 import com.imagefetch.util.ImageFetcher;
 import com.imagefetch.util.IntentConstants;
@@ -57,24 +58,37 @@ public class ImageTotalPage extends SuperActivity {
 	@SuppressWarnings("unchecked")
 	private void intentValue() {
 		// TODO Auto-generated method stub
-		new RunnableService(new runCallBack() {
+        new NetAsyncTask(this,true){
 
-			@Override
-			public void start() {
-				// TODO Auto-generated method stub
-				// mDataList =
-				// ImageFetcher.getInstance(context).getImagesAllItemList(false);
-				mStrList = ImageFetcher.getInstance(context)
-						.getImagesAllStringList(false);
-			}
+            @Override
+            protected void doInBack() throws Exception {
+                mStrList = ImageFetcher.getInstance(context)
+                        .getImagesAllStringList(false);
+            }
 
-			@Override
-			public void end() {
-				// TODO Auto-generated method stub
-				handlerExtend.onFinally();
-			}
-
-		}, true);
+            @Override
+            protected void onPost(Exception e) {
+                init();
+            }
+        }.execute();
+//		new RunnableService(new runCallBack() {
+//
+//			@Override
+//			public void start() {
+//				// TODO Auto-generated method stub
+//				// mDataList =
+//				// ImageFetcher.getInstance(context).getImagesAllItemList(false);
+//				mStrList = ImageFetcher.getInstance(context)
+//						.getImagesAllStringList(false);
+//			}
+//
+//			@Override
+//			public void end() {
+//				// TODO Auto-generated method stub
+//				handlerExtend.onFinally();
+//			}
+//
+//		}, true);
 
 	}
 
@@ -107,32 +121,32 @@ public class ImageTotalPage extends SuperActivity {
 		});
 	}
 
-	HandlerExtend handlerExtend = new HandlerExtend(new handleCallBack() {
-
-		@Override
-		public void call_onInit() {
-			// TODO Auto-generated method stub
-
-		}
-
-		@Override
-		public void call_onLoad() {
-			// TODO Auto-generated method stub
-
-		}
-
-		public void call_onFinally() {
-			// if (mDataList == null)
-			// mDataList = new ArrayList<ImageItem>();
-			// mBucketName = getIntent().getStringExtra(
-			// IntentConstants.EXTRA_BUCKET_NAME);
-			// if (TextUtils.isEmpty(mBucketName)) {
-			// mBucketName = "«Î—°‘Ò";
-			// }
-			init();
-		};
-
-	});
+//	HandlerExtend handlerExtend = new HandlerExtend(new handleCallBack() {
+//
+//		@Override
+//		public void call_onInit() {
+//			// TODO Auto-generated method stub
+//
+//		}
+//
+//		@Override
+//		public void call_onLoad() {
+//			// TODO Auto-generated method stub
+//
+//		}
+//
+//		public void call_onFinally() {
+//			// if (mDataList == null)
+//			// mDataList = new ArrayList<ImageItem>();
+//			// mBucketName = getIntent().getStringExtra(
+//			// IntentConstants.EXTRA_BUCKET_NAME);
+//			// if (TextUtils.isEmpty(mBucketName)) {
+//			// mBucketName = "«Î—°‘Ò";
+//			// }
+//			init();
+//		};
+//
+//	});
 
 	@Override
 	public void finish() {

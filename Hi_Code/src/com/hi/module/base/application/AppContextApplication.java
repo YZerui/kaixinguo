@@ -37,12 +37,27 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.thread.RunnableService;
 import com.thread.callBack.runCallBack;
 
+import org.apache.http.HttpVersion;
+import org.apache.http.client.HttpClient;
+import org.apache.http.conn.ClientConnectionManager;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.params.HttpProtocolParams;
+import org.apache.http.protocol.HTTP;
+
 /**
  * Created with IntelliJ IDEA. User: tangxiaomin Date: 4/19/13 Time: 12:57 PM
  */
 public class AppContextApplication extends Application {
 	private static AppContextApplication instance;
-
+    private HttpClient httpClient;
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@SuppressWarnings("unused")
 	@Override
@@ -75,8 +90,42 @@ public class AppContextApplication extends Application {
 		initFaceData();
 		//创建本地sd卡文件夹
 		createSDFolder();
-	}
 
+        httpClient = this.createHttpClient();
+	}
+    // 创建HttpClient实例
+    private HttpClient createHttpClient() {
+        HttpParams params = new BasicHttpParams();
+        HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
+        HttpProtocolParams.setContentCharset(params,
+                HTTP.DEFAULT_CONTENT_CHARSET);
+        HttpProtocolParams.setUseExpectContinue(params, true);
+        HttpConnectionParams.setConnectionTimeout(params, 20 * 1000);
+        HttpConnectionParams.setSoTimeout(params, 20 * 1000);
+        HttpConnectionParams.setSocketBufferSize(params, 8192);
+        SchemeRegistry schReg = new SchemeRegistry();
+        schReg.register(new Scheme("http", PlainSocketFactory
+                .getSocketFactory(), 80));
+        schReg.register(new Scheme("https",
+                SSLSocketFactory.getSocketFactory(), 443));
+
+        ClientConnectionManager connMgr = new ThreadSafeClientConnManager(
+                params, schReg);
+
+        return new DefaultHttpClient(connMgr, params);
+    }
+
+    // 关闭连接管理器并释放资源
+    private void shutdownHttpClient() {
+        if (httpClient != null && httpClient.getConnectionManager() != null) {
+            httpClient.getConnectionManager().shutdown();
+        }
+    }
+
+    // 对外提供HttpClient实例
+    public HttpClient getHttpClient() {
+        return httpClient;
+    }
 	private void createSDFolder() {
 		// TODO Auto-generated method stub
 		File file=new File(COMMON.APP_FILE_FOLDER);

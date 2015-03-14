@@ -121,7 +121,7 @@ import com.xlistview.XListView.listHttpCallBack;
  * @author MM_Zerui
  * @tip_1 当返回键触发时，将对未读数量进行情况（根据当前对方UID）
  */
-public class MsgDetailActivity extends ListActivity implements MessageListener {
+public class MsgDetailActivity extends ListActivity implements MessageListener, ImageSelectPage.ImageSelectListener {
     private static final int IMAGE_REQUEST = 100;
     private static final int TAKE_CAMERA_REQUEST = 101;
     private String MSG_EDIT_TEXT = "MSG_EDIT_TEXT";
@@ -175,7 +175,7 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
         super.onCreate(savedInstanceState);
         registerReceive();
         initEmotionPager();
-        ImageSelectPage.ifSelect = false;// 标识图片未选取
+//        ImageSelectPage.ifSelect = false;// 标识图片未选取
     }
 
     /**
@@ -342,7 +342,7 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
 //                        dbReq.onInit();
 //                    }
 //                }, 300);
-                loadMsgsFromDB(true,true);
+                loadMsgsFromDB(true, true);
             }
 
             @Override
@@ -350,7 +350,7 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
                 // TODO Auto-generated method stub
 //				dbReq.onLoad();
                 msgSize += PAGE_SIZE;
-                loadMsgsFromDB(false,true);
+                loadMsgsFromDB(false, true);
 //                new GetDataTask(context,false,false).execute();
             }
 
@@ -538,14 +538,14 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
                     msgAgent.createAndSendMsg(new MsgAgent.MsgBuilderHelper() {
                         @Override
                         public void specifyType(MsgBuilder msgBuilder) {
-                            msgBuilder.sendImg(localCameraPath,E_DB_ImgUrlMode.LOCAL.value());
+                            msgBuilder.sendImg(localCameraPath, E_DB_ImgUrlMode.LOCAL.value());
                         }
 
                         @Override
                         public void setFromUserInfo(MsgBuilder msgBuilder) {
-                            msgBuilder.setFromIdInfo(oppoName,head);
+                            msgBuilder.setFromIdInfo(oppoName, head);
                         }
-                    },new DefaultSendCallback(){
+                    }, new DefaultSendCallback() {
                         @Override
                         public void onSuccess(T_IMsg msg) {
                             super.onSuccess(msg);
@@ -783,21 +783,58 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
 //				.send();
     }
 
+    /**
+     * 图片是否选取
+     *
+     * @param isSelect
+     */
+    @Override
+    public void isImageSelect(boolean isSelect) {
+        if(!isSelect){
+            topBar.onNoteText("未选取图片");
+            return;
+        }
+        if (!isStateFine()) {
+            return;
+        }
+        if (!checkAccostAvailable()) {
+            topBar.onNoteText(accostNote);
+            return;
+        }
+        msgAgent.createAndSendMsg(new MsgAgent.MsgBuilderHelper() {
+                @Override
+                public void specifyType(MsgBuilder msgBuilder) {
+                    msgBuilder.sendImg(ImageSelectPage.imgPath,E_DB_ImgUrlMode.LOCAL.value());
+                }
+
+                @Override
+                public void setFromUserInfo(MsgBuilder msgBuilder) {
+                    msgBuilder.setFromIdInfo(oppoName,head);
+                }
+            },new DefaultSendCallback(){
+                @Override
+                public void onSuccess(T_IMsg msg) {
+                    super.onSuccess(msg);
+                }
+            });
+
+    }
+
     class DefaultSendCallback implements MsgAgent.SendCallback {
         @Override
         public void onError(Exception e) {
             e.printStackTrace();
-            loadMsgsFromDB(false,false);
+            loadMsgsFromDB(false, false);
         }
 
         @Override
         public void onStart(T_IMsg msg) {
-            loadMsgsFromDB(true,false);
+            loadMsgsFromDB(true, false);
         }
 
         @Override
         public void onSuccess(T_IMsg msg) {
-            loadMsgsFromDB(false,false);
+            loadMsgsFromDB(false, false);
         }
     }
 
@@ -931,27 +968,28 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
         // TODO Auto-generated method stub
         super.onResume();
 //		IMessageReceiver.registerSessionListener(userId, this);
+        ImageSelectPage.addImageSelect(this);
         IMessageReceiver.addMsgListener(this);
-        ImageLoader.getInstance().recycleCache();
-        if(ImageSelectPage.ifSelect){
-            msgAgent.createAndSendMsg(new MsgAgent.MsgBuilderHelper() {
-                @Override
-                public void specifyType(MsgBuilder msgBuilder) {
-                    msgBuilder.sendImg(ImageSelectPage.imgPath,E_DB_ImgUrlMode.LOCAL.value());
-                }
-
-                @Override
-                public void setFromUserInfo(MsgBuilder msgBuilder) {
-                    msgBuilder.setFromIdInfo(oppoName,head);
-                }
-            },new DefaultSendCallback(){
-                @Override
-                public void onSuccess(T_IMsg msg) {
-                    super.onSuccess(msg);
-                }
-            });
-
-        }
+//        ImageLoader.getInstance().recycleCache();
+//        if(ImageSelectPage.ifSelect){
+//            msgAgent.createAndSendMsg(new MsgAgent.MsgBuilderHelper() {
+//                @Override
+//                public void specifyType(MsgBuilder msgBuilder) {
+//                    msgBuilder.sendImg(ImageSelectPage.imgPath,E_DB_ImgUrlMode.LOCAL.value());
+//                }
+//
+//                @Override
+//                public void setFromUserInfo(MsgBuilder msgBuilder) {
+//                    msgBuilder.setFromIdInfo(oppoName,head);
+//                }
+//            },new DefaultSendCallback(){
+//                @Override
+//                public void onSuccess(T_IMsg msg) {
+//                    super.onSuccess(msg);
+//                }
+//            });
+//
+//        }
 //        if (ImageSelectPage.ifSelect) {
 //            if (!checkAccostAvailable()) {
 //                topBar.onNoteText(accostNote);
@@ -989,6 +1027,7 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
         super.onPause();
 //        IMessageReceiver.unregisterSessionListener(userId);
         IMessageReceiver.removeMsgListener(this);
+
     }
 
     @Override
@@ -1000,23 +1039,23 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
 
         // unwatch对方
         IMService.unwatchPeer(userId);
-
+        ImageSelectPage.removeSelectListener(this);
     }
 
     @Override
-    public boolean onMessageUpdate(String otherId,T_IMsg msgBean) {
+    public boolean onMessageUpdate(String otherId, T_IMsg msgBean) {
         if (otherId.equals(userId)) {
-            if(msgBean!=null){
-                Dao_IMsg.addMessage(msgBean,false,true);
+            if (msgBean != null) {
+                Dao_IMsg.addMessage(msgBean, false, true);
             }
-            loadMsgsFromDB(true,false);
+            loadMsgsFromDB(true, false);
             return true;
         }
         return false;
     }
 
-    private void loadMsgsFromDB(boolean b,boolean isRefresh) {
-        new GetDataTask(context, false,b,isRefresh).execute();
+    private void loadMsgsFromDB(boolean b, boolean isRefresh) {
+        new GetDataTask(context, false, b, isRefresh).execute();
     }
 
     @Override
@@ -1037,12 +1076,13 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
 
     class GetDataTask extends NetAsyncTask {
         boolean scrollToLast = true;
-        boolean isRefresh=true;
-        List<T_IMsg> datas=new ArrayList<>();
-        GetDataTask(Context ctx, boolean isDialog, boolean scroolToLast,boolean isRefresh) {
+        boolean isRefresh = true;
+        List<T_IMsg> datas = new ArrayList<>();
+
+        GetDataTask(Context ctx, boolean isDialog, boolean scroolToLast, boolean isRefresh) {
             super(ctx, isDialog);
-            this.scrollToLast=scroolToLast;
-            this.isRefresh=isRefresh;
+            this.scrollToLast = scroolToLast;
+            this.isRefresh = isRefresh;
         }
 
         @Override
@@ -1058,8 +1098,8 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
             if (e != null) {
                 ViewHandleUtils.toastNormal("网络环境不佳");
             }
-            if(!DataValidate.checkDataValid(items)){
-               items=new ArrayList<>();
+            if (!DataValidate.checkDataValid(items)) {
+                items = new ArrayList<>();
             }
             addMsgsAndRefresh(datas, scrollToLast);
         }
@@ -1079,13 +1119,14 @@ public class MsgDetailActivity extends ListActivity implements MessageListener {
 //                }
             }
             xListView.onLoadStop();
-            P.v("本次加载数:"+(newN-lastN));
-            if (isRefresh&&(newN-lastN< PAGE_SIZE)) {
+            P.v("本次加载数:" + (newN - lastN));
+            if (isRefresh && (newN - lastN < PAGE_SIZE)) {
                 xListView.setPullRefreshEnable(false);
             } else {
                 xListView.setPullRefreshEnable(true);
             }
         }
+
     }
 
     private void scrollToLast() {

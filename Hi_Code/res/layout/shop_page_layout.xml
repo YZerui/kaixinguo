@@ -41,12 +41,14 @@
     </RelativeLayout>
 
     <include
-        android:id="@+id/leave_item_more" 
+        android:id="@+id/leave_item_more"
+        android:visibility="gone"
         layout="@layout/include_shop_leave_item" />
 
     <View
         style="@style/split_line_view"
         android:layout_height="1dp"
+
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
 

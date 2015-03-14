@@ -32,6 +32,7 @@ public class TabView extends LinearLayout {
 //		// imageView.set
 		imageView.setLayoutParams(new LayoutParams(
 				LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+        imageView.setPadding(5,8,5,8);
 		setGravity(Gravity.CENTER);
 		// set
 		// setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,

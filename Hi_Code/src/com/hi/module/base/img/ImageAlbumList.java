@@ -21,6 +21,8 @@ import com.hi.module.base.superClass.SuperActivity;
 import com.hi.module.locale.ui.leavenote.ImgSelectDialog;
 import com.hi.module.self.ui.ImgSetDialog;
 import com.hi.utils.AnimationUtil;
+import com.hi.utils.Benchmark;
+import com.hi.utils.network.NetAsyncTask;
 import com.imagefetch.model.ImageBucket;
 import com.imagefetch.util.ImageFetcher;
 import com.imagefetch.util.IntentConstants;
@@ -47,12 +49,29 @@ public class ImageAlbumList extends SuperActivity{
 		setContentView(R.layout.img_album_list_layout);
 		ViewUtils.inject(this);
 		super.onCreate(savedInstanceState);
-		onInit();
+        getAlbumList();
 	}
-	private void onInit() {
+
+    private void getAlbumList() {
+        new NetAsyncTask(context,true){
+
+            @Override
+            protected void doInBack() throws Exception {
+                mHelper = ImageFetcher.getInstance(getApplicationContext());
+                mDataList=mHelper.getImagesBucketList(false);
+            }
+
+            @Override
+            protected void onPost(Exception e) {
+                onInit();
+            }
+        }.execute();
+    }
+
+    private void onInit() {
 		// TODO Auto-generated method stub
-		mHelper = ImageFetcher.getInstance(getApplicationContext());
-		mDataList=mHelper.getImagesBucketList(false);
+
+
 		if(!DataValidate.checkDataValid(mDataList)){
 			return;
 		}
@@ -100,6 +119,7 @@ public class ImageAlbumList extends SuperActivity{
 		// TODO Auto-generated method stub
 		super.finish();
 		AppManager.getAppManager().finishActivity(ImgSelectDialog.class);
+
 		AppManager.getAppManager().finishActivity(ImgSetDialog.class);
 		AnimationUtil.finishOut2Bottom(context);
 		//设定是否截图的标识

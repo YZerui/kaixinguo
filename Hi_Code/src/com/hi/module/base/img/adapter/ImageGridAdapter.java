@@ -6,6 +6,7 @@ import com.android.ruifeng.hi.R;
 import com.exception.utils.P;
 import com.hi.module.base.img.ImageLoader;
 import com.hi.module.base.img.ImageLoader.Type;
+import com.hi.utils.imgLoadUtil.ImageManager2;
 import com.imagefetch.util.ImageDisplayer;
 import com.lidroid.xutils.bitmap.callback.BitmapLoadFrom;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
@@ -73,10 +74,13 @@ public class ImageGridAdapter extends BaseAdapter {
 
 		final String item = mDataList.get(position);
 
-		// P.v("url:"+item);
+		P.v("url:"+item);
 		// String url="/storage/emulated/0/hi/image/1420267946989.png";
-		mHolder.imageIv.setImageResource(R.drawable.default_load_img);
-		ImageLoader.getInstance(3, Type.FIFO).loadImage(item, mHolder.imageIv);
+//		mHolder.imageIv.setImageResource(R.drawable.default_load_img);
+//		ImageLoader.getInstance(3, Type.FIFO).loadImage(item, mHolder.imageIv);
+
+        ImageManager2.from(mContext).displayImage(mHolder.imageIv,
+                item, R.drawable.default_load_img, 100, 100);
 //		 imageLoader.displayImage("file://"+item, mHolder.imageIv,
 //		 loadOptions);
 		return convertView;
