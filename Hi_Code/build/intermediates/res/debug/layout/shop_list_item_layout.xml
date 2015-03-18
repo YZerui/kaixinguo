@@ -10,7 +10,7 @@
         android:orientation="horizontal" >
 
         <RelativeLayout
-            android:layout_width="80dp"
+            android:layout_width="120dp"
             android:layout_height="80dp"
             android:layout_gravity="center_vertical" >
 
@@ -18,13 +18,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#fff"
-                android:padding="5dp" >
+                android:padding="1dp" >
 
                 <ImageView
                     android:id="@+id/shopIcon"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:layout_margin="3dp" />
+                     />
                 <!-- image corner -->
 
                 <ImageView
@@ -51,43 +51,43 @@
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1.2" >
 
                     <TextView
                         android:id="@+id/shopItemName"
                         style="@style/shop_item_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
                         android:text="必胜客" />
 
-                    <CheckBox
-                        android:id="@+id/shopComment"
-                        style="@style/StoreLikeCheckboxTheme"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="10dp"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false" />
+                    <!--<CheckBox-->
+                        <!--android:id="@+id/shopComment"-->
+                        <!--style="@style/StoreLikeCheckboxTheme"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:focusable="false"-->
+                        <!--android:focusableInTouchMode="false" />-->
                 </RelativeLayout>
                 <!-- 信息 -->
 
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1.2" >
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_weight="1.2" >-->
 
-                    <TextView
-                        android:id="@+id/shopItemMsg"
-                        style="@style/shop_item_msg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="2dp"
-                        android:text="5个关注" />
-                </RelativeLayout>
+                    <!--<TextView-->
+                        <!--android:id="@+id/shopItemMsg"-->
+                        <!--style="@style/shop_item_msg"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="2dp"-->
+                        <!--android:text="5个关注" />-->
+                <!--</RelativeLayout>-->
                 <!-- 地点 -->
 
                 <RelativeLayout
@@ -95,24 +95,24 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1" >
 
-                    <ImageView
-                        android:id="@+id/siteIcon"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/business_location_icon" />
+                    <!--<ImageView-->
+                        <!--android:id="@+id/siteIcon"-->
+                        <!--android:layout_width="15dp"-->
+                        <!--android:layout_height="15dp"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:src="@drawable/business_location_icon" />-->
 
                     <TextView
-                        android:id="@+id/shop_item_address"
+                        android:id="@+id/shop_item_intro"
                         style="@style/shop_item_site"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/siteIcon"
-                        android:maxEms="8"
-                        android:singleLine="true"
-                        android:text="南山区南头" />
+                        android:paddingRight="5dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="南山区南头南山区南头南山南山区南头区南南山区南头南山区南头南山区南头头南山区南头" />
 
                     <TextView
                         android:id="@+id/shop_item_distance"

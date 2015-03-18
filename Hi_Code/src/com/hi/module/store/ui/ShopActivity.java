@@ -13,8 +13,10 @@ import android.widget.RelativeLayout;
 
 import com.android.ruifeng.hi.R;
 import com.customview.callBack.pageCallBack;
+import com.customview.callBack.topBarCallBack;
 import com.customview.view.CustomPageView;
 
+import com.customview.view.CustomTopbarView;
 import com.hi.adapter.ShopItemAdapter;
 import com.hi.adapter.ShopItemAdapter.onItemCommentClickListener;
 import com.hi.common.API;
@@ -28,6 +30,7 @@ import com.hi.module.base.superClass.ListActivity;
 import com.hi.module.store.model.RecvStoreCommentBean;
 import com.hi.utils.AnimationUtil;
 import com.hi.utils.DBUtils;
+import com.hi.utils.ViewHandleUtils;
 import com.hi.utils.network.HttpUtils;
 import com.hi.view.ActionItem;
 import com.hi.view.customLayout.TitlePopup;
@@ -52,17 +55,18 @@ import com.xlistview.XListView.listHttpCallBack;
 public class ShopActivity extends ListActivity {
 	private ShopItemAdapter adapter;
 	private List<Recv_StoreList> items;
-	private TitlePopup titlePopup;
-	
+//	private TitlePopup titlePopup;
 	private Req_StoreList reqBean;
 	private Http_StoreList httpReq;
-	@ViewInject(R.id.store_seq_list_btn)
-	private RelativeLayout seqListBtn;
+
+//	@ViewInject(R.id.store_seq_list_btn)
+//	private RelativeLayout seqListBtn;
 	@ViewInject(R.id.xListView)
 	private XListView xListView;
 	@ViewInject(R.id.pageView)
 	private CustomPageView pageView;
-	
+	@ViewInject(R.id.topBar)
+    private CustomTopbarView topBar;
 	@ViewInject(R.id.leave_item_more)
 	private View leaveMoreItem;
 	// 动画工具
@@ -104,12 +108,25 @@ public class ShopActivity extends ListActivity {
 
 	@Override
 	protected void initResource() {
+        if(initBool){
+            pageView.onProgressOnly().setVisibility(View.VISIBLE);
+            initBool=false;
+        }
 		reqBean=new Req_StoreList();
 	
 		items = new ArrayList<Recv_StoreList>();
 		adapter = new ShopItemAdapter(context);
 		adapter.setOnItemCommentClickListener(onItemCommentClickListener);
 		httpRequestMethod();
+        topBar.setCallBack(new topBarCallBack() {
+            @Override
+            public void call_rightTextBtnListener() {
+                super.call_rightTextBtnListener();
+                //跳转到照片墙
+                AnimationUtil.tab_in2LeftIntent(context,NearbyImgsActivity.class);
+
+            }
+        });
 		xListView.setHttpCallBack(new listHttpCallBack() {
 			@Override
 			public void initListView() {
@@ -151,10 +168,7 @@ public class ShopActivity extends ListActivity {
 			@Override
 			public void onStart() {
 				// TODO Auto-generated method stub
-				if(initBool){
-					pageView.onProgressOnly().setVisibility(View.VISIBLE);
-					initBool=false;
-				}
+
 				
 			}
 			
@@ -204,26 +218,26 @@ public class ShopActivity extends ListActivity {
 		httpReq.onParams(reqBean);
 	}
 
-	/**
-	 * 跳转到我的优惠劵列表
-	 * 
-	 * @param v
-	 */
-	@OnClick(R.id.storePrivilegeBtn)
-	public void privilegeClick(View v) {
-//		AnimationUtil.tab_in2LeftIntent(context, MyStorePrivilegePage.class);
-		AnimationUtil.tab_in2LeftIntent(context, MyPrivilegeActivity.class);
-	}
+//	/**
+//	 * 跳转到我的优惠劵列表
+//	 *
+//	 * @param v
+//	 */
+//	@OnClick(R.id.storePrivilegeBtn)
+//	public void privilegeClick(View v) {
+////		AnimationUtil.tab_in2LeftIntent(context, MyStorePrivilegePage.class);
+//		AnimationUtil.tab_in2LeftIntent(context, MyPrivilegeActivity.class);
+//	}
 
-	@OnClick(R.id.leave_item_more)
-	public void leaveMoreClick(View v){
-		toast.setText("跳转到留言列表页面");
-	}
-	
-	@OnClick(R.id.fixIcon)
-	public void toCameraClick(View v){
-		toast.setText("跳转到拍照页面");
-	}
+//	@OnClick(R.id.leave_item_more)
+//	public void leaveMoreClick(View v){
+//		toast.setText("跳转到留言列表页面");
+//	}
+//
+//	@OnClick(R.id.fixIcon)
+//	public void toCameraClick(View v){
+//		toast.setText("跳转到拍照页面");
+//	}
 
 	@Override
 	protected void outFinish() {
@@ -237,45 +251,45 @@ public class ShopActivity extends ListActivity {
 	private void initTitleBar() {
 
 		// TODO Auto-generated method stub
-
-		titlePopup = new TitlePopup(this, LayoutParams.WRAP_CONTENT);
-		titlePopup.setAnimationStyle(R.style.popwin_anim_style);
-
-		seqListBtn.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				titlePopup.show(v);
-			}
-		});
-		// 给标题栏弹窗添加子类
-		titlePopup.addAction(new ActionItem(this, "喜欢/更新时间",
-				R.drawable.view_pager_indicator_white_selected));
-		titlePopup.addAction(new ActionItem(this, "朋友/距离",
-				R.drawable.view_pager_indicator_white_selected));
-		// 弹出栏的菜单选中时的触发
-		titlePopup.setItemOnClickListener(new OnItemOnClickListener() {
-
-			@Override
-			public void onItemClick(ActionItem item, int position) {
-				// TODO Auto-generated method stub
-				switch (position) {
-				// 喜欢、更新时间排序
-				case 0:
-					reqBean.setOrder(E_Http_StoreType.ORDER_INTEREST.toString());
-					httpReq.onParams(reqBean).onInit();
-					break;
-				// 朋友、距离排序
-				case 1:
-					reqBean.setOrder(E_Http_StoreType.ORDER_FRIEND.toString());
-					httpReq.onParams(reqBean).onInit();
-					break;
-				default:
-					break;
-				}
-			}
-		});
+//
+//		titlePopup = new TitlePopup(this, LayoutParams.WRAP_CONTENT);
+//		titlePopup.setAnimationStyle(R.style.popwin_anim_style);
+//
+//		seqListBtn.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//				titlePopup.show(v);
+//			}
+//		});
+//		// 给标题栏弹窗添加子类
+//		titlePopup.addAction(new ActionItem(this, "喜欢/更新时间",
+//				R.drawable.view_pager_indicator_white_selected));
+//		titlePopup.addAction(new ActionItem(this, "朋友/距离",
+//				R.drawable.view_pager_indicator_white_selected));
+//		// 弹出栏的菜单选中时的触发
+//		titlePopup.setItemOnClickListener(new OnItemOnClickListener() {
+//
+//			@Override
+//			public void onItemClick(ActionItem item, int position) {
+//				// TODO Auto-generated method stub
+//				switch (position) {
+//				// 喜欢、更新时间排序
+//				case 0:
+//					reqBean.setOrder(E_Http_StoreType.ORDER_INTEREST.toString());
+//					httpReq.onParams(reqBean).onInit();
+//					break;
+//				// 朋友、距离排序
+//				case 1:
+//					reqBean.setOrder(E_Http_StoreType.ORDER_FRIEND.toString());
+//					httpReq.onParams(reqBean).onInit();
+//					break;
+//				default:
+//					break;
+//				}
+//			}
+//		});
 	}
 
 	/**

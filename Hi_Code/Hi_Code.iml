@@ -89,8 +89,9 @@
     <orderEntry type="library" exported="" name="mta-sdk-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="avospush-v2.6.9.1" level="project" />
     <orderEntry type="library" exported="" name="jackson-all-1.7.6" level="project" />
-    <orderEntry type="library" exported="" name="ShareSDK-QZone-2.3.12" level="project" />
+    <orderEntry type="library" exported="" name="locSDK_4.2" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Wechat-Favorite-2.3.12" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-QZone-2.3.12" level="project" />
     <orderEntry type="library" exported="" name="avosstatistics-v2.6.9.1" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Core-2.3.12" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.2" level="project" />

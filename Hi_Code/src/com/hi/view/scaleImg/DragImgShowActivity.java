@@ -41,6 +41,8 @@ import android.widget.Toast;
  * 
  */
 public class DragImgShowActivity extends Activity {
+
+//    private static String QINIU_Type="?imageView2/0/w/600";
 	private int window_width, window_height;// 控件宽度
 	private DragImageView dragImageView;// 自定义控件
 	private int state_height;// 状态栏的高度
@@ -72,7 +74,9 @@ public class DragImgShowActivity extends Activity {
 				.showImageForEmptyUri(R.drawable.default_load_img)
 				.cacheInMemory(true)
 				.cacheOnDisc(true).build();
-
+//        if(imgUrl.contains("7u2h3g")){
+//            imgUrl+=
+//        }
 		imageLoader.displayImage(imgUrl, dragImageView, loadOptions);
 		
 		dragImageView.setmActivity(this);// 注入Activity.

@@ -1,8 +1,10 @@
 package com.hi.http.global.req;
 
 import com.hi.common.http.E_Http_Port;
+import com.hi.common.http.E_Http_QNType;
 import com.hi.http.base.Call_httpData;
 import com.hi.http.base.HttpRequestClass;
+import com.hi.http.global.model.Req_QiniuToken;
 import com.hi.module.base.callBack.httpResultCallBack;
 import com.hi.service.HttpResultService;
 import com.lidroid.xutils.exception.HttpException;
@@ -14,13 +16,21 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
  * @author MM_Zerui
  *
  */
-public class Http_QiniuToken extends HttpRequestClass<Class<?>,String>{
+public class Http_QiniuToken extends HttpRequestClass<Req_QiniuToken,String>{
+    private Req_QiniuToken reqBean;
 	public Http_QiniuToken(Call_httpData<String> callBack) {
 		// TODO Auto-generated constructor stub
 		this.call_normal=callBack;
+        reqBean=new Req_QiniuToken();
+        //д╛ходёй╫
+        reqBean.setQn_t(E_Http_QNType.NORMAL.toString());
 	}
+    public Http_QiniuToken setType(E_Http_QNType typeEnum){
+        reqBean.setQn_t(typeEnum.toString());
+        return this;
+    }
 	@Override
-	public HttpRequestClass onParams(Class<?> reqBean) {
+	public HttpRequestClass onParams(Req_QiniuToken reqBean) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -28,7 +38,7 @@ public class Http_QiniuToken extends HttpRequestClass<Class<?>,String>{
 	@Override
 	public void onAction() {
 		// TODO Auto-generated method stub
-		httpAction(E_Http_Port.QINIU_TOKEN.value(),null, new RequestCallBack<String>() {
+		httpAction(E_Http_Port.QINIU_TOKEN.value(),reqBean, new RequestCallBack<String>() {
 			@Override
 			public void onStart() {
 				// TODO Auto-generated method stub

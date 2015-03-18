@@ -15,14 +15,22 @@ public class Recv_obtMsg {
     private String head;
     private String id;
     private String img;
+    private String distance;
     private String nickName;
-    private String remark;
+//    private String remark;
     private String type;
     private String time;
     private String wifiMac;
-    
-	
-	public String getBirthDay() {
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
+    public String getBirthDay() {
 		return birthDay;
 	}
 	public void setBirthDay(String birthDay) {
@@ -82,12 +90,12 @@ public class Recv_obtMsg {
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
-	public String getRemark() {
-		return remark;
-	}
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+//	public String getRemark() {
+//		return remark;
+//	}
+//	public void setRemark(String remark) {
+//		this.remark = remark;
+//	}
 
 	public String getType() {
 		return type;

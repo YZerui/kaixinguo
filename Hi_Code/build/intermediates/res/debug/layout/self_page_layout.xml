@@ -199,6 +199,8 @@
                         app:item_imgNote="@drawable/self_activity_note"
                         app:item_splitBottomShow="SHOW"
                         app:item_textContent="我的活动" >
+
+
                     </com.customview.view.CustomItemView>
                 </LinearLayout>
             </LinearLayout>

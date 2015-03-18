@@ -7,6 +7,7 @@ import com.customview.view.CustomTopbarView;
 import com.format.utils.DataValidate;
 import com.format.utils.Md5Util;
 import com.hi.common.EXCEPTION_CODE;
+import com.hi.common.param.Enum_Page;
 import com.hi.dao.supImpl.Dao_SelfIfo;
 import com.hi.http.base.Call_httpData;
 import com.hi.http.local.model.Req_issueMsg;
@@ -55,6 +56,7 @@ public class LeaveNoteEditActivity extends NormalActivity implements ImageSelect
     @ViewInject(R.id.imgSelect)
     private ImageView imgSelect;
 
+    public String pageSource;
     public static String path;
     public static String sourcePath;
     private boolean isHasImage = false;
@@ -71,6 +73,10 @@ public class LeaveNoteEditActivity extends NormalActivity implements ImageSelect
     @Override
     public void obtainIntentValue() {
         // TODO Auto-generated method stub
+        pageSource=getIntent().getStringExtra("DATA0");
+        if(pageSource!=null&&pageSource.equals(Enum_Page.SELF.toString())){
+            topBar.setBackText("我的主页");
+        }
 //		Intent intent=getIntent();
 //		UID=intent.getStringExtra("DATA0");
 //		head=intent.getStringExtra("DATA1");
@@ -139,11 +145,14 @@ public class LeaveNoteEditActivity extends NormalActivity implements ImageSelect
 
             private void leaveMsgIssue() {
                 // TODO Auto-generated method stub
+
                 String content = msgEditText.getText().toString().trim();
                 if (!DataValidate.checkDataValid(content)) {
                     toast.setText("请先输入你的留言内容哦");
+
                     return;
                 }
+                topBar.setTitle("发布...").setProVisibility(true);
                 Req_issueMsg reqBean = new Req_issueMsg();
                 String imgPath = "";
                 //待修改
@@ -158,9 +167,9 @@ public class LeaveNoteEditActivity extends NormalActivity implements ImageSelect
                     }
                 }
                 if (DataValidate.checkDataValid(imgPath)) {
-                    final String newPath = PathUtils.getChatFilePath(Md5Util.myUUID());
-                    ViewHandleUtils.compressImage(imgPath, newPath);
-                    reqBean.setImg(newPath);
+//                    final String newPath = PathUtils.getChatFilePath(Md5Util.myUUID());
+//                    ViewHandleUtils.compressImage(imgPath, newPath);
+                    reqBean.setImgUrl(imgPath);
                 }
 
                 reqBean.setContent(content);
@@ -172,7 +181,7 @@ public class LeaveNoteEditActivity extends NormalActivity implements ImageSelect
                     @Override
                     public void onStart() {
                         // TODO Auto-generated method stub
-                        topBar.setTitle("发布...").setProVisibility(true);
+
                     }
 
                     @Override
@@ -185,7 +194,7 @@ public class LeaveNoteEditActivity extends NormalActivity implements ImageSelect
                     @Override
                     public void onFail() {
                         // TODO Auto-generated method stub
-                        toast.setText("发布失败,网络错误或不在wifi状态哦");
+                        toast.setText("发布失败,网络可能有误哦");
                     }
 
                     @Override

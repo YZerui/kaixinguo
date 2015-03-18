@@ -9,10 +9,28 @@ public class Req_WifiList {
 	private String uid;
 	private String wifiMac;
 	private String bid;
+    private String m_long;
+    private String m_lat;
 	private String begin;
 	private String limit;
-	
-	public String getBegin() {
+
+    public String getM_long() {
+        return m_long;
+    }
+
+    public void setM_long(String m_long) {
+        this.m_long = m_long;
+    }
+
+    public String getM_lat() {
+        return m_lat;
+    }
+
+    public void setM_lat(String m_lat) {
+        this.m_lat = m_lat;
+    }
+
+    public String getBegin() {
 		return begin;
 	}
 	public void setBegin(String begin) {

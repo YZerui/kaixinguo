@@ -13,6 +13,7 @@ import com.hi.dao.model.T_MyFriends;
 import com.hi.module.base.superClass.SuperAdapter;
 import com.hi.module.base.superClass.SuperViewHolder;
 import com.hi.utils.FormatUtils;
+import com.hi.view.customWidget.ImageView_Gender;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 
 import android.content.Context;
@@ -108,9 +109,9 @@ public class FriItemAdapter extends SuperAdapter {
 	}
 	public final class ViewHolder extends SuperViewHolder{
 		private ImageView head,unReadNote;
-		private TextView unRead,title,content,rightNote;
+		private TextView unRead,title,content,rightNote,age;
 		private RelativeLayout unReadLayout,unReadNumLayout;
-		
+		private ImageView_Gender genderView;
 		public ViewHolder(View parent) {
 			// TODO Auto-generated constructor stub
 			initView(parent);
@@ -126,6 +127,8 @@ public class FriItemAdapter extends SuperAdapter {
 			rightNote=(TextView)parent.findViewById(R.id.fixDouble_timer);
 			unReadLayout=(RelativeLayout)parent.findViewById(R.id.fix_unreadLayout);
 			unReadNumLayout=(RelativeLayout)parent.findViewById(R.id.fix_unreadNumLayout);
+            age=(TextView)parent.findViewById(R.id.fixDouble_age);
+            genderView=(ImageView_Gender)parent.findViewById(R.id.fixDouble_gender);
 		}
 		@Override
 		public void refreshData(int position) {
@@ -133,6 +136,8 @@ public class FriItemAdapter extends SuperAdapter {
 			T_MyFriends bean = friDatas.get(position);
 			W_UserInfo.Default(E_DB_SelfIfo.nickName,title,bean.getNickName());
 			W_UserInfo.Default(E_DB_SelfIfo.currentState, content,bean.getCurrentState());
+            age.setText(FormatUtils.getAge(bean.getBirthDay()));
+            genderView.setGender(bean.getSex().equals("0")?false:true);
 			imageLoader.displayImage(bean.getHead(),head, loadOptions, null);
 		}
 	}

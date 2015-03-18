@@ -11,20 +11,22 @@
             android:id="@+id/local_wifi_set_btn"
             style="@style/topbar_left_text_style"
             android:text="现场设置"
+            android:visibility="gone"
             android:background="@drawable/btn_selector_bg" />
         <TextView
             android:id="@+id/local_note_input_btn"
             style="@style/topbar_left_text_style"
             android:text="留言"
+
             android:background="@drawable/btn_selector_bg"
-            android:visibility="invisible" />
+            android:visibility="gone" />
         <TextView
             android:id="@+id/local_note_share_btn"
             style="@style/topbar_right_text_style"
             android:background="@drawable/btn_selector_bg"
             android:layout_alignParentRight="true"
             android:text="分享"
-            android:visibility="invisible" />
+            android:visibility="gone" />
 
         <RadioGroup
             android:id="@+id/local_radio"
@@ -37,15 +39,24 @@
             <RadioButton
                 android:id="@+id/local_user_radio"
                 style="@style/radioButton"
-                android:background="@drawable/title_bar_radio_left"
-                android:text="现场" />
+                android:background="#0000"
+                android:text="果友" />
 
             <RadioButton
                 android:id="@+id/local_note_radio"
                 style="@style/radioButton"
-                android:background="@drawable/title_bar_radio_right"
-                android:text="留言墙" />
+                android:background="#0000"
+                android:text="照片墙"   />
+                <!--android:background="@drawable/title_bar_radio_right"-->
+
         </RadioGroup>
+        <ImageView
+            android:layout_width="0.2dp"
+            android:layout_height="fill_parent"
+            android:background="#3000"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerInParent="true"></ImageView>
     </RelativeLayout>
 
     <android.support.v4.view.ViewPager

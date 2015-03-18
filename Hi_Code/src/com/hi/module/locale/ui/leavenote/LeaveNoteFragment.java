@@ -21,6 +21,7 @@ import com.hi.http.local.req.Http_obtMsg;
 import com.hi.http.local.req.Http_praiseMsg;
 import com.hi.module.base.img.ImageViewPage;
 import com.hi.module.locale.ui.UserDetailFragmentActivity;
+import com.hi.service.GetLocPointService;
 import com.hi.utils.AnimationUtil;
 import com.hi.utils.DeviceUtils;
 import com.hi.view.customLayout.CustomToast;
@@ -61,7 +62,7 @@ public class LeaveNoteFragment extends Fragment {
 	private List<Recv_obtMsg> recvList = new ArrayList<Recv_obtMsg>();
 	private Req_obtMsg reqBean = new Req_obtMsg();
 	private int favourPosition;
-	
+    private String m_long,m_lat;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -73,7 +74,29 @@ public class LeaveNoteFragment extends Fragment {
 		return view;
 	}
 
-	private void initView() {
+    private void getLocation() {
+        new GetLocPointService(new GetLocPointService.CallBack_Loc() {
+            @Override
+            public void getLocPoint(double longitude, double latitude, String city) {
+                m_long=String.valueOf(longitude);
+                m_lat=String.valueOf(latitude);
+
+            }
+
+            @Override
+            public void onFail() {
+                m_long="";
+                m_lat="";
+            }
+
+            @Override
+            public void onFinally() {
+
+            }
+        },getActivity());
+    }
+
+    private void initView() {
 		// TODO Auto-generated method stub
 		pageView = (CustomPageView) view.findViewById(R.id.pageView);
 		xListView = (XListView) view.findViewById(R.id.xListView);
@@ -94,9 +117,33 @@ public class LeaveNoteFragment extends Fragment {
 				adapter.setCallBack(call);
 				adapter.setDatas(recvList);
 				xListView.setAdapter(adapter);
-				reqBean.setWifiMac(DeviceUtils.getWifiMac());// 测试用
-				reqHttp = (Http_obtMsg) new Http_obtMsg(callBack).onParams(
-						reqBean).onInit();
+
+                reqBean.setMid(Dao_SelfIfo.getInstance().getMid());
+                //获取当前经纬度
+                new GetLocPointService(new GetLocPointService.CallBack_Loc() {
+                    @Override
+                    public void getLocPoint(double longitude, double latitude, String city) {
+                        m_long=String.valueOf(longitude);
+                        m_lat=String.valueOf(latitude);
+
+                    }
+
+                    @Override
+                    public void onFail() {
+                        m_long="";
+                        m_lat="";
+                    }
+
+                    @Override
+                    public void onFinally() {
+                        reqBean.setWifiMac(DeviceUtils.getWifiMac());// 测试用
+                        reqBean.setM_lat(m_lat);
+                        reqBean.setM_long(m_long);
+                        reqHttp = (Http_obtMsg) new Http_obtMsg(callBack).onParams(
+                                reqBean).onInit();
+                    }
+                },getActivity());
+
 			}
 
 			@Override

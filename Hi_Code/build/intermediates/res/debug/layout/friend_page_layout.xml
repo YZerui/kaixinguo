@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/page_theme_color"
@@ -11,7 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         custom:topbar_right_img_src="@drawable/friend_to_contacts_note"
-        custom:topbar_left_img_src="@drawable/icon_white_search"
+        custom:topbar_left_img_src="@drawable/gray_search_icon"
         custom:topbar_title="联系人" >
     </com.customview.view.CustomTopbarView>
 

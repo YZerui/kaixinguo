@@ -11,9 +11,12 @@ public class Recv_StoreIfo {
 	private String address;
 	private String balance;
 	private String bid;
-	private String businessType;
+//	private String businessType;
 	private String contact;
-	private String coordinates;
+//	private String coordinates;
+    private String latAdd;
+    private String longAdd;
+
 	private String createTime;
 	private String createTimeDate;
 	private String descHtml;
@@ -39,9 +42,9 @@ public class Recv_StoreIfo {
 			recvBean.setAddress(jsonObject.getString(E_Recv_StroeIfo.address.name()));
 			recvBean.setBalance(jsonObject.getString(E_Recv_StroeIfo.balance.name()));
 			recvBean.setBid(jsonObject.getString(E_Recv_StroeIfo.bid.name()));
-			recvBean.setBusinessType(jsonObject.getString(E_Recv_StroeIfo.businessType.name()));
+//			recvBean.setBusinessType(jsonObject.getString(E_Recv_StroeIfo.businessType.name()));
 			recvBean.setContact(jsonObject.getString(E_Recv_StroeIfo.contact.name()));
-			recvBean.setCoordinates(jsonObject.getString(E_Recv_StroeIfo.coordinates.name()));
+//			recvBean.setCoordinates(jsonObject.getString(E_Recv_StroeIfo.coordinates.name()));
 			recvBean.setCreateTime(jsonObject.getString(E_Recv_StroeIfo.createTime.name()));
 			recvBean.setCreateTimeDate(jsonObject.getString(E_Recv_StroeIfo.createTimeDate.name()));
 			recvBean.setDescHtml(jsonObject.getString(E_Recv_StroeIfo.descHtml.name()));
@@ -60,6 +63,8 @@ public class Recv_StoreIfo {
 			recvBean.setSpreadCode(jsonObject.getString(E_Recv_StroeIfo.spreadCode.name()));
 			recvBean.setState(jsonObject.getString(E_Recv_StroeIfo.state.name()));
 			recvBean.setStateName(jsonObject.getString(E_Recv_StroeIfo.stateName.name()));
+            recvBean.setLatAdd(jsonObject.getString(E_Recv_StroeIfo.latAdd.name()));
+            recvBean.setLongAdd(jsonObject.getString(E_Recv_StroeIfo.longAdd.name()));
 			//ªÒ»°’’∆¨«Ω
 			recvBean.setLogos(getLogos(recvBean.getPhotos()));
 			return recvBean;
@@ -72,7 +77,23 @@ public class Recv_StoreIfo {
 		}
 	}
 
-	public String[] getLogos(String jsonArray){
+    public String getLatAdd() {
+        return latAdd;
+    }
+
+    public void setLatAdd(String latAdd) {
+        this.latAdd = latAdd;
+    }
+
+    public String getLongAdd() {
+        return longAdd;
+    }
+
+    public void setLongAdd(String longAdd) {
+        this.longAdd = longAdd;
+    }
+
+    public String[] getLogos(String jsonArray){
 		
 		try {
 			JSONArray array=new JSONArray(jsonArray);
@@ -121,13 +142,13 @@ public class Recv_StoreIfo {
 		this.bid = bid;
 	}
 
-	public String getBusinessType() {
-		return businessType;
-	}
-
-	public void setBusinessType(String businessType) {
-		this.businessType = businessType;
-	}
+//	public String getBusinessType() {
+//		return businessType;
+//	}
+//
+//	public void setBusinessType(String businessType) {
+//		this.businessType = businessType;
+//	}
 
 	public String getContact() {
 		return contact;
@@ -137,13 +158,13 @@ public class Recv_StoreIfo {
 		this.contact = contact;
 	}
 
-	public String getCoordinates() {
-		return coordinates;
-	}
-
-	public void setCoordinates(String coordinates) {
-		this.coordinates = coordinates;
-	}
+//	public String getCoordinates() {
+//		return coordinates;
+//	}
+//
+//	public void setCoordinates(String coordinates) {
+//		this.coordinates = coordinates;
+//	}
 
 	public String getCreateTime() {
 		return createTime;

@@ -56,7 +56,7 @@
     <dimen name="custom_progress_layout_length">70dp</dimen>
     <dimen name="custom_progress_bar_length">80dp</dimen>
     <!-- ********************顶部bar*********************** -->
-    <dimen name="topbar_height">45dp</dimen>
+    <dimen name="topbar_height">50dp</dimen>
     <dimen name="topbar_left_img_margin">10dp</dimen>
     <dimen name="topbar_right_img_margin">10dp</dimen>
     <dimen name="topbar_img_width">45dip</dimen>

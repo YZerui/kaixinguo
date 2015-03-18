@@ -9,6 +9,7 @@ import com.hi.http.base.HttpRequestClass;
 import com.hi.http.store.model.Recv_StoreList;
 import com.hi.http.store.model.Req_StoreList;
 import com.hi.module.base.callBack.httpResultCallBack;
+import com.hi.service.GetLocPointService;
 import com.hi.service.HttpResultService;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
@@ -21,6 +22,7 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
  */
 public class Http_StoreList extends HttpRequestClass<Req_StoreList, Recv_StoreList>{
 	private Req_StoreList reqBean;
+    private String m_long,m_lat;
 	public Http_StoreList(Call_httpListData<Recv_StoreList> callBack) {
 		// TODO Auto-generated constructor stub
 		this.call_list=callBack;
@@ -51,59 +53,79 @@ public class Http_StoreList extends HttpRequestClass<Req_StoreList, Recv_StoreLi
 	@Override
 	public void onAction() {
 		// TODO Auto-generated method stub
-		httpAction(E_Http_Port.STORE_LIST.value(), reqBean,new RequestCallBack<String>() {
-			@Override
-			public void onStart() {
-				// TODO Auto-generated method stub
-				super.onStart();
-				call_list.onStart();
-			}
-			@Override
-			public void onSuccess(ResponseInfo<String> arg0) {
-				// TODO Auto-generated method stub
-				new HttpResultService(arg0.result, new httpResultCallBack<Recv_StoreList>() {
-					@Override
-					public void onListData(boolean validity,
-							List<Recv_StoreList> listDatas) {
-						// TODO Auto-generated method stub
-						super.onListData(validity, listDatas);
-						if(validity){
-							if(isIfInit()){
-								call_list.onInit(listDatas);
-							}else {
-								call_list.onLoad(listDatas);
-							}
-							return;
-						}
-						call_list.onFail();
-					}
-					@Override
-					public void onRequestFail() {
-						// TODO Auto-generated method stub
-						call_list.onFail();
-					}
+        new GetLocPointService(new GetLocPointService.CallBack_Loc() {
+            @Override
+            public void getLocPoint(double longitude, double latitude, String city) {
+                m_lat=String.valueOf(latitude);
+                m_long=String.valueOf(longitude);
+            }
 
-					@Override
-					public void onSuccess() {
-						// TODO Auto-generated method stub
-						
-					}
+            @Override
+            public void onFail() {
+                m_lat="";
+                m_long="";
+            }
 
-					@Override
-					public void onFinally() {
-						// TODO Auto-generated method stub
-						call_list.onFinally();
-					}
-				}, Recv_StoreList.class, true);
-			}
-			
-			@Override
-			public void onFailure(HttpException arg0, String arg1) {
-				// TODO Auto-generated method stub
-				call_list.onFail();
-				call_list.onFinally();
-			}
-		});
+            @Override
+            public void onFinally() {
+                reqBean.setM_long(m_long);
+                reqBean.setM_lat(m_lat);
+                httpAction(E_Http_Port.STORE_LIST2.value(), reqBean,new RequestCallBack<String>() {
+                    @Override
+                    public void onStart() {
+                        // TODO Auto-generated method stub
+                        super.onStart();
+                        call_list.onStart();
+                    }
+                    @Override
+                    public void onSuccess(ResponseInfo<String> arg0) {
+                        // TODO Auto-generated method stub
+                        new HttpResultService(arg0.result, new httpResultCallBack<Recv_StoreList>() {
+                            @Override
+                            public void onListData(boolean validity,
+                                                   List<Recv_StoreList> listDatas) {
+                                // TODO Auto-generated method stub
+                                super.onListData(validity, listDatas);
+                                if(validity){
+                                    if(isIfInit()){
+                                        call_list.onInit(listDatas);
+                                    }else {
+                                        call_list.onLoad(listDatas);
+                                    }
+                                    return;
+                                }
+                                call_list.onFail();
+                            }
+                            @Override
+                            public void onRequestFail() {
+                                // TODO Auto-generated method stub
+                                call_list.onFail();
+                            }
+
+                            @Override
+                            public void onSuccess() {
+                                // TODO Auto-generated method stub
+
+                            }
+
+                            @Override
+                            public void onFinally() {
+                                // TODO Auto-generated method stub
+                                call_list.onFinally();
+                            }
+                        }, Recv_StoreList.class, true);
+                    }
+
+                    @Override
+                    public void onFailure(HttpException arg0, String arg1) {
+                        // TODO Auto-generated method stub
+                        call_list.onFail();
+                        call_list.onFinally();
+                    }
+                });
+            }
+        },null);
+
 	}
 
 }

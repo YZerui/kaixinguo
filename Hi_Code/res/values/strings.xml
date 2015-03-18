@@ -23,5 +23,7 @@
     <string name="module_self_page_title">我</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_sefl_setting">SeflSetting</string>
+    <string name="title_activity_nearby_imgs">NearbyImgsActivity</string>
+    <string name="title_activity_wifi_regi_page">WifiRegiPage</string>
 
 </resources>

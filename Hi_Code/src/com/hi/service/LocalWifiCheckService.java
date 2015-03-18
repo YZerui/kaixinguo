@@ -28,9 +28,16 @@ import android.os.IBinder;
  *
  */
 public class LocalWifiCheckService extends Service{
+    public enum Enum_WIFICHECK{
+        MATCH,
+        UNMATCH,
+        UNWIFI
+    }
 	private TimerTask timerTask;
 	private Timer timer;
+    private String note=new String();
 	private String noteStr=new String();
+
 	@Override
 	public IBinder onBind(Intent intent) {
 		// TODO Auto-generated method stub
@@ -70,9 +77,20 @@ public class LocalWifiCheckService extends Service{
 			@Override
 			public void onSuccess(Recv_StoreIfo datas) {
 				// TODO Auto-generated method stub
-				noteStr="当前商家 - "+datas.getName();
+                note=Enum_WIFICHECK.MATCH.toString();
+				noteStr=datas.getName();
 			}
-			
+            @Override
+            public void onFail() {
+                // TODO Auto-generated method stub
+                if(DataValidate.checkDataValid(DeviceUtils.getWifiMac())){
+                    note=Enum_WIFICHECK.UNMATCH.toString();
+                    noteStr="所在Wifi没有对应商家";
+                    return;
+                }
+                note=Enum_WIFICHECK.UNWIFI.toString();
+                noteStr="当前还没有连接Wifi哦";
+            }
 			@Override
 			public void onStart() {
 				// TODO Auto-generated method stub
@@ -83,21 +101,13 @@ public class LocalWifiCheckService extends Service{
 			public void onFinally() {
 				// TODO Auto-generated method stub
 				//发送通知广播
-				BroadcastUtil.sendBroadCast(getApplicationContext(), Enum_Page.WIFILOCAL.name(), noteStr);
-				BroadcastUtil.sendBroadCast(getApplicationContext(), Enum_Page.MSG_NET.name(), noteStr);
+				BroadcastUtil.sendBroadCast(getApplicationContext(), Enum_Page.WIFILOCAL.name(), note,noteStr);
+//				BroadcastUtil.sendBroadCast(getApplicationContext(), Enum_Page.MSG_NET.name(), note);
 				P.v("wifi检测完成");
 				P.v("网络环境检测完成");
 			}
 			
-			@Override
-			public void onFail() {
-				// TODO Auto-generated method stub
-				if(DataValidate.checkDataValid(DeviceUtils.getWifiMac())){
-					noteStr="所在Wifi没有对应商家";
-					return;
-				}
-				noteStr="当前还没有连接Wifi哦";
-			}
+
 		}).onParams(reqBean).onAction();
 	}
 	@Override

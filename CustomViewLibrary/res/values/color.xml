@@ -3,6 +3,7 @@
 
     <!-- ***************************全局属性********************** -->
     <color name="color_theme">#fa723a</color>
+    <color name="color_topbar_bg">#fff5f5f5</color>
     <color name="color_theme_light">#aafa723a</color>
     <!-- 背景全局颜色分级 -->
     <color name="page_bg_level_one">#fff</color>
@@ -28,7 +29,7 @@
     <color name="color_btn_red_deep">#c03d3d</color>
 
     <!-- 顶部topbar -->
-	<color name="color_topbar">#fff</color>
+	<color name="color_topbar">#ff525252</color>
 	<!-- 顶部提示栏背景 -->
 	<color name="color_topbar_note_bg">#e000</color>
 	<color name="color_topbar_note_text">#fff</color>

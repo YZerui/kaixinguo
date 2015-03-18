@@ -7,28 +7,60 @@ package com.hi.http.store.model;
  */
 public class Recv_StoreList {
 	private String address;
-	private String coordinates;
+//	private String coordinates;
+    private String distance;
 	private String coupons;
 	private String friends;
 	private String id;
 	private String islove;
+    private String latAdd;
+    private String longAdd;
 	private String logo;
 	private String name;
 	private String phone;
+    private String remark;
 	private String sms;
-	public String getAddress() {
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public String getAddress() {
 		return address;
 	}
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getCoordinates() {
-		return coordinates;
-	}
-	public void setCoordinates(String coordinates) {
-		this.coordinates = coordinates;
-	}
-	public String getCoupons() {
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
+    public String getLatAdd() {
+        return latAdd;
+    }
+
+    public void setLatAdd(String latAdd) {
+        this.latAdd = latAdd;
+    }
+
+    public String getLongAdd() {
+        return longAdd;
+    }
+
+    public void setLongAdd(String longAdd) {
+        this.longAdd = longAdd;
+    }
+
+    public String getCoupons() {
 		return coupons;
 	}
 	public void setCoupons(String coupons) {

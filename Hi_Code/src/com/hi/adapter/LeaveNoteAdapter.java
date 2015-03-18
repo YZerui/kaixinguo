@@ -41,7 +41,7 @@ public class LeaveNoteAdapter extends SuperAdapter {
 	private LayoutInflater inflater;
 	private List<Recv_obtMsg> datas;
 	protected DisplayImageOptions loadOptions2;
-
+    private static String QINIU_Type="?imageView2/0/w/600";
 	public LeaveNoteAdapter(Context context) {
 		inflater = LayoutInflater.from(context);
 		loadOptions = new DisplayImageOptions.Builder()
@@ -142,7 +142,13 @@ public class LeaveNoteAdapter extends SuperAdapter {
 						loadOptions);
 				if (DataValidate.checkDataValid(recvBean.getImg())) {
 					img_content.setVisibility(View.VISIBLE);
-					imageLoader.displayImage(recvBean.getImg(), img_content,
+                    String showImg=new String();
+                    showImg=recvBean.getImg();
+                    //表示是七牛的图片
+                    if(showImg.contains("7u2h3g")){
+                        showImg=recvBean.getImg()+QINIU_Type;
+                    }
+					imageLoader.displayImage(showImg, img_content,
 							loadOptions2);
 				} else {
 					img_content.setVisibility(View.GONE);

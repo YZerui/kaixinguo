@@ -4,8 +4,11 @@
     tools:context="com.hi.module.self.ui.selfmodule.SelfFragmentTwo">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/frameImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"/>
 
 </FrameLayout>
 <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/fragment_self_fragment_two.xml -->

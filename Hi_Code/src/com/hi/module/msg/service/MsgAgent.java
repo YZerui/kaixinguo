@@ -8,6 +8,7 @@ import com.avos.avoscloud.Session;
 import com.format.utils.Md5Util;
 import com.hi.common.db.E_DB_ImgUrlMode;
 import com.hi.common.db.E_DB_MsgType;
+import com.hi.common.http.E_Http_QNType;
 import com.hi.common.http.E_Http_SendState;
 import com.hi.dao.model.T_IMsg;
 import com.hi.dao.supImpl.Dao_IMsg;
@@ -123,43 +124,45 @@ public class MsgAgent {
         ViewHandleUtils.compressImage(localSelectPath, newPath);
         UploadImageService service = new UploadImageService();
         service.setHeight(400).setImageType(Enum_ImgScaleType.TYPE_0)
-                .setImagePath(newPath).uploadImage(new UploadImageService.CallBack() {
+                .setImagePath(newPath)
+                .setUploadType(E_Http_QNType.IMMSG)
+                .uploadImage(new UploadImageService.CallBack() {
 
-            @Override
-            public void onSuccess(String url) {
-                // TODO Auto-generated method stub
+                    @Override
+                    public void onSuccess(String url) {
+                        // TODO Auto-generated method stub
 //                imgSendMethod(url);
-                msg.setMsg(url);
-                sendMsg(msg);
-                Dao_IMsg.updateMsgState(msg.getObjectId(), E_Http_SendState.SUCCESS);
-                Dao_IMsg.updateImageMode(msg.getObjectId(),url,E_DB_ImgUrlMode.URL);
-                sendCallBack.onSuccess(msg);
-            }
+                        msg.setMsg(url);
+                        sendMsg(msg);
+                        Dao_IMsg.updateMsgState(msg.getObjectId(), E_Http_SendState.SUCCESS);
+                        Dao_IMsg.updateImageMode(msg.getObjectId(), url, E_DB_ImgUrlMode.URL);
+                        sendCallBack.onSuccess(msg);
+                    }
 
-            @Override
-            public void onStart() {
-                // TODO Auto-generated method stub
+                    @Override
+                    public void onStart() {
+                        // TODO Auto-generated method stub
 
-            }
+                    }
 
-            @Override
-            public void onFinally() {
-                // TODO Auto-generated method stub
+                    @Override
+                    public void onFinally() {
+                        // TODO Auto-generated method stub
 
-            }
+                    }
 
-            @Override
-            public void onFail() {
-                // TODO Auto-generated method stub
-                Dao_IMsg.updateMsgState(msg.getObjectId(),E_Http_SendState.FAIL);
-                sendCallBack.onError(null);
+                    @Override
+                    public void onFail() {
+                        // TODO Auto-generated method stub
+                        Dao_IMsg.updateMsgState(msg.getObjectId(), E_Http_SendState.FAIL);
+                        sendCallBack.onError(null);
 //                T_IMsg iMsg = items.get(items.size() - 1);
 //                iMsg.setName("∑¢ÀÕ ß∞‹");
 //                iMsg.setTime(FormatUtils.getCurrentDateValue_long());
 //                iMsg.setSendState(E_Http_SendState.FAIL.value());
 //                adapter.notifyDataSetChanged();
 //                MsgSendFail(iMsg);
-            }
-        });
+                    }
+                });
     }
 }

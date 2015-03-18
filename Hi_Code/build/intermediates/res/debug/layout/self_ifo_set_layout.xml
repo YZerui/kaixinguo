@@ -129,6 +129,7 @@
                         custom:item_rightNoteShow="SHOW"
                         custom:item_splitPartBottomShow="SHOW"
                         custom:item_textContent="编辑你的状态"
+                        android:visibility="gone"
                         custom:item_textNote="状态" >
                     </com.customview.view.CustomItemView>
 
@@ -141,6 +142,7 @@
                         custom:item_rightNoteShow="SHOW"
                         custom:item_splitPartBottomShow="SHOW"
                         custom:item_textContent="编辑你的职业"
+                        android:visibility="gone"
                         custom:item_textNote="职业" >
                     </com.customview.view.CustomItemView>
 

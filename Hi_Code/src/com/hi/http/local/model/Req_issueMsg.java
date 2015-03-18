@@ -10,9 +10,37 @@ public class Req_issueMsg {
 	private String bid;
 	private String wifiMac;
 	private String content;
-	private String img;
-	
-	public String getBid() {
+    private String m_long;
+    private String m_lat;
+
+    private String img;
+    private String imgUrl;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getM_long() {
+        return m_long;
+    }
+
+    public void setM_long(String m_long) {
+        this.m_long = m_long;
+    }
+
+    public String getM_lat() {
+        return m_lat;
+    }
+
+    public void setM_lat(String m_lat) {
+        this.m_lat = m_lat;
+    }
+
+    public String getBid() {
 		return bid;
 	}
 	public void setBid(String bid) {

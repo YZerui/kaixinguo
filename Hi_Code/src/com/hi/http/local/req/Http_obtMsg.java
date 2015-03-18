@@ -28,7 +28,6 @@ public class Http_obtMsg extends HttpRequestClass<Req_obtMsg,Recv_obtMsg>{
 	@Override
 	public HttpRequestClass onParams(Req_obtMsg reqBean) {
 		this.reqBean=reqBean;
-		reqBean.setUid(Dao_SelfIfo.getInstance().getMid());
 		return this;
 	}
 	@Override
@@ -50,7 +49,7 @@ public class Http_obtMsg extends HttpRequestClass<Req_obtMsg,Recv_obtMsg>{
 	@Override
 	public void onAction() {
 		// TODO Auto-generated method stub
-		httpAction(E_Http_Port.LEAVE_MSG_OBT.value(), reqBean, new RequestCallBack<String>() {
+		httpAction(E_Http_Port.LEAVE_MSG_OBT2.value(), reqBean, new RequestCallBack<String>() {
 			
 			@Override
 			public void onSuccess(ResponseInfo<String> arg0) {

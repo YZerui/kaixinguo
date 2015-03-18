@@ -39,6 +39,8 @@ public enum E_Http_Port {
 	LEAVE_MSG_PRAISE("/business/praise.action"),
 	//获取商家留言墙列表
 	LEAVE_MSG_OBT("/business/wmList.action"),
+	//获取商家留言墙列表2
+	LEAVE_MSG_OBT2("/v2/business/wmList.action"),
 	//查看某留言点赞列表
 	LEAVE_MSG_PRAISELIST("/business/praiseList.action"),
 	/**********************Store(商家)******************/
@@ -46,6 +48,8 @@ public enum E_Http_Port {
 	STORE_WIFIMAC("/business/find.action"),
 	//店家列表
 	STORE_LIST("/business/list.action"),
+	//店家列表2
+	STORE_LIST2("/v2/business/list.action"),
 	//喜欢店家
 	STORE_INTEREST("/business/love.action"),
 	//取消喜欢店家
@@ -83,6 +87,8 @@ public enum E_Http_Port {
 	USER_LOGINOUT("/member/loginout.action"),
 	//更换WIFI现场
 	USER_CHANGEWIFI("/member/changeWifi.action"),
+    //更新个人状态
+    UPDATE_STATES("/v2/member/updateStates.action"),
 	//修改用户信息接口
 	USER_IFOUPDATE("/member/modify.action"),
 	//上传用户头像
@@ -95,6 +101,8 @@ public enum E_Http_Port {
 	USER_AUTHORITY("/member/competence.action"),
 	//查看现场用户列表
 	USER_LOCATELIST("/member/list.action"),
+	//查看现场用户列表2
+	USER_LOCATELIST2("/v2/member/scene.action"),
 	//检测通讯录使用情况
 	USER_PHONEREGI("/member/valPhone.action");
 	

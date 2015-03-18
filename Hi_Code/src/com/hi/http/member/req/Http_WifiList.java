@@ -11,6 +11,7 @@ import com.hi.http.base.HttpRequestClass;
 import com.hi.http.member.model.Recv_WifiList;
 import com.hi.http.member.model.Req_WifiList;
 import com.hi.module.base.callBack.httpResultCallBack;
+import com.hi.service.GetLocPointService;
 import com.hi.service.HttpResultService;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
@@ -23,6 +24,8 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
  */
 public class Http_WifiList extends HttpRequestClass<Req_WifiList, Recv_WifiList>{
 	private Req_WifiList reqBean;
+    private String m_long;
+    private String m_lat;
 	public Http_WifiList(Call_httpListData<Recv_WifiList> callBack) {
 		this.call_list=callBack;
 	}
@@ -54,59 +57,79 @@ public class Http_WifiList extends HttpRequestClass<Req_WifiList, Recv_WifiList>
 	@Override
 	public void onAction() {
 		// TODO Auto-generated method stub
-		httpAction(E_Http_Port.USER_LOCATELIST.value(), reqBean, new RequestCallBack<String>() {
-			@Override
-			public void onStart() {
-				// TODO Auto-generated method stub
-				super.onStart();
-				call_list.onStart();
-			}
-			@Override
-			public void onSuccess(ResponseInfo<String> arg0) {
-				// TODO Auto-generated method stub
-				new HttpResultService(arg0.result, new httpResultCallBack<Recv_WifiList>() {
-					@Override
-					public void onListData(boolean validity,
-							List<Recv_WifiList> listDatas) {
-						// TODO Auto-generated method stub
-						super.onListData(validity, listDatas);
-						if(validity){
-							if(isIfInit()){
-								call_list.onInit(listDatas);
-							}else {
-								call_list.onLoad(listDatas);
-							}
-							return;
-						}
-						call_list.onFail();
-					}
-					@Override
-					public void onRequestFail() {
-						// TODO Auto-generated method stub
-						call_list.onFail();
-					}
+        new GetLocPointService(new GetLocPointService.CallBack_Loc() {
+            @Override
+            public void getLocPoint(double longitude, double latitude, String city) {
+                m_lat=String.valueOf(latitude);
+                m_long=String.valueOf(longitude);
+            }
 
-					@Override
-					public void onSuccess() {
-						// TODO Auto-generated method stub
-						
-					}
+            @Override
+            public void onFail() {
+                m_lat="";
+                m_long="";
+            }
 
-					@Override
-					public void onFinally() {
-						// TODO Auto-generated method stub
-						call_list.onFinally();
-					}
-				}, Recv_WifiList.class, true);
-			}
-			
-			@Override
-			public void onFailure(HttpException arg0, String arg1) {
-				// TODO Auto-generated method stub
-				call_list.onFail();
-				call_list.onFinally();
-			}
-		});
+            @Override
+            public void onFinally() {
+                reqBean.setM_lat(m_lat);
+                reqBean.setM_long(m_long);
+                httpAction(E_Http_Port.USER_LOCATELIST2.value(), reqBean, new RequestCallBack<String>() {
+                    @Override
+                    public void onStart() {
+                        // TODO Auto-generated method stub
+                        super.onStart();
+                        call_list.onStart();
+                    }
+                    @Override
+                    public void onSuccess(ResponseInfo<String> arg0) {
+                        // TODO Auto-generated method stub
+                        new HttpResultService(arg0.result, new httpResultCallBack<Recv_WifiList>() {
+                            @Override
+                            public void onListData(boolean validity,
+                                                   List<Recv_WifiList> listDatas) {
+                                // TODO Auto-generated method stub
+                                super.onListData(validity, listDatas);
+                                if(validity){
+                                    if(isIfInit()){
+                                        call_list.onInit(listDatas);
+                                    }else {
+                                        call_list.onLoad(listDatas);
+                                    }
+                                    return;
+                                }
+                                call_list.onFail();
+                            }
+                            @Override
+                            public void onRequestFail() {
+                                // TODO Auto-generated method stub
+                                call_list.onFail();
+                            }
+
+                            @Override
+                            public void onSuccess() {
+                                // TODO Auto-generated method stub
+
+                            }
+
+                            @Override
+                            public void onFinally() {
+                                // TODO Auto-generated method stub
+                                call_list.onFinally();
+                            }
+                        }, Recv_WifiList.class, true);
+                    }
+
+                    @Override
+                    public void onFailure(HttpException arg0, String arg1) {
+                        // TODO Auto-generated method stub
+                        call_list.onFail();
+                        call_list.onFinally();
+                    }
+                });
+            }
+        },null);
+
 	}
 	
 }

@@ -20,21 +20,21 @@ public final class R {
 		public static final int btn_selector_bg_normal = 0x7f02005f;
 		public static final int btn_selector_bg_press = 0x7f020060;
 		public static final int default_load_img = 0x7f0200cd;
-		public static final int ic_launcher = 0x7f02011b;
+		public static final int ic_launcher = 0x7f02011c;
 	}
 	public static final class id {
-		public static final int action_settings = 0x7f0a0282;
-		public static final int count = 0x7f0a017c;
-		public static final int cover = 0x7f0a017a;
-		public static final int imageViewNoti = 0x7f0a01d8;
-		public static final int info_layout = 0x7f0a017b;
-		public static final int textViewNoti = 0x7f0a01d9;
+		public static final int action_settings = 0x7f0a0286;
+		public static final int count = 0x7f0a0183;
+		public static final int cover = 0x7f0a0181;
+		public static final int imageViewNoti = 0x7f0a01df;
+		public static final int info_layout = 0x7f0a0182;
+		public static final int textViewNoti = 0x7f0a01e0;
 		public static final int title = 0x7f0a004c;
 	}
 	public static final class layout {
 		public static final int activity_main = 0x7f030019;
-		public static final int item_bucket_list = 0x7f030050;
-		public static final int notification_bar = 0x7f030069;
+		public static final int item_bucket_list = 0x7f030053;
+		public static final int notification_bar = 0x7f03006c;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0e0000;

@@ -31,6 +31,7 @@ D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\ShareSDK-
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-961a98df86c7d47fadd613b098e1253ee2162e26.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\libammsdk-10cb4af18c036a77ae5a5f43200c91d4ca09fb6c.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\json-lib-2.4-jdk15-7f90121ee26a0fb03fe92931225f5818d68d8e3d.jar
+D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\locSDK_4.2-3e0ed7b223bd7e56e712eb4325cba5ef4169c0b7.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\avospush-v2.6.9.1-ff5839436573ab2d21dd40cd54958716923bbad4.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\fastjson-337f0f0d79684e10f9779cf7a57af0f06c3a8a55.jar
 D:\Code\git\firm\kaixinguo\Hi_Code\build\intermediates\pre-dexed\debug\xUtils-2.6.10-4e998e3bbf3a9e561392c18a60669c6c3cbeab02.jar

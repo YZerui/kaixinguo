@@ -12,7 +12,10 @@ public class BroadcastUtil {
 		Intent intent = new Intent();
 		intent.setAction(action);
 		if(param.length>0){
-			intent.putExtra("DATA",param[0]);
+            for(int i=0;i<param.length;i++){
+                intent.putExtra("DATA"+i,param[i]);
+            }
+
 		}
 		
 		context.sendBroadcast(intent);

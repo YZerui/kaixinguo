@@ -337,7 +337,8 @@
     <eat-comment/>
     <color name="color_theme">#fa723a</color>
     <color name="color_theme_light">#aafa723a</color>
-    <color name="color_topbar">#fff</color>
+    <color name="color_topbar">#ff525252</color>
+    <color name="color_topbar_bg">#fff5f5f5</color>
     <color name="color_topbar_note_bg">#e000</color>
     <color name="color_topbar_note_text">#fff</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
@@ -592,7 +593,6 @@
     <eat-comment/>
     <color name="topbar_left_back_text_color">#fff</color>
     <color name="topbar_right_text_btn_color">#fff</color>
-    <color name="topbar_title_color">#fff</color>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/TagView/unspecified/res/values/values.xml -->
     <eat-comment/>
     <color name="topic_bg">#ff009fd3</color>
@@ -871,7 +871,7 @@
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/dimen.xml -->
     <eat-comment/>
     <dimen name="topbar_LR_icon_margin">10dp</dimen>
-    <dimen name="topbar_height">40dp</dimen>
+    <dimen name="topbar_height">45dp</dimen>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
     <eat-comment/>
     <dimen name="topbar_img_height">45dip</dimen>
@@ -1135,9 +1135,11 @@
     <string name="tencentweibo">腾讯微博</string>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_nearby_imgs">NearbyImgsActivity</string>
     <string name="title_activity_sefl_setting">SeflSetting</string>
     <string name="title_activity_self_module">SelfModuleActivity</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_wifi_regi_page">WifiRegiPage</string>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/ssdk_strings.xml -->
     <eat-comment/>
     <string name="tumblr">Tumblr</string>
@@ -2615,7 +2617,8 @@
         <item name="android:layout_width">90dp</item>
         <item name="android:layout_height">28dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">14dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/color_topbar</item>
         <item name="android:button">@null</item>
     </style>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
@@ -2671,7 +2674,7 @@
         <item name="android:textColor">@color/item_text_color_light</item>
     </style>
     <style name="shop_item_site">
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:textColor">@color/item_text_color_light</item>
     </style>
     <style name="shop_item_title">
@@ -2735,7 +2738,7 @@
     <style name="topbar_back_note">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/back_note_icon_height</item>
-        <item name="android:background">@drawable/topbar_back_icon_white</item>
+        <item name="android:background">@drawable/topbar_back_icon_gray</item>
     </style>
     <style name="topbar_back_text">
         <item name="android:layout_width">wrap_content</item>
@@ -2746,14 +2749,14 @@
     <style name="topbar_bg">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/topbar_height</item>
-        <item name="android:background">@color/color_theme</item>
+        <item name="android:background">@color/color_topbar_bg</item>
     </style>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/values/styles.xml -->
     <eat-comment/>
     <style name="topbar_bg_style">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/topbar_height</item>
-        <item name="android:background">@color/theme_color</item>
+        <item name="android:background">@color/color_topbar_bg</item>
     </style>
     <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/build/intermediates/exploded-aar/kaixinguo/CustomViewLibrary/unspecified/res/values/values.xml -->
     <eat-comment/>
@@ -2794,7 +2797,7 @@
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">@dimen/topbar_left_back_text_marginleft</item>
         <item name="android:paddingRight">@dimen/topbar_left_back_text_marginleft</item>
-        <item name="android:textColor">@color/topbar_left_back_text_color</item>
+        <item name="android:textColor">@color/color_topbar</item>
         <item name="android:textSize">@dimen/topbar_left_back_text_size</item>
     </style>
     <style name="topbar_left_widget_style">
@@ -2810,7 +2813,7 @@
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">@dimen/topbar_LR_icon_margin</item>
         <item name="android:paddingRight">@dimen/topbar_LR_icon_margin</item>
-        <item name="android:textColor">@color/topbar_right_text_btn_color</item>
+        <item name="android:textColor">@color/color_topbar</item>
         <item name="android:textSize">@dimen/topbar_right_text_btn_size</item>
     </style>
     <style name="topbar_right_widget_style">
@@ -2835,7 +2838,7 @@
     <eat-comment/>
     <style name="topbar_title_style">
         <item name="android:textSize">@dimen/topbar_title_size</item>
-        <item name="android:textColor">@color/topbar_title_color</item>
+        <item name="android:textColor">@color/color_topbar</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

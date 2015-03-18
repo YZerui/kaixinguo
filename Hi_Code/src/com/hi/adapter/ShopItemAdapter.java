@@ -85,37 +85,38 @@ public class ShopItemAdapter extends SuperAdapter{
 					.findViewById(R.id.shopItemName);
 			holder.ShopIcon = (ImageView) convertView
 					.findViewById(R.id.shopIcon);
-			holder.ShopMsg = (TextView) convertView
-					.findViewById(R.id.shopItemMsg);
-			holder.shopComment = (CheckBox) convertView
-					.findViewById(R.id.shopComment);
-			holder.shopDistance = (TextView) convertView
-					.findViewById(R.id.shop_item_distance);
-			holder.shopSite = (TextView) convertView
-					.findViewById(R.id.shop_item_address);
+//			holder.ShopMsg = (TextView) convertView
+//					.findViewById(R.id.shopItemMsg);
+//			holder.shopComment = (CheckBox) convertView
+//					.findViewById(R.id.shopComment);
+//			holder.shopDistance = (TextView) convertView
+//					.findViewById(R.id.shop_item_distance);
+			holder.shopIntro = (TextView) convertView
+					.findViewById(R.id.shop_item_intro);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		Recv_StoreList bean = ifoDatas.get(position);
 		holder.ShopName.setText(bean.getName());
-		holder.ShopMsg.setText(bean.getFriends() + "个朋友关注");
-		holder.shopSite.setText(bean.getAddress());
+        holder.shopIntro.setText(bean.getRemark());
+//		holder.ShopMsg.setText(bean.getFriends() + "个朋友关注");
+//		holder.shopIntro.setText(bean.getAddress());
 		//如果没有喜欢该店家
-		if(bean.getIslove().equals(PARAMS.STORE_LOVE)){
-			System.out.println("list check true");
-			holder.shopComment.setChecked(true);
-		}else {
-			System.out.println("list check false");
-			holder.shopComment.setChecked(false);
-		}
-		holder.shopComment.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				mItemCommentClickListener.click(position,holder.shopComment.isChecked());
-			}
-		});
+//		if(bean.getIslove().equals(PARAMS.STORE_LOVE)){
+//			System.out.println("list check true");
+//			holder.shopComment.setChecked(true);
+//		}else {
+//			System.out.println("list check false");
+//			holder.shopComment.setChecked(false);
+//		}
+//		holder.shopComment.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				mItemCommentClickListener.click(position,holder.shopComment.isChecked());
+//			}
+//		});
 		imageLoader.displayImage(bean.getLogo(), holder.ShopIcon, loadOptions, null);
 		return convertView;
 	}
@@ -124,7 +125,7 @@ public class ShopItemAdapter extends SuperAdapter{
 		public TextView ShopName;
 		public TextView ShopMsg;
 		public ImageView ShopIcon;
-		public TextView shopSite;
+		public TextView shopIntro;
 		public TextView shopDistance;
 		public CheckBox shopComment;
 	}

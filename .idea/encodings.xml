@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/CustomViewLibrary/src/com/constant/COMMON.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hi_Code/res/drawable-mdpi/charm_note_icon.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Hi_Code/src/com/hi/module/base/face/FaceAdapter.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Hi_Code/src/com/hi/utils/imgLoadUtil/ImageManager2.java" charset="GBK" />

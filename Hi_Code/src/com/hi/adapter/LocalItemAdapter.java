@@ -12,6 +12,7 @@ import com.hi.module.msg.model.MsgBean;
 import com.hi.utils.FormatUtils;
 import com.hi.utils.ViewHandleUtils;
 import com.hi.view.RoundedImageView;
+import com.hi.view.customWidget.ImageView_Gender;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 
 import android.content.Context;
@@ -81,7 +82,8 @@ public class LocalItemAdapter extends SuperAdapter {
 
 	public final class ViewHolder  extends SuperViewHolder{
 		private ImageView head,unReadNote;
-		private TextView unRead,title,content,rightNote;
+		private TextView unRead,title,content,rightNote,age;
+        private ImageView_Gender genderView;
 		private RelativeLayout unReadLayout,unReadNumLayout;
 		
 		public ViewHolder(View parent) {
@@ -96,9 +98,11 @@ public class LocalItemAdapter extends SuperAdapter {
 			unRead=(TextView)parent.findViewById(R.id.fix_unreadNumText);
 			title=(TextView)parent.findViewById(R.id.fixDouble_title);
 			content=(TextView)parent.findViewById(R.id.fixDouble_content);
-			rightNote=(TextView)parent.findViewById(R.id.fixDouble_timer);
+			rightNote=(TextView)parent.findViewById(R.id.fixDouble_title_right);
 			unReadLayout=(RelativeLayout)parent.findViewById(R.id.fix_unreadLayout);
 			unReadNumLayout=(RelativeLayout)parent.findViewById(R.id.fix_unreadNumLayout);
+            age=(TextView)parent.findViewById(R.id.fixDouble_age);
+            genderView=(ImageView_Gender)parent.findViewById(R.id.fixDouble_gender);
 		}
 		@Override
 		public void refreshData(int position) {
@@ -107,6 +111,10 @@ public class LocalItemAdapter extends SuperAdapter {
 			imageLoader.displayImage(bean.getHead(),head,
 					loadOptions, null);
 			content.setText(bean.getCurrentState());
+            age.setText(FormatUtils.getAge(bean.getBirthday()));
+            genderView.setGender(bean.getSex().equals("0")?false:true);
+            rightNote.setText(bean.getIsOnLine().equals("0")?"不在场":"在场");
+            content.setText("还没有什么动态呢");
 		}
 
 	}

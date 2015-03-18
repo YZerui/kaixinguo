@@ -26,7 +26,7 @@ import android.os.IBinder;
  * 
  * @author MM_Zerui
  * @tip_1 当应用登入现场后开启该服务
- * @tip_2 每隔20分钟发送一次现场签到
+ * @tip_2 每隔15分钟发送一次现场签到
  * @tip_3 当应用退出时退出该服务,标识结束该签到
  * 
  */
@@ -70,9 +70,9 @@ public class LocalWifiSignService extends Service {
 	 */
 	public void requestMethod() {
 		Req_ChangeWifi reqBean=new Req_ChangeWifi();
-		reqBean.setAvid(DeviceUtils.getAvosId());
-		reqBean.setDriveType(E_Http_LoginPlat.android.name());
-		reqBean.setDriviceCode(DeviceUtils.getAvosId());
+//		reqBean.setAvid(DeviceUtils.getAvosId());
+//		reqBean.setDriveType(E_Http_LoginPlat.android.name());
+//		reqBean.setDriviceCode(DeviceUtils.getAvosId());
 		reqBean.setUid(Dao_SelfIfo.getInstance().getMid());
 		reqBean.setWifiMac(DeviceUtils.getWifiMac());
 		new Http_ChangeWifi(new Call_httpData<Class>() {

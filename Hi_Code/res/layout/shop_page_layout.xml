@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res/com.android.ruifeng.hi"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/pageListBgColor"
     android:orientation="vertical" >
 
-    <RelativeLayout style="@style/topbar_bg_style" >
+    <RelativeLayout style="@style/topbar_bg_style"
+        android:visibility="gone">
 
         <RelativeLayout
             android:id="@+id/store_seq_list_btn"
@@ -22,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="场所"
-                android:textColor="@color/topbar_title_color"
+                android:textColor="@color/color_topbar"
                 android:textSize="20dp" />
 
             <ImageView
@@ -39,7 +40,14 @@
             style="@style/topbar_right_text_style"
             android:text="我的优惠" />
     </RelativeLayout>
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_title="场所"
+        custom:topbar_right_text="附近照片">
 
+        </com.customview.view.CustomTopbarView>
     <include
         android:id="@+id/leave_item_more"
         android:visibility="gone"
@@ -48,7 +56,6 @@
     <View
         style="@style/split_line_view"
         android:layout_height="1dp"
-
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
 

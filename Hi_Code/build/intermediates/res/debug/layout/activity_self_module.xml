@@ -11,17 +11,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         app:topbar_title="@string/module_self_page_title"
-        app:topbar_right_text="个人设置">
-    </com.customview.view.CustomTopbarView>
+        app:topbar_right_text="个人设置"></com.customview.view.CustomTopbarView>
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPage"
         android:layout_width="fill_parent"
         android:layout_height="160dp">
 
     </android.support.v4.view.ViewPager>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:orientation="horizontal"
+        android:visibility="gone"
         android:layout_height="40dp">
 
         <TextView
@@ -32,12 +34,14 @@
             android:textColor="@color/color_theme"
             android:gravity="center"
             android:text="搭讪" />
+
         <View
             android:layout_width="0.2dp"
             android:layout_height="fill_parent"
             android:background="@color/text_color_level_three">
 
         </View>
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -47,10 +51,51 @@
             android:gravity="center"
             android:text="分享" />
     </LinearLayout>
-    <View
-        style="@style/split_line_view"
-        >
 
-    </View>
+    <View style="@style/split_line_view"></View>
+
+    <FrameLayout
+        android:id="@+id/notePage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:background="@color/page_bg_level_three">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/plusIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/self_leavenote_add"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plusIcon"
+                android:layout_centerHorizontal="true"
+                android:maxEms="12"
+                android:ellipsize="end"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/text_color_level_three"
+                android:gravity="center"
+                android:text="你还没有冒过泡呢，快来发布你的第一条留言吧"/>
+            </RelativeLayout>
+
+        <com.xlistview.XListView
+            android:id="@+id/xListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/leave_note_list_style"
+            android:visibility="gone"></com.xlistview.XListView>
+
+        <com.customview.view.CustomPageView
+            android:id="@+id/pageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></com.customview.view.CustomPageView>
+    </FrameLayout>
 </LinearLayout>
 <!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/activity_self_module.xml -->

@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_bg_level_three"
+    tools:context="com.hi.module.store.ui.NearbyImgsActivity">
+
+    <com.customview.view.CustomTopbarView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:topbar_title="附近照片"
+        custom:topbar_back_text="场所">
+        </com.customview.view.CustomTopbarView>
+
+    <com.customview.view.CustomPageView
+        android:id="@+id/pageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+    </com.customview.view.CustomPageView>
+
+    <com.xlistview.XListView
+        android:id="@+id/xListView"
+        style="@style/leave_note_list_style"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.xlistview.XListView>
+
+</LinearLayout>

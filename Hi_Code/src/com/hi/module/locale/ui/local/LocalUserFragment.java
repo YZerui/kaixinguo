@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -28,6 +30,7 @@ import com.hi.http.member.model.Req_WifiList;
 import com.hi.http.member.req.Http_WifiList;
 import com.hi.module.base.superClass.ListFragment;
 import com.hi.module.locale.ui.UserDetailFragmentActivity;
+import com.hi.service.LocalWifiCheckService;
 import com.hi.utils.AnimationUtil;
 import com.hi.utils.DeviceUtils;
 import com.lidroid.xutils.ViewUtils;
@@ -52,6 +55,8 @@ public class LocalUserFragment extends ListFragment {
 	private Http_WifiList httpReq;
 	private Req_WifiList reqBean;
 	private listNotifyReceive listMsgReceive;
+    private RelativeLayout barLayout;
+    private ImageView localImg;
 	private TextView localNote;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,6 +74,8 @@ public class LocalUserFragment extends ListFragment {
 		xListView = (XListView) view.findViewById(R.id.xListView);
 		pageView = (CustomPageView) view.findViewById(R.id.pageView);
 		localNote=(TextView)view.findViewById(R.id.barTextNote);
+        barLayout=(RelativeLayout)view.findViewById(R.id.barLayout);
+        localImg=(ImageView)view.findViewById(R.id.barImageNote);
 	}
 
 	@Override
@@ -236,9 +243,28 @@ public class LocalUserFragment extends ListFragment {
 		public void onReceive(Context context, Intent intent) {
 			// TODO Auto-generated method stub
 			if (intent.getAction().equals(Enum_Page.WIFILOCAL.name())) {
-				if(DataValidate.checkDataValid(intent.getStringExtra("DATA"))){
-					localNote.setText(intent.getStringExtra("DATA"));
-					localNote.setVisibility(View.VISIBLE);
+				if(DataValidate.checkDataValid(intent.getStringExtra("DATA0"))){
+                    barLayout.setVisibility(View.VISIBLE);
+//                    localNote.setText(intent.getStringExtra("DATA1"));
+//                    localNote.setVisibility(View.VISIBLE);
+                    String note=intent.getStringExtra("DATA0");
+                    String noteStr=intent.getStringExtra("DATA1");
+                    //该wifi已经注册
+                    if(note.equals(LocalWifiCheckService.Enum_WIFICHECK.MATCH.name())){
+                        localImg.setImageResource(R.drawable.wifi_locat_icon);
+                        localNote.setText("当前位置:"+noteStr);
+                    }
+                    //该wifi未注册
+                    else if (note.equals(LocalWifiCheckService.Enum_WIFICHECK.UNMATCH.name())){
+                        localImg.setImageResource(R.drawable.wifi_warn_icon);
+                        localNote.setText("该wifi还未被登记哦，帮忙注册有奖");
+                    }
+                    //目前未连接wifi
+                    else {
+                        localImg.setImageResource(R.drawable.wifi_warn_icon);
+                        localNote.setText("当前未连接wifi哦");
+                    }
+
 				}
 			}
 		}

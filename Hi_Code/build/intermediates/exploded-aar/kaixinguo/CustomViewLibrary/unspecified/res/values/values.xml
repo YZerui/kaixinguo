@@ -18,7 +18,8 @@
     <color name="color_note">#fa723a</color>
     <color name="color_theme">#fa723a</color>
     <color name="color_theme_light">#aafa723a</color>
-    <color name="color_topbar">#fff</color>
+    <color name="color_topbar">#ff525252</color>
+    <color name="color_topbar_bg">#fff5f5f5</color>
     <color name="color_topbar_note_bg">#e000</color>
     <color name="color_topbar_note_text">#fff</color>
     <color name="custom_toast_bg">#bb434242</color>
@@ -107,7 +108,7 @@
     <dimen name="text_page_level_one">22dp</dimen>
     <dimen name="text_page_level_three">16dp</dimen>
     <dimen name="text_page_level_two">18dp</dimen>
-    <dimen name="topbar_height">45dp</dimen>
+    <dimen name="topbar_height">50dp</dimen>
     <dimen name="topbar_img_height">45dip</dimen>
     <dimen name="topbar_img_width">45dip</dimen>
     <dimen name="topbar_left_img_margin">10dp</dimen>
@@ -340,7 +341,7 @@
     <style name="topbar_back_note">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/back_note_icon_height</item>
-        <item name="android:background">@drawable/topbar_back_icon_white</item>
+        <item name="android:background">@drawable/topbar_back_icon_gray</item>
     </style>
     <style name="topbar_back_text">
         <item name="android:layout_width">wrap_content</item>
@@ -351,7 +352,7 @@
     <style name="topbar_bg">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/topbar_height</item>
-        <item name="android:background">@color/color_theme</item>
+        <item name="android:background">@color/color_topbar_bg</item>
     </style>
     <style name="topbar_btn_style">
         <item name="android:layout_width">@dimen/topbar_img_width</item>

@@ -12,7 +12,8 @@ dependencies {
     compile project(':ExpandListLibrary')
     compile project(':circleimageview')
     compile project(':TagView')
-//    compile files('libs/android-support-v4.jar')
+    //    compile files('libs/android-support-v4.jar')
+    compile files('libs/locSDK_4.2.jar')
 }
 configurations {
     all*.exclude group: 'com.android.support', module: 'support-v4'

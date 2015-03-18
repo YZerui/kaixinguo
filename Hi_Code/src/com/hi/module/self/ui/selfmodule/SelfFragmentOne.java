@@ -39,7 +39,7 @@ public class SelfFragmentOne extends Fragment {
         context = getActivity();
         initView();
         initRes();
-        invalidete();
+//        invalidete();
     }
 
     private void initRes() {
@@ -81,13 +81,19 @@ public class SelfFragmentOne extends Fragment {
         this.mHead = imgHead;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        invalidete();
+    }
+
     private void invalidete() {
         //个人信息的初始化
         T_SelfIfo infoBean = Dao_SelfIfo.getInstance();
         W_UserInfo.Default(E_DB_SelfIfo.nickName, this.textName, infoBean.getNickName());
 //        W_UserInfo.Default(E_DB_SelfIfo.occupation, fragmentOne.getT, infoBean.getOccupation());
 //        W_UserInfo.Default(E_DB_SelfIfo.note, labelItem.getContent(), infoBean.getNote());
-        W_UserInfo.Default(E_DB_SelfIfo.currentState, this.textState, infoBean.getCurrentState());
+        W_UserInfo.Default(E_DB_SelfIfo.note, this.textState, infoBean.getNote());
         W_UserInfo.Default(E_DB_SelfIfo.xingzuo, this.textXingZuo, infoBean.getXingZuo());
         W_UserInfo.Default(E_DB_SelfIfo.age, this.textAge, infoBean.getAge());
         imageLoader.displayImage(infoBean.getHead(), this.imgHead, loadOptions, null);

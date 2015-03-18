@@ -10,5 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
     </FrameLayout>
-
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
 </LinearLayout><!-- From: file:/D:/Code/git/firm/kaixinguo/Hi_Code/res/layout/local_fragment_activity.xml -->

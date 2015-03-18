@@ -1,18 +1,35 @@
 package com.hi.http.member.model;
 
 public class Recv_WifiList {
-	private String birthDay;
+	private String birthday;
 	private String currentState;
 	private String head;
 	private String lineTimes;
 	private String mid;
 	private String nickName;
+    private String isOnLine;
 	private String sex;
 	private String stateTime;
 	private String driverType;
 	private String avosid;
-	
-	public String getDriverType() {
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getIsOnLine() {
+        return isOnLine;
+    }
+
+    public void setIsOnLine(String isOnLine) {
+        this.isOnLine = isOnLine;
+    }
+
+    public String getDriverType() {
 		return driverType;
 	}
 	public void setDriverType(String driverType) {
@@ -23,12 +40,6 @@ public class Recv_WifiList {
 	}
 	public void setAvosid(String avosid) {
 		this.avosid = avosid;
-	}
-	public String getBirthDay() {
-		return birthDay;
-	}
-	public void setBirthDay(String birthDay) {
-		this.birthDay = birthDay;
 	}
 	public String getCurrentState() {
 		return currentState;

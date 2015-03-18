@@ -3,6 +3,8 @@ package com.hi.service.image;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.exception.utils.P;
+import com.hi.common.http.E_Http_QNType;
 import com.hi.http.base.Call_httpData;
 import com.hi.http.global.req.Http_QiniuToken;
 import com.qiniu.android.http.ResponseInfo;
@@ -26,6 +28,7 @@ public class UploadImageService {
 	private Enum_ImgScaleType enumType;
 	private boolean isType=false;
 	private String imgPath;
+    private E_Http_QNType enumUploadType;
 	public UploadImageService setWidth(int width) {
 		this.width = String.valueOf(width);
 		isWidth = true;
@@ -37,7 +40,10 @@ public class UploadImageService {
 		isHeight = true;
 		return this;
 	}
-
+    public UploadImageService setUploadType(E_Http_QNType enumType){
+        this.enumUploadType=enumType;
+        return this;
+    }
 	public UploadImageService setImageType(Enum_ImgScaleType enumType) {
 		this.enumType = enumType;
 		isType=true;
@@ -66,19 +72,22 @@ public class UploadImageService {
 							// 获取文件名
 							try {
 								String imgName = result.getString("name");
-								callBack.onSuccess(withImgType(imgName,
+                                P.v("七牛上传图片:"+imgName);
+                                callBack.onSuccess(withImgType(imgName,
 										enumType));
-								callBack.onFinally();
+                                callBack.onFinally();
 								return;
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
-								callBack.onFail();
+                                callBack.onFail();
+                                callBack.onFinally();
 							}
 						} else {
 							callBack.onFail();
+                            callBack.onFinally();
 						}
-						callBack.onFinally();
+
 					}
 
 				}, null);
@@ -93,15 +102,16 @@ public class UploadImageService {
 			@Override
 			public void onFinally() {
 				// TODO Auto-generated method stub
-				callBack.onFinally();
+
 			}
 
 			@Override
 			public void onFail() {
 				// TODO Auto-generated method stub
 				callBack.onFail();
+                callBack.onFinally();
 			}
-		}).onAction();
+		}).setType(enumUploadType).onAction();
 	}
 
 	private String withImgType(String imgName, Enum_ImgScaleType enumType) {

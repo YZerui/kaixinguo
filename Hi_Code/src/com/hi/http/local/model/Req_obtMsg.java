@@ -6,13 +6,40 @@ package com.hi.http.local.model;
  *
  */
 public class Req_obtMsg {
+    private String mid;//µÇÂ¼ÓÃ»§ID
 	private String uid;
 	private String bid;
 	private String wifiMac;
 	private String start;
 	private String limit;
-	
-	public String getUid() {
+	private String m_long;
+    private String m_lat;
+
+    public String getMid() {
+        return mid;
+    }
+
+    public void setMid(String mid) {
+        this.mid = mid;
+    }
+
+    public String getM_long() {
+        return m_long;
+    }
+
+    public void setM_long(String m_long) {
+        this.m_long = m_long;
+    }
+
+    public String getM_lat() {
+        return m_lat;
+    }
+
+    public void setM_lat(String m_lat) {
+        this.m_lat = m_lat;
+    }
+
+    public String getUid() {
 		return uid;
 	}
 	public void setUid(String uid) {
